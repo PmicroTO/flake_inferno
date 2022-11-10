@@ -1,7 +1,6 @@
 { config, pkgs, libs, ... }:
 
 {
-		nixpkgs.config.allowUnfree = true;
 		programs.home-manager.enable = true;
 		home = { 
 			username = "lucio";
