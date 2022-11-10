@@ -38,14 +38,20 @@
 		shell = pkgs.zsh;
 		};
 		
-	programs.zsh.enable = true;	
+	programs = { 
+		zsh.enable = true;
+		droidcam.enable = true;
+
+	};	
 	environment = { 
 		pathsToLink = [ "/share/zsh" ];
 		shells = with pkgs; [ zsh ];
 		};
 		
-	services.clamav.daemon.enable = true;
-	services.clamav.updater.enable = true;
+	services.clamav = { 
+		daemon.enable = true; 
+		updater.enable = true;
+	};
 
 	nix = {
 		package = pkgs.nixFlakes;

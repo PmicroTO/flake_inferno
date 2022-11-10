@@ -21,6 +21,7 @@
         inherit pkgs;
         modules = [
           ./home.nix
+          ./dconf.nix
         ];
       }; 
 
