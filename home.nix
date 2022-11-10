@@ -20,7 +20,6 @@
 		disfetch
 		ventoy-bin-full
 		taskwarrior
-		steam-run
 		dconf2nix
 		arcanPackages.espeak
 		detox

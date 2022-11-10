@@ -11,6 +11,7 @@
 		rnnoise-plugin
 		nerdfonts
 		nmon
+		steam-run
 		(pkgs.systemd.overrideAttrs (oldAttrs: {
 				mesonFlags = oldAttrs.mesonFlags ++ [ "-Doptimization=3" ]; 
 				}))
