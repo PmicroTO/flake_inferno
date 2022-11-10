@@ -30,6 +30,7 @@
 		droidcam
 		webcamoid
 		gnome.pomodoro
+		vscodium
 		]) ++ (with pkgs.gnomeExtensions ;[
  		gnome-bedtime
 		espresso
