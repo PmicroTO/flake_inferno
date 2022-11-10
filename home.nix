@@ -54,8 +54,8 @@
 				nluks = "cryptsetup --type luks -c serpent-xts-plain64 -s 512 --hash whirlpool luksFormat";
 				taskpurge = "task $(task uuids due.before:now) purge";
 				opvault = "ecryptfs-mount-private ; sleep 300 ; ecryptfs-umount-private";
-				rebuildflake = "sudo nixos-rebuild switch -j 8 --flake /home/lucio/Projects/flake_inferno";
-				updateflake = "sudo nixos-rebuild switch -j 8 --upgrade --flake /home/lucio/Projects/flake_inferno";
+				flakere = "sudo nixos-rebuild switch -j 8 --flake /home/lucio/Projects/flake_inferno";
+				flakeup = "sudo nixos-rebuild switch -j 8 --upgrade --flake /home/lucio/Projects/flake_inferno";
 			};
 		};
 		programs.git = {
