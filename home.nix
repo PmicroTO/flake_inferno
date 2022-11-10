@@ -45,19 +45,14 @@
 				enable = true;
 				theme = "alanpeabody";
 			};
-			shellAliases = {
-				ls = "ls -A --color=auto -cltp --si --group-directories-first";
-				otcry = "sudo cryptsetup tcryptOpen";
-				ctcry = "sudo cryptsetup tcryptClose";
-				oluks = "sudo cryptsetup luksOpen";
-				cluks = "sudo cryptsetup luksClose";
-				nluks = "cryptsetup --type luks -c serpent-xts-plain64 -s 512 --hash whirlpool luksFormat";
-				taskpurge = "task $(task uuids due.before:now) purge";
-				opvault = "ecryptfs-mount-private ; sleep 300 ; ecryptfs-umount-private";
-				flakere = "sudo nixos-rebuild switch -j 8 --flake /home/lucio/Projects/flake_inferno";
-				flakeup = "sudo nixos-rebuild switch -j 8 --upgrade --flake /home/lucio/Projects/flake_inferno";
-			};
 		};
+ 		programs.vscode = {
+			enable = true;
+#			enableUpdateCheck = false;
+#			enableExtensionUpdateCheck = false;
+			package = pkgs.vscodium;
+			extensions = (with pkgs ;[ vscode-extensions.ms-python.python vscode-extensions.bbenoist.nix ]);
+ 		};
 		programs.git = {
 			enable = true;
 			userEmail = "8f2w79@getgoogleoff.me";
