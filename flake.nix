@@ -27,7 +27,6 @@
 		./networking.nix
 		./pipewire_conf.nix
 		./pipewire.nix
-		system.configurationRevision = nixpkgs.lib.mkIf (self ? rev) self.rev;
         ];
     };
       homeConfigurations.lucio = home-manager.lib.homeManagerConfiguration {
@@ -36,6 +35,7 @@
           ./home.nix
         ];
       };
+	system.configurationRevision = nixpkgs.lib.mkIf (self ? rev) self.rev;
 
   };
 }
