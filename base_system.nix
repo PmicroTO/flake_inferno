@@ -39,7 +39,6 @@
 		
 	environment = { 
 		pathsToLink = [ "/share/zsh" ]; 
-		shells = with pkgs; [ zsh ];
 		};
 		
 	services.clamav.daemon.enable = true;
