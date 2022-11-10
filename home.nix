@@ -67,7 +67,7 @@
 			enable = true;
 #			enableUpdateCheck = false;
 #			enableExtensionUpdateCheck = false;
-			package = pkgs.vscodium;
+			package = pkgs.vscodium-fhs;
 			extensions = (with pkgs ;[ vscode-extensions.ms-python.python vscode-extensions.bbenoist.nix vscode-extensions.pkief.material-icon-theme ]);
  		};
 		programs.git = {
