@@ -96,7 +96,7 @@
 				target = ".config/base16-shell-master";
 			};
 		};
-		dconf.setting = {
+		dconf.settings = {
 		"" = {
       custom-keybindings = [ "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/" ];
       mic-mute = [ "<Shift><Super>BackSpace" ];
