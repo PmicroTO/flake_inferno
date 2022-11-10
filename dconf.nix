@@ -70,48 +70,6 @@ with lib.hm.gvariant;
 				name = "terminal";
 				};
 
-"org/gnome/shell/extensions/dash-to-panel" = {
-      animate-appicon-hover-animation-extent = "{'RIPPLE': 4, 'PLANK': 4, 'SIMPLE': 1}";
-      appicon-margin = 6;
-      appicon-padding = 4;
-      available-monitors = [ 0 ];
-      dot-position = "BOTTOM";
-      dot-style-focused = "DOTS";
-      dot-style-unfocused = "DOTS";
-      group-apps = true;
-      hide-overview-on-startup = true;
-      hotkeys-overlay-combo = "TEMPORARILY";
-      leftbox-padding = -1;
-      overview-click-to-exit = false;
-      panel-anchors = ''
-        {"0":"MIDDLE"}
-      '';
-      panel-element-positions = ''
-        {"0":[{"element":"showAppsButton","visible":true,"position":"centerMonitor"},{"element":"activitiesButton","visible":false,"position":"centered"},{"element":"leftBox","visible":false,"position":"stackedTL"},{"element":"taskbar","visible":true,"position":"centerMonitor"},{"element":"centerBox","visible":false,"position":"centerMonitor"},{"element":"rightBox","visible":true,"position":"stackedBR"},{"element":"dateMenu","visible":true,"position":"stackedBR"},{"element":"systemMenu","visible":true,"position":"stackedBR"},{"element":"desktopButton","visible":false,"position":"stackedBR"}]}\n
-      '';
-      panel-lengths = ''
-        {"0":100}
-      '';
-      panel-positions = ''
-        {"0":"BOTTOM"}\n
-      '';
-      panel-sizes = ''
-        {"0":48}
-      '';
-      primary-monitor = 0;
-      progress-show-count = false;
-      show-appmenu = false;
-      show-favorites = true;
-      show-running-apps = true;
-      status-icon-padding = -1;
-      stockgs-keep-top-panel = false;
-      trans-bg-color = "#323232";
-      trans-panel-opacity = 0.95;
-      trans-use-custom-bg = true;
-      trans-use-custom-opacity = false;
-      tray-padding = -1;
-      window-preview-title-position = "TOP";
-    };
 
 	}; #dconf end
 

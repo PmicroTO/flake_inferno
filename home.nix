@@ -34,7 +34,7 @@
 		]) ++ (with pkgs.gnomeExtensions ;[
  		gnome-bedtime
 		espresso
-		dash-to-panel
+#		dash-to-panel
  		]); #end.packages
 		programs.zsh ={
 			enable = true;
