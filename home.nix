@@ -83,8 +83,8 @@
 			};
 			".background-image" = {
 				source = pkgs.fetchurl { 
-				url = "https://w.wallhaven.cc/full/j5/wallhaven-j5l5g5.png"; 
-				sha256 = "97496c9e4812f47709052787a5a81f51fa3c047391d2adc5c2ff690e53753ccf";
+				url = "https://raw.githubusercontent.com/wnxkiv85/flake_inferno/main/wallpaper.jpeg"; 
+				sha256 = "c11872838c13eaab4a128541a9413526b629e6ed7027b9ac67bb4a5fe0c30284";
 						};
 			};
 			"Sakuya-cursors" = {
