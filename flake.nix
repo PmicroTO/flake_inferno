@@ -6,15 +6,9 @@
 				url = "github:nix-community/home-manager";
 				inputs.nixpkgs.follows = "nixpkgs";
 			};
-			hyprland = {
-				url = "github:hyprwm/Hyprland";
-				# build with your own instance of nixpkgs
-				inputs.nixpkgs.follows = "nixpkgs";
-			};
-		
 		};
 
-  outputs = { self, nixpkgs, home-manager, hyprland }:
+  outputs = { self, nixpkgs, home-manager, ... }:
   
 	let
 		system = "x86_64-linux";
@@ -33,7 +27,7 @@
 		./networking.nix
 		./pipewire_conf.nix
 		./pipewire.nix
-
+		system.configurationRevision = nixpkgs.lib.mkIf (self ? rev) self.rev;
         ];
     };
       homeConfigurations.lucio = home-manager.lib.homeManagerConfiguration {
@@ -42,7 +36,7 @@
           ./home.nix
         ];
       };
-	system.configurationRevision = nixpkgs.lib.mkIf (self ? rev) self.rev;
+
   };
 }
 
