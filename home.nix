@@ -51,7 +51,8 @@
 			taskpurge = "task $(task uuids due.before:now) purge";
 			opvault = "ecryptfs-mount-private ; sleep 300 ; ecryptfs-umount-private";	
 			ls = "ls -A --color=auto -cltp --si --group-directories-first";			
-			flkhm = "home-manager switch --max-jobs 8 --flake /home/lucio/Projects/flake_inferno#lucio";
+			flkhr = "home-manager switch --max-jobs 8 --flake /home/lucio/Projects/flake_inferno#lucio";
+			flkhu = "home-manager switch --update --max-jobs 8 --flake /home/lucio/Projects/flake_inferno#lucio";
 			flkup = "sudo nixos-rebuild switch -j 8 --verbose --upgrade --flake /home/lucio/Projects/flake_inferno/";
 			flkre = "sudo nixos-rebuild switch -j 8 --verbose --flake /home/lucio/Projects/flake_inferno/";
 		};
