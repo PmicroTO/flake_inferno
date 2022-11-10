@@ -34,11 +34,14 @@
  
 	users.users.lucio = {
 		isNormalUser = true;
-		extraGroups = [ "wheel" "networkmanager" "i2c" ]; 
+		extraGroups = [ "wheel" "networkmanager" "i2c" ];
+		shell = pkgs.zsh;
 		};
 		
+	programs.zsh.enable = true;	
 	environment = { 
-		pathsToLink = [ "/share/zsh" ]; 
+		pathsToLink = [ "/share/zsh" ];
+		shells = with pkgs; [ zsh ];
 		};
 		
 	services.clamav.daemon.enable = true;
@@ -50,7 +53,7 @@
 		experimental-features = nix-command flakes
 	'';
 	};
-	
+		
 	nixpkgs.config.allowUnfree = true;
 	nixpkgs.config.allowUnfreePredicate = (pkg: true);
 
