@@ -76,8 +76,8 @@
 			};
 			".background-image" = {
 				source = pkgs.fetchurl { 
-				url = "https://images3.alphacoders.com/784/784785.png"; 
-				sha256 = "7991fea419fecd3f17f90037ea4e1e227aa9b9f97b2196f1c66429c41da7122d";
+				url = "https://w.wallhaven.cc/full/j5/wallhaven-j5l5g5.png"; 
+				sha256 = "97496c9e4812f47709052787a5a81f51fa3c047391d2adc5c2ff690e53753ccf";
 						};
 			};
 			"Sakuya-cursors" = {
@@ -96,5 +96,34 @@
 				target = ".config/base16-shell-master";
 			};
 		};
+		dconf.setting = {
+		"" = {
+      custom-keybindings = [ "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/" ];
+      mic-mute = [ "<Shift><Super>BackSpace" ];
+      volume-down = [ "<Super>minus" ];
+      volume-mute = [ "<Super>BackSpace" ];
+      volume-up = [ "<Super>equal" ];
+    };
+
+    "custom-keybindings/custom0" = {
+      binding = "<Shift><Super>minus";
+      command = "ddcutil setvcp 10 - 20";
+      name = "backlightdown";
+    };
+
+    "custom-keybindings/custom1" = {
+      binding = "<Shift><Super>equal";
+      command = "ddcutil setvcp 10 + 20";
+      name = "backlightup";
+    };
+
+    "custom-keybindings/custom2" = {
+      binding = "<Super>Return";
+      command = "nautilus";
+      name = "Terminal";
+    };
+
+		
+		}; #dconf end
 		
 }
