@@ -45,6 +45,18 @@
 				enable = true;
 				theme = "alanpeabody";
 			};
+			shellAliases = {
+				ls = "ls -A --color=auto -cltp --si --group-directories-first";
+				otcry = "sudo cryptsetup tcryptOpen";
+				ctcry = "sudo cryptsetup tcryptClose";
+				oluks = "sudo cryptsetup luksOpen";
+				cluks = "sudo cryptsetup luksClose";
+				nluks = "cryptsetup --type luks -c serpent-xts-plain64 -s 512 --hash whirlpool luksFormat";
+				taskpurge = "task $(task uuids due.before:now) purge";
+				opvault = "ecryptfs-mount-private ; sleep 300 ; ecryptfs-umount-private";
+				rebuildflake = "sudo nixos-rebuild switch -j 8 --flake /home/lucio/Projects/flake_inferno";
+				updateflake = "sudo nixos-rebuild switch -j 8 --upgrade --flake /home/lucio/Projects/flake_inferno";
+			};
 		};
 		programs.git = {
 			enable = true;
