@@ -20,18 +20,15 @@
     nixosConfigurations.inferno = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules =
-        [ ({ pkgs, ... }: {
-
+        [ 
             	./base_system.nix
-		/.boot.nix
-		/.configuration.nix
-		/.gnome.nix
-		/.hardware-configuration.nix
-		/.networking.nix
-		/.pipewire_conf.nix
-		/.pipewire.nix
-		system.configurationRevision = nixpkgs.lib.mkIf (self ? rev) self.rev;
-          })
+		./boot.nix
+		./configuration.nix
+		./gnome.nix
+		./hardware-configuration.nix
+		./networking.nix
+		./pipewire_conf.nix
+		./pipewire.nix
         ];
     };
       homeConfigurations.lucio = home-manager.lib.homeManagerConfiguration {
@@ -40,6 +37,7 @@
           ./home.nix
         ];
       };
+	system.configurationRevision = nixpkgs.lib.mkIf (self ? rev) self.rev;
   };
 }
 
