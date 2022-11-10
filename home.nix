@@ -46,6 +46,13 @@
 				enable = true;
 				theme = "alanpeabody";
 			};
+		initExtraFirst = ''
+		# Base16 Shell
+		BASE16_SHELL="$HOME/.config/base16-shell-master/"
+		[ -n "$PS1" ] && \
+		    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
+		        source "$BASE16_SHELL/profile_helper.sh"
+      			'';	
 		};
 		home.shellAliases = {
 			taskpurge = "task $(task uuids due.before:now) purge";
