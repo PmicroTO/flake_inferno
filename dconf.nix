@@ -71,20 +71,20 @@ with lib.hm.gvariant;
 				};
 		
 	"org/gnome/shell/extensions/materialshell/bindings" = {
-      kill-focused-window = "<Control>q";
-      last-workspace = [ "<Control>z" ];
-      move-window-bottom = [ "<Control><Alt>j" ];
-      move-window-left = [ "<Control><Alt>l" ];
+      kill-focused-window = "<Super>q";
+      last-workspace = [ "<Super>z" ];
+      move-window-bottom = [ "<Super><Shift>j" ];
+      move-window-left = [ "<Super><Shift>l" ];
       move-window-monitor-down = [ "" ];
       move-window-monitor-left = [ "" ];
       move-window-monitor-right = [ "" ];
       move-window-monitor-up = [ "" ];
-      move-window-right = [ "<Control><Alt>h" ];
-      move-window-top = [ "<Control><Alt>k" ];
-      next-window = [ "<Control>l" ];
-      next-workspace = [ "<Control>j" ];
-      previous-window = [ "<Control>h" ];
-      previous-workspace = [ "<Control>k" ];
+      move-window-right = [ "<Control><Shift>h" ];
+      move-window-top = [ "<Control><Shift>k" ];
+      next-window = [ "<Super>l" ];
+      next-workspace = [ "<Super>j" ];
+      previous-window = [ "<Super>h" ];
+      previous-workspace = [ "<Super>k" ];
 
     };
 
