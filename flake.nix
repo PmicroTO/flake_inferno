@@ -23,7 +23,6 @@
         [ 
             	./base_system.nix
 		./boot.nix
-		./configuration.nix
 		./gnome.nix
 		./hardware-configuration.nix
 		./networking.nix
