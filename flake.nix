@@ -16,7 +16,20 @@
 	in
 	
   {
-    nixosConfigurations.inferno = nixpkgs.lib.nixosSystem {
+      homeConfigurations.lucio = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+
+        # Specify your home configuration modules here, for example,
+        # the path to your home.nix.
+        modules = [
+          ./home.nix
+        ];
+
+        # Optionally use extraSpecialArgs
+        # to pass through arguments to home.nix
+      }; 
+
+	nixosConfigurations.inferno = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules =
         [ 
@@ -29,12 +42,6 @@
 		./pipewire.nix
         ];
     };
-      homeConfigurations.lucio = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-        modules = [
-          ./home.nix
-        ];
-      };
 	system.configurationRevision = nixpkgs.lib.mkIf (self ? rev) self.rev;
   };
 }
