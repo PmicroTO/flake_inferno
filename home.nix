@@ -97,31 +97,8 @@
 			};
 		};
 		dconf.settings = {
-		"/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings" = {
-      custom-keybindings = [ "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2" ];
-      mic-mute = [ "<Shift><Super>BackSpace" ];
-      volume-down = [ "<Super>minus" ];
-      volume-mute = [ "<Super>BackSpace" ];
-      volume-up = [ "<Super>equal" ];
-    };
+		"org/gnome/desktop/peripherals/trackball" = { scroll-wheel-emulation-button = 8; };
 
-    "custom-keybindings/custom0" = {
-      binding = "<Shift><Super>minus";
-      command = "ddcutil setvcp 10 - 20";
-      name = "backlightdown";
-    };
-
-    "custom-keybindings/custom1" = {
-      binding = "<Shift><Super>equal";
-      command = "ddcutil setvcp 10 + 20";
-      name = "backlightup";
-    };
-
-    "custom-keybindings/custom2" = {
-      binding = "<Super>Return";
-      command = "nautilus";
-      name = "Terminal";
-    };
 
 		
 		}; #dconf end
