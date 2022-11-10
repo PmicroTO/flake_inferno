@@ -34,6 +34,7 @@
 		]) ++ (with pkgs.gnomeExtensions ;[
  		gnome-bedtime
 		espresso
+		material-shell
 #		dash-to-panel
  		]); #end.packages
 		programs.zsh ={

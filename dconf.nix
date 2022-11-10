@@ -46,7 +46,7 @@ with lib.hm.gvariant;
 				night-light-schedule-automatic = true;			
 				};
 		"org/gnome/desktop/wm/preferences" = {
-				num-workspaces = 4;
+				num-workspaces = 1;
 				};
 
 		"org/gnome/desktop/input-sources" = {
@@ -69,11 +69,42 @@ with lib.hm.gvariant;
 				command = "kgx";
 				name = "terminal";
 				};
+		
+	"org/gnome/shell/extensions/materialshell/bindings" = {
+      kill-focused-window = "<Control>q";
+      last-workspace = [ "<Control>z" ];
+      move-window-bottom = [ "<Control><Alt>j" ];
+      move-window-left = [ "<Control><Alt>l" ];
+      move-window-monitor-down = [ "" ];
+      move-window-monitor-left = [ "" ];
+      move-window-monitor-right = [ "" ];
+      move-window-monitor-up = [ "" ];
+      move-window-right = [ "<Control><Alt>h" ];
+      move-window-top = [ "<Control><Alt>k" ];
+      next-window = [ "<Control>l" ];
+      next-workspace = [ "<Control>j" ];
+      previous-window = [ "<Control>h" ];
+      previous-workspace = [ "<Control>k" ];
 
+    };
+
+    "org/gnome/shell/extensions/materialshell/layouts" = {
+      default-layout = "split";
+    };
+
+    "org/gnome/shell/extensions/materialshell/theme" = {
+      clock-app-launcher = false;
+      focus-effect = "border";
+      panel-opacity = 100;
+      primary-color = "#dc8add";
+      theme = "dark";
+    };
+
+    "org/gnome/shell/extensions/materialshell/tweaks" = {
+      cycle-through-workspaces = true;
+      disable-notifications = false;
+    };		
 
 	}; #dconf end
-
-
-
 }
 

@@ -47,7 +47,7 @@
 	
   fileSystems."/mnt/data" = {
 	device = "/dev/disk/by-uuid/f1451973-4324-4d88-bb57-4a712f7beaf0";
-	options = [ "nosuid" "noatime" "nofail" "noexec" "group" "nodev" "x-gvfs-show" ];
+	options = [ "nosuid" "noatime" "nofail" "noexec" "group" "nodev" "x-gvfs-show" "noauto" ];
 	};
 
    fileSystems."/mnt/vms" = {
