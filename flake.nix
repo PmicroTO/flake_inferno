@@ -19,7 +19,6 @@
   {
       homeConfigurations.lucio = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        nixpkgs.config.allowUnfree = true;
         modules = [
           ./home.nix
         ];
