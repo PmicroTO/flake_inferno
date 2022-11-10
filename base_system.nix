@@ -48,9 +48,15 @@
 		shells = with pkgs; [ zsh ];
 		};
 		
-	services.clamav = { 
+	services = { 
+		clamav = {
 		daemon.enable = true; 
 		updater.enable = true;
+		};
+		fstrim = {
+		enable = true;
+		interval = "weekly";
+		};
 	};
 
 	nix = {

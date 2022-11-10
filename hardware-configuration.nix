@@ -31,9 +31,19 @@
       fsType = "vfat";
     };
 
-  swapDevices =
-    [ { device = "/dev/disk/by-uuid/038e80ac-1370-4954-add1-22788788b2d6"; }
-    ];
+#  swapDevices =	[ { device = "/dev/disk/by-uuid/038e80ac-1370-4954-add1-22788788b2d6"; } ];
+  
+  swapDevices = [{
+  	device = "/dev/disk/by-partuuid/5f92a962-fe03-4dbd-8276-99b76bdadb36";
+ 	options = [ "defaults" "nofail" ];
+	discardPolicy = "once";
+	randomEncryption = {
+		enable = true;
+		cipher = "serpent-xts-plain64";
+  		source = "/dev/random";
+  		allowDiscards = true;
+		};  
+  }];
 	
   fileSystems."/mnt/data" = {
 	device = "/dev/disk/by-uuid/f1451973-4324-4d88-bb57-4a712f7beaf0";
