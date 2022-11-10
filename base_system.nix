@@ -35,6 +35,12 @@
 		isNormalUser = true;
 		extraGroups = [ "wheel" "networkmanager" "i2c" ]; 
 		};
+		
+	environment = { 
+		pathsToLink = [ "/share/zsh" ]; 
+		shells = with pkgs; [ zsh ];
+		};
+		
 	services.clamav.daemon.enable = true;
 	services.clamav.updater.enable = true;
 
