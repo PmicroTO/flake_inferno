@@ -9,6 +9,7 @@
 		
 		};
 		home.packages = (with pkgs ;[
+		nerdfonts
 		gnome.geary
 		brave
 		calibre

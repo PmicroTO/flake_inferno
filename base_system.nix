@@ -9,7 +9,6 @@
 	};	
 	environment.systemPackages = with pkgs; [
 		rnnoise-plugin
-		nerdfonts
 		nmon
 		steam-run
 		(pkgs.systemd.overrideAttrs (oldAttrs: {
