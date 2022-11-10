@@ -98,7 +98,7 @@
 		};
 		dconf.settings = {
 		"/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings" = {
-      custom-keybindings = [ "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/" ];
+      custom-keybindings = [ "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2" ];
       mic-mute = [ "<Shift><Super>BackSpace" ];
       volume-down = [ "<Super>minus" ];
       volume-mute = [ "<Super>BackSpace" ];
