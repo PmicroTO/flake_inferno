@@ -40,8 +40,6 @@
         inherit pkgs;
         modules = [
           ./home.nix
-	hyprland.nixosModules.default
-	{ programs.hyprland.enable = true; }
         ];
       };
 	system.configurationRevision = nixpkgs.lib.mkIf (self ? rev) self.rev;
