@@ -93,10 +93,13 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/shell/extensions/materialshell/theme" = {
+      blur-background = true;
       clock-app-launcher = false;
       focus-effect = "border";
+      horizontal-panel-position = "bottom";
+      panel-icon-color = false;
       panel-opacity = 100;
-      primary-color = "#dc8add";
+      primary-color = "#9a9996";
       theme = "dark";
     };
 
