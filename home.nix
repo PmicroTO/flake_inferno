@@ -8,8 +8,11 @@
 			stateVersion = "22.11";
 		
 		};
+		nixpkgs.config.allowUnfree = true;
+		nixpkgs.config.allowUnfreePredicate = (pkg: true);
 		home.packages = (with pkgs ;[
 		nerdfonts
+		steam-run
 		gnome.geary
 		brave
 		calibre
@@ -36,7 +39,6 @@
  		gnome-bedtime
 		espresso
 		material-shell
-#		dash-to-panel
  		]); #end.packages
 		programs.zsh ={
 			enable = true;
