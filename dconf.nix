@@ -71,6 +71,8 @@ with lib.hm.gvariant;
 				};
 		
 	"org/gnome/shell/extensions/materialshell/bindings" = {
+      reverse-cycle-tiling-layout = [ "<Super>bracketleft" ];
+      cycle-tiling-layout = [ "<Super>bracketright" ];
       kill-focused-window = "<Super>q";
       last-workspace = [ "<Super>z" ];
       move-window-bottom = [ "<Super><Shift>j" ];
@@ -79,33 +81,40 @@ with lib.hm.gvariant;
       move-window-monitor-left = [ "" ];
       move-window-monitor-right = [ "" ];
       move-window-monitor-up = [ "" ];
-      move-window-right = [ "<Control><Shift>h" ];
-      move-window-top = [ "<Control><Shift>k" ];
+      move-window-right = [ "<Shift><Super>h" ];
+      move-window-top = [ "<Shift><Super>k" ];
       next-window = [ "<Super>l" ];
       next-workspace = [ "<Super>j" ];
       previous-window = [ "<Super>h" ];
       previous-workspace = [ "<Super>k" ];
-
     };
 
     "org/gnome/shell/extensions/materialshell/layouts" = {
-      default-layout = "split";
+      default-layout = "grid";
+      float = false;
+      grid = true;
+      half = false;
     };
 
     "org/gnome/shell/extensions/materialshell/theme" = {
-      blur-background = true;
+      blur-background = false;
       clock-app-launcher = false;
+      clock-horizontal = false;
       focus-effect = "border";
       horizontal-panel-position = "bottom";
       panel-icon-color = false;
+      panel-icon-style = "application";
       panel-opacity = 100;
+      panel-size = 48;
       primary-color = "#9a9996";
       theme = "dark";
+      vertical-panel-position = "left";
     };
 
     "org/gnome/shell/extensions/materialshell/tweaks" = {
+      cycle-through-windows = true;
       cycle-through-workspaces = true;
-      disable-notifications = false;
+      disable-notifications = true;
     };		
 
 	}; #dconf end
