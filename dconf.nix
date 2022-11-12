@@ -71,8 +71,7 @@ with lib.hm.gvariant;
 				};
 		
 	"org/gnome/shell/extensions/materialshell/bindings" = {
-      reverse-cycle-tiling-layout = [ "<Super>bracketleft" ];
-      cycle-tiling-layout = [ "<Super>bracketright" ];
+      cycle-tiling-layout = [ "<Super>w" ];
       kill-focused-window = "<Super>q";
       last-workspace = [ "<Super>z" ];
       move-window-bottom = [ "<Super><Shift>j" ];
@@ -94,6 +93,7 @@ with lib.hm.gvariant;
       float = false;
       grid = true;
       half = false;
+      split = false;
     };
 
     "org/gnome/shell/extensions/materialshell/theme" = {
