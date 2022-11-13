@@ -36,6 +36,7 @@
 		webcamoid
 		gnome.pomodoro
 		]) ++ (with pkgs.gnomeExtensions ;[
+		gsconnect
  		gnome-bedtime
 		espresso
 		material-shell
@@ -65,6 +66,7 @@
 			flkhr = "home-manager switch --max-jobs 8 --flake /home/lucio/Projects/flake_inferno#lucio";
 			flkup = "sudo nixos-rebuild switch -j 8 --verbose --upgrade --flake /home/lucio/Projects/flake_inferno/";
 			flkre = "sudo nixos-rebuild switch -j 8 --verbose --flake /home/lucio/Projects/flake_inferno/";
+			listports = "sudo netstat -tulpn | grep LISTEN ";
 		};
  		programs.vscode = {
 			enable = true;
