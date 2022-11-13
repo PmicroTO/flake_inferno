@@ -107,6 +107,7 @@ with lib.hm.gvariant;
       panel-opacity = 100;
       panel-size = 48;
       primary-color = "#9a9996";
+      taskbar-item-style = "icon";
       theme = "dark";
       vertical-panel-position = "left";
     };
