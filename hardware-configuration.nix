@@ -14,13 +14,13 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/3e1feff2-4082-4ab2-9ba6-a1a86f27eca5";
+    { device = "/dev/disk/by-uuid/5f78a007-da6b-4110-9bfc-226340acb8a1";
       fsType = "xfs";
     };
 
   boot.initrd.luks.devices = { 
 	nix_root = { 
-		device = "/dev/disk/by-uuid/226b1a84-af65-43e2-9fd0-5d4673c2680c"; 
+		device = "/dev/disk/by-uuid/c10b9174-531e-43e3-abfe-05a4f0397e2e"; 
 		preLVM = false;
 		allowDiscards = true;
 		};
