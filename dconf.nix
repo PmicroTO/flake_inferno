@@ -10,9 +10,9 @@ with lib.hm.gvariant;
 		"org/gnome/desktop/interface" = { 
 				cursor-theme = "Sakuya-cursors";
 				icon-theme = "Nordzy-pink";
-				document-font-name = "Liberation Serif 13";
+				document-font-name = "FiraCode Nerd Font Mono Light 12";
 				font-name = "Liberation Sans 11";
-				monospace-font-name = "SauceCodePro Nerd Font Mono 11";
+				monospace-font-name = "FiraCode Nerd Font Mono Light 12";
 				gtk-theme = "adw-gtk3";
 				};
 
@@ -117,6 +117,15 @@ with lib.hm.gvariant;
       cycle-through-workspaces = true;
       disable-notifications = true;
     };		
+    
+	"org/gnome/desktop/background" = {
+				color-shading-type = "solid";
+				picture-options = "zoom";
+				picture-uri = "file:///home/lucio/.background-image";
+				picture-uri-dark = "file:///home/lucio/.background-image";
+				primary-color = "#000000000000";
+				secondary-color = "#000000000000";
+				};
 
 	}; #dconf end
 }
