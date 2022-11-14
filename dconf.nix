@@ -17,7 +17,12 @@ with lib.hm.gvariant;
 				};
 
 		"org/gnome/system/locale" = { region = "pt_BR.UTF-8"; };
-		
+
+		"org/gnome/shell" = {
+				enabled-extensions = [ "gnomebedtime@ionutbortis.gmail.com" "espresso@coadmunkee.github.com" "gsconnect@andyholmes.github.io" "material-shell@papyelgringo" ];
+				};
+
+
 		"org/gnome/shell/keybindings" = {
 				switch-to-application-1 = [ "" ];
 				switch-to-application-2 = [ "" ];
