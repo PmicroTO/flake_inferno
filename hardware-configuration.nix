@@ -16,7 +16,7 @@
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/5f78a007-da6b-4110-9bfc-226340acb8a1";
       fsType = "xfs";
-	options = [ "logbsize=256k" "allocsize=131072k" "isize=512" ];
+	options = [ "logbsize=256k" ];
     };
 
   boot.initrd.luks.devices = { 
