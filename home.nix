@@ -163,7 +163,7 @@
 			clock24 = true;
 			keyMode = "vi";
 			newSession = true;
-			terminal = "tmux-truecolor";
+			terminal = "tmux-256color";
 			prefix = "C-space";
 			extraConfig = "
 				set -ga terminal-overrides \",alacritty:Tc\"
@@ -184,7 +184,7 @@
 			withPython3 = true;
 			extraPython3Packages = (ps: with ps; [ python-lsp-server ]);
 			extraPackages = (with pkgs ;[ sqls ccls ]);
-			plugins = (with pkgs ;[ vimPlugins.nvim-base16 ]);
+			plugins = (with pkgs ;[ vimPlugins.nvim-base16 vimPlugins.vim-nix ]);
 			extraConfig = "
 			set termguicolors
 			colorscheme base16-nord
