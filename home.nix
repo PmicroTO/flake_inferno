@@ -163,7 +163,6 @@
 			clock24 = true;
 			keyMode = "vi";
 			newSession = true;
-			terminal = "tmux-256color";
 			prefix = "C-space";
 			extraConfig = "
 				set -ga terminal-overrides \",alacritty:Tc\"
