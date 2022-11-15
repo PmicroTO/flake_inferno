@@ -10,9 +10,9 @@ with lib.hm.gvariant;
 		"org/gnome/desktop/interface" = { 
 				cursor-theme = "Sakuya-cursors";
 				icon-theme = "Nordzy-pink";
-				document-font-name = "FiraCode Nerd Font Mono Light 12";
+				document-font-name = "MesloLGLDZ Nerd Font 12";
 				font-name = "Liberation Sans 11";
-				monospace-font-name = "FiraCode Nerd Font Mono Light 12";
+				monospace-font-name = "MesloLGLDZ Nerd Font 12";
 				gtk-theme = "adw-gtk3";
 				};
 
@@ -71,7 +71,7 @@ with lib.hm.gvariant;
 				};
 		"org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2" = {
 				binding = "<Super>Return";
-				command = "kgx";
+				command = "alacritty";
 				name = "terminal";
 				};
 		
