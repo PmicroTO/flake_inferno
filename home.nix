@@ -52,7 +52,7 @@
 				{ 
     					name = "hydro";
 					src = pkgs.fetchFromGitHub {
-					owner = "jorgebucaro";
+					owner = "jorgebucaran";
 					repo = "hydro";
 					rev = "d4c107a2c99d1066950a09f605bffea61fc0efab";
 					sha256 = "1ajh6klw1rkn2mqk4rdghflxlk6ykc3wxgwp2pzfnjd58ba161ki";
@@ -60,12 +60,14 @@
 				}
 
 			];
-			ShellInit = "
+			shellInit = "
 			zoxide init fish | source \
 			";
 			interactiveShellInit = "
-				   " set BASE16_SHELL "$HOME/.config/base16-shell/" "
-				    " source "$BASE16_SHELL/profile_helper.fish" "
+				if status --is-interactive \
+				    set BASE16_SHELL \"$HOME/.config/base16-shell/\" \
+				    source \"$BASE16_SHELL/profile_helper.fish\" \
+				end
 			";
 			
 		};
@@ -136,7 +138,7 @@
 				url = "https://github.com/chriskempson/base16-shell/archive/refs/heads/master.zip" ;
 				sha512 = "0c0lm47wwcqd2lc0293awr8kvpib8pcq1kgnilnbg0d2g0b65if0aj0yrmv1sg3z78c15ssksv9j7ikbhhwifdg3360ypk2plrfyrny";	
 				};
-				target = ".config/base16-shell-master";
+				target = ".config/base16-shell";
 			};
 			"tpm" = {
 				source = pkgs.fetchFromGitHub {
