@@ -34,17 +34,17 @@
 	users.users.lucio = {
 		isNormalUser = true;
 		extraGroups = [ "wheel" "networkmanager" "i2c" ];
-		shell = pkgs.zsh;
+		shell = pkgs.fish;
 		};
 		
 	programs = { 
-		zsh.enable = true;
+		fish.enable = true;
 		droidcam.enable = true;
 
 	};	
 	environment = { 
 		pathsToLink = [ "/share/zsh" ];
-		shells = with pkgs; [ zsh ];
+		shells = with pkgs; [ fish ];
 		};
 		
 	services = { 

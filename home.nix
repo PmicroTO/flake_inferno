@@ -6,6 +6,10 @@
 			username = "lucio";
 			homeDirectory = "/home/lucio";
 			stateVersion = "22.11";
+			sessionVariables = {
+				EDITOR = "vi";
+				VISUAL = "vi";
+			};
 		
 		};
 		nixpkgs.config.allowUnfree = true;
@@ -35,29 +39,35 @@
 		droidcam
 		webcamoid
 		gnome.pomodoro
+		zoxide
 		]) ++ (with pkgs.gnomeExtensions ;[
 		gsconnect
  		gnome-bedtime
 		espresso
 		material-shell
  		]); #end.packages
-		programs.zsh ={
+		programs.fish ={
 			enable = true;
-			enableAutosuggestions = true;
-			enableCompletion =true;
-			enableSyntaxHighlighting = true;
-			dotDir = ".config/zsh";
-			oh-my-zsh= {
-				enable = true;
-				theme = "alanpeabody";
-			};
-		initExtraFirst = ''
-		# Base16 Shell
-		BASE16_SHELL="$HOME/.config/base16-shell-master/"
-		[ -n "$PS1" ] && \
-		    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
-		        source "$BASE16_SHELL/profile_helper.sh"
-      			'';	
+			plugins = [
+				{ 
+    					name = "hydro";
+					src = pkgs.fetchFromGitHub {
+					owner = "jorgebucaro";
+					repo = "hydro";
+					rev = "d4c107a2c99d1066950a09f605bffea61fc0efab";
+					sha256 = "1ajh6klw1rkn2mqk4rdghflxlk6ykc3wxgwp2pzfnjd58ba161ki";
+					};
+				}
+
+			];
+			ShellInit = "
+			zoxide init fish | source \
+			";
+			interactiveShellInit = "
+				   " set BASE16_SHELL "$HOME/.config/base16-shell/" "
+				    " source "$BASE16_SHELL/profile_helper.fish" "
+			";
+			
 		};
 		home.shellAliases = {
 			taskpurge = "task $(task uuids due.before:now) purge";
@@ -75,7 +85,15 @@
 			keyMode = "vi";
 			newSession = true;
 			prefix = "C-space";
-			terminal = "screen-256color";
+			terminal = "tmux-256color";
+			extraConfig = "
+				set -g allow-passthrough 1
+				set -g @plugin 'tmux-plugins/tpm'
+				set -g @plugin 'wfxr/tmux-power'
+				set -g @tmux_power_theme 'snow'
+				run '~/.tmux/plugins/tpm/tpm'
+
+			";
 
 		};
 		programs.neovim = {
@@ -119,6 +137,15 @@
 				sha512 = "0c0lm47wwcqd2lc0293awr8kvpib8pcq1kgnilnbg0d2g0b65if0aj0yrmv1sg3z78c15ssksv9j7ikbhhwifdg3360ypk2plrfyrny";	
 				};
 				target = ".config/base16-shell-master";
+			};
+			"tpm" = {
+				source = pkgs.fetchFromGitHub {
+				owner = "tmux-plugins";
+				repo = "tpm";
+				rev = "b699a7e01c253ffb7818b02d62bce24190ec1019";
+				sha256 = "1395fv70gxkpqswnraw50fcaawnjn91j4a44yzz1c3vmm3jp4r38";
+				};
+				target = ".tmux/plugins/tpm";
 			};
 		};
 }
