@@ -68,13 +68,25 @@
 			flkre = "sudo nixos-rebuild switch -j 8 --verbose --flake /home/lucio/Projects/flake_inferno/";
 			listports = "sudo netstat -tulpn | grep LISTEN ";
 		};
- 		programs.vscode = {
+		programs.tmux = {
 			enable = true;
-#			enableUpdateCheck = false;
-#			enableExtensionUpdateCheck = false;
-			package = pkgs.vscodium-fhs;
-			extensions = (with pkgs ;[ vscode-extensions.ms-python.python vscode-extensions.bbenoist.nix vscode-extensions.pkief.material-icon-theme ]);
- 		};
+			baseIndex = 1;
+			clock24 = true;
+			keyMode = "vi";
+			newSession = true;
+			prefix = "C-space";
+			terminal = "screen-256color";
+
+		};
+		programs.neovim = {
+			enable = true;
+			viAlias = true;
+			vimAlias = true;
+			vimdiffAlias = true;
+			withPython3 = true;
+			extraPython3Packages = (ps: with ps; [ python-lsp-server ]);
+			extraPackages = (with pkgs ;[ sqls ccls ]);
+		};
 		programs.git = {
 			enable = true;
 			userEmail = "8f2w79@getgoogleoff.me";
