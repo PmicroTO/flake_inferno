@@ -138,16 +138,6 @@
 
 				}
 
-#				{
-#					name = "tmux.fish";
-#					src = pkgs.fetchFromGitHub {
-#						owner = "budimanjojo";
-#						repo = "tmux.fish";
-#						rev = "42c2f6ed78b846d62ff646d870c6078faf48d4a8";
-#						sha256 = "0nz6mrw6k509p5nwjnphp4x748d6315ypngyvq57mqs42i5fmd5q";
-#					};				
-#				}
-
 			];
 			shellInit = "
 			#zoxide
