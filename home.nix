@@ -47,7 +47,7 @@
  		]); #end.packages
 		programs.alacritty = {
 			enable = true;
-			settings = {
+                        settings = {
 				window = { 
 					decorations = "none"; 
 					padding = {
@@ -163,14 +163,19 @@
 			clock24 = true;
 			keyMode = "vi";
 			newSession = true;
-			prefix = "C-space";
+			prefix = "C-a";
 			extraConfig = "
 				set -ga terminal-overrides \",alacritty:Tc\"
 				set -g default-command \"\${SHELL}\"
-				set -g allow-passthrough 1 
+                                set -g allow-passthrough 1 
+                                set -g @plugin 'arcticicestudio/nord-tmux'
+                                set -g @plugin 'whame/tmux-modal'
+                                set -g @modal-keybindings-conf \${HOME}/.config/tmux_modal.conf
+                                set -g @plugin 'tmux-plugins/tmux-resurrect'
+                                set -g @plugin 'tmux-plugins/tmux-continuum'
+                                set -g @continuum-boot 'on'
 				set -g @plugin 'tmux-plugins/tpm' 
-				set -g @plugin 'arcticicestudio/nord-tmux'
-				run '~/.tmux/plugins/tpm/tpm' 
+                                run '~/.tmux/plugins/tpm/tpm' 
 
 			";
 
@@ -230,6 +235,153 @@
 				sha256 = "1395fv70gxkpqswnraw50fcaawnjn91j4a44yzz1c3vmm3jp4r38";
 				};
 				target = ".tmux/plugins/tpm";
-			};
+                        };
+                        "tmux_modal.conf" = {
+                          text = "
+KBD_CMD=C-space
+KBD_CMD_EXIT=C-space
+KBD_QUIT=q
+KBD_COPY_MODE=c
+KBD_PASTE=y
+KBD_CMD_PROMPT=:
+KBD_WIN=w
+KBD_WIN_GOTO_0=0
+KBD_WIN_GOTO_1=1
+KBD_WIN_GOTO_2=2
+KBD_WIN_GOTO_3=3
+KBD_WIN_GOTO_4=4
+KBD_WIN_GOTO_5=5
+KBD_WIN_GOTO_6=6
+KBD_WIN_GOTO_7=7
+KBD_WIN_GOTO_8=8
+KBD_WIN_GOTO_9=9
+KBD_WIN_GOTO_TREE=t
+KBD_WIN_GOTO_INDEX=i
+KBD_WIN_PANE_LEFT=h
+KBD_WIN_PANE_RIGHT=l
+KBD_WIN_PANE_UP=k
+KBD_WIN_PANE_DOWN=j
+KBD_WIN_PANE_DEL=d
+KBD_WIN_PREV=H
+KBD_WIN_NEXT=L
+KBD_WIN_DEL=D
+KBD_WIN_CREATE=c
+KBD_WIN_LAST=o
+KBD_WIN_ZOOM=z
+KBD_WIN_BREAK=b
+KBD_WIN_NR=n
+KBD_WIN_RENAME=,
+KBD_WIN_PANE=w
+KBD_WIN_SPLIT=s
+KBD_WIN_SPLIT_RIGHT=l
+KBD_WIN_SPLIT_DOWN=j
+KBD_WIN_MOVE=m
+KBD_WIN_MOVE_UP=k
+KBD_WIN_MOVE_DOWN=j
+KBD_WIN_ARRANGE=a
+KBD_WIN_ARRANGE_1=1
+KBD_WIN_ARRANGE_2=2
+KBD_WIN_ARRANGE_3=3
+KBD_WIN_ARRANGE_4=4
+KBD_WIN_RESIZE=r
+KBD_WIN_RESIZE_LEFT=h
+KBD_WIN_RESIZE_RIGHT=l
+KBD_WIN_RESIZE_DOWN=j
+KBD_WIN_RESIZE_UP=k
+KBD_WIN_RESIZE_MULTI_LEFT=H
+KBD_WIN_RESIZE_MULTI_RIGHT=L
+KBD_WIN_RESIZE_MULTI_DOWN=J
+KBD_WIN_RESIZE_MULTI_UP=K
+KBD_SESS=s
+KBD_SESS_DETACH=d
+KBD_SESS_PREV=h
+KBD_SESS_NEXT=l
+KBD_SESS_TREE=t
+KBD_SESS_DEL=D
+KBD_GOTO=g
+KBD_GOTO_WIN=w
+KBD_GOTO_WIN_0=0
+KBD_GOTO_WIN_1=1
+KBD_GOTO_WIN_2=2
+KBD_GOTO_WIN_3=3
+KBD_GOTO_WIN_4=4
+KBD_GOTO_WIN_5=5
+KBD_GOTO_WIN_6=6
+KBD_GOTO_WIN_7=7
+KBD_GOTO_WIN_8=8
+KBD_GOTO_WIN_9=9
+KBD_GOTO_WIN_TREE=t
+KBD_GOTO_WIN_INDEX=i
+KBD_GOTO_WIN_PREV=h
+KBD_GOTO_WIN_NEXT=l
+KBD_GOTO_WIN_LAST=o
+KBD_GOTO_SESS=s
+KBD_GOTO_SESS_PREV=h
+KBD_GOTO_SESS_NEXT=l
+KBD_GOTO_SESS_TREE=tKBD_WIN_PANE_LEFT=h
+KBD_WIN_PANE_RIGHT=l
+KBD_WIN_PANE_UP=k
+KBD_WIN_PANE_DOWN=j
+KBD_WIN_PANE_DEL=d
+KBD_WIN_PREV=H
+KBD_WIN_NEXT=L
+KBD_WIN_DEL=D
+KBD_WIN_CREATE=c
+KBD_WIN_LAST=o
+KBD_WIN_ZOOM=z
+KBD_WIN_BREAK=b
+KBD_WIN_NR=n
+KBD_WIN_RENAME=,
+KBD_WIN_PANE=w
+KBD_WIN_SPLIT=s
+KBD_WIN_SPLIT_RIGHT=l
+KBD_WIN_SPLIT_DOWN=j
+KBD_WIN_MOVE=m
+KBD_WIN_MOVE_UP=k
+KBD_WIN_MOVE_DOWN=j
+KBD_WIN_ARRANGE=a
+KBD_WIN_ARRANGE_1=1
+KBD_WIN_ARRANGE_2=2
+KBD_WIN_ARRANGE_3=3
+KBD_WIN_ARRANGE_4=4
+KBD_WIN_RESIZE=r
+KBD_WIN_RESIZE_LEFT=h
+KBD_WIN_RESIZE_RIGHT=l
+KBD_WIN_RESIZE_DOWN=j
+KBD_WIN_RESIZE_UP=k
+KBD_WIN_RESIZE_MULTI_LEFT=H
+KBD_WIN_RESIZE_MULTI_RIGHT=L
+KBD_WIN_RESIZE_MULTI_DOWN=J
+KBD_WIN_RESIZE_MULTI_UP=K
+KBD_SESS=s
+KBD_SESS_DETACH=d
+KBD_SESS_PREV=h
+KBD_SESS_NEXT=l
+KBD_SESS_TREE=t
+KBD_SESS_DEL=D
+KBD_GOTO=g
+KBD_GOTO_WIN=w
+KBD_GOTO_WIN_0=0
+KBD_GOTO_WIN_1=1
+KBD_GOTO_WIN_2=2
+KBD_GOTO_WIN_3=3
+KBD_GOTO_WIN_4=4
+KBD_GOTO_WIN_5=5
+KBD_GOTO_WIN_6=6
+KBD_GOTO_WIN_7=7
+KBD_GOTO_WIN_8=8
+KBD_GOTO_WIN_9=9
+KBD_GOTO_WIN_TREE=t
+KBD_GOTO_WIN_INDEX=i
+KBD_GOTO_WIN_PREV=h
+KBD_GOTO_WIN_NEXT=l
+KBD_GOTO_WIN_LAST=o
+KBD_GOTO_SESS=s
+KBD_GOTO_SESS_PREV=h
+KBD_GOTO_SESS_NEXT=l
+KBD_GOTO_SESS_TREE=t
+                          ";
+                                target = ".config/tmux_modal.conf";
+                        };
 		};
 }
