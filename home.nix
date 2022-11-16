@@ -1,5 +1,4 @@
 { config, pkgs, lib, ... }:
-
 {
   programs.home-manager.enable = true;
   home = {
@@ -143,7 +142,7 @@
 
     ];
     shellInit = "
-#                        fish_add_path -p \$HOME/.config/nvim/bin
+            fish_add_path -p \$HOME/.config/nvim/bin
 			#zoxide
 			zoxide init fish | source \
 			set -U fish_greeting
@@ -193,7 +192,7 @@
     vimdiffAlias = true;
     withPython3 = true;
     extraPackages = (with pkgs ;[ tree-sitter nodejs ripgrep fd unzip ]);
-    #   plugins = (with pkgs.vimPlugins ;[ nvim-base16 vim-nix telescope-nvim ]);
+    plugins = (with pkgs.vimPlugins ;[ nvim-base16 telescope-nvim ]);
   };
   programs.git = {
     enable = true;
@@ -244,9 +243,8 @@
         rev = "ec3faaacb52207e99c54a66e04f5425adb772faa";
         sha256 = "0r3xwrjw07f8n35fb3s9w4kkavsciqwsw408bfi7vdfyax5fxc5x";
       };
-	target = ".config/nvim";
-	text = "blank";
-	recursive = true;
+      target = ".config/nvim";
+      recursive = true;
     };
     "tmux_modal.conf" = {
       text = "
