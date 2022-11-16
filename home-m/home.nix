@@ -185,15 +185,6 @@
 			";
 
   };
-  programs.neovim = {
-    enable = true;
-    viAlias = true;
-    vimAlias = true;
-    vimdiffAlias = true;
-    withPython3 = true;
-    extraPackages = (with pkgs ;[ tree-sitter nodejs ripgrep fd unzip ]);
-    plugins = (with pkgs.vimPlugins ;[ nvim-base16 telescope-nvim ]);
-  };
   programs.git = {
     enable = true;
     userEmail = "8f2w79@getgoogleoff.me";
@@ -235,16 +226,6 @@
         sha256 = "1395fv70gxkpqswnraw50fcaawnjn91j4a44yzz1c3vmm3jp4r38";
       };
       target = ".tmux/plugins/tpm";
-    };
-    "nyoom.nvim" = {
-      source = pkgs.fetchFromGitHub {
-        owner = "shaunsingh";
-        repo = "nyoom.nvim";
-        rev = "ec3faaacb52207e99c54a66e04f5425adb772faa";
-        sha256 = "0r3xwrjw07f8n35fb3s9w4kkavsciqwsw408bfi7vdfyax5fxc5x";
-      };
-      target = ".config/nvim";
-      recursive = true;
     };
     "tmux_modal.conf" = {
       text = "
