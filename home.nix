@@ -13,7 +13,10 @@
 		};
 		nixpkgs.config.allowUnfree = true;
 		nixpkgs.config.allowUnfreePredicate = (pkg: true);
-		home.packages = (with pkgs ;[
+        home.packages = (with pkgs ;[
+                gcc
+                cargo
+                wl-clipboard
 		fontpreview
 		nerdfonts
 		steam-run
@@ -139,7 +142,8 @@
 				}
 
 			];
-			shellInit = "
+                        shellInit = "
+                        fish_add_path -p \$HOME/.config/nvim/bin
 			#zoxide
 			zoxide init fish | source \
 			set -U fish_greeting
@@ -168,8 +172,10 @@
 				set -ga terminal-overrides \",alacritty:Tc\"
 				set -g default-command \"\${SHELL}\"
                                 set -g allow-passthrough 1 
+                                set -s copy-command 'wl-copy'
                                 set -g @plugin 'arcticicestudio/nord-tmux'
                                 set -g @plugin 'whame/tmux-modal'
+                                set -g @modal-yesno-cmd on
                                 set -g @modal-keybindings-conf \${HOME}/.config/tmux_modal.conf
                                 set -g @plugin 'tmux-plugins/tmux-resurrect'
                                 set -g @plugin 'tmux-plugins/tmux-continuum'
@@ -187,12 +193,12 @@
 			vimdiffAlias = true;
 			withPython3 = true;
 			extraPython3Packages = (ps: with ps; [ python-lsp-server ]);
-			extraPackages = (with pkgs ;[ sqls ccls ]);
-			plugins = (with pkgs ;[ vimPlugins.nvim-base16 vimPlugins.vim-nix ]);
-			extraConfig = "
-			set termguicolors
-			colorscheme base16-nord
-			";
+			extraPackages = (with pkgs ;[ sqls ccls rnix-lsp ]);
+			plugins = (with pkgs.vimPlugins ;[ nvim-base16 vim-nix ]);
+#			extraConfig = "
+#			set termguicolors
+#			colorscheme base16-nord
+#			";
 		};
 		programs.git = {
 			enable = true;
@@ -235,7 +241,17 @@
 				sha256 = "1395fv70gxkpqswnraw50fcaawnjn91j4a44yzz1c3vmm3jp4r38";
 				};
 				target = ".tmux/plugins/tpm";
-                        };
+                        };  
+			"nyoom" = {
+				source = pkgs.fetchFromGitHub {
+				owner = "shaunsingh";
+				repo = "nyoom.nvim";
+				rev = "ec3faaacb52207e99c54a66e04f5425adb772faa";
+				sha256 = "0r3xwrjw07f8n35fb3s9w4kkavsciqwsw408bfi7vdfyax5fxc5x";
+				};
+                                target = ".config/nvim";
+                                recursive = true;
+                        }; 
                         "tmux_modal.conf" = {
                           text = "
 KBD_CMD=C-space
