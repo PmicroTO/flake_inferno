@@ -6,9 +6,9 @@
     vimAlias = true;
     vimdiffAlias = true;
     withPython3 = true;
-    extraPackages = (with pkgs ;[ tree-sitter nodejs ripgrep fd unzip ]);
+    withNodeJs = true;
+    extraPackages = (with pkgs ;[ tree-sitter ripgrep fd unzip ]);
     plugins = (with pkgs.vimPlugins ;[ nvim-base16 telescope-nvim nvim-web-devicons ]);
-    extraConfig = builtins.readFile ./init.lua;
   };
 
   home.file."nyoom" = {
