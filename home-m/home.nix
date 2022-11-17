@@ -12,6 +12,7 @@
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.allowUnfreePredicate = (pkg: true);
   home.packages = (with pkgs; [
+    any-nix-shell
     nixfmt
     gcc
     cargo
@@ -143,11 +144,12 @@
     shellInit = ''
 
                   fish_add_path -p $HOME/.config/nvim/bin
-      			#zoxide
-      			zoxide init fish | source 
       			set -U fish_greeting
       			'';
-    interactiveShellInit = "\n			";
+                        interactiveShellInit = "
+                        any-nix-shell fish --info-right | source
+                        zoxide init fish | source 
+                        ";
 
   };
   home.shellAliases = {
