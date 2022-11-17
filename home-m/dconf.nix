@@ -1,81 +1,88 @@
-{ config, lib, ... }: 
+{ config, lib, ... }:
 
 with lib.hm.gvariant;
 
 {
 
-	dconf.settings = {
-		"org/gnome/desktop/peripherals/trackball" = { scroll-wheel-emulation-button = 8; };
-		
-		"org/gnome/desktop/interface" = { 
-				cursor-theme = "Sakuya-cursors";
-				icon-theme = "Nordzy-pink";
-				document-font-name = "MesloLGLDZ Nerd Font 12";
-				font-name = "Liberation Sans 11";
-				monospace-font-name = "MesloLGLDZ Nerd Font 12";
-				gtk-theme = "adw-gtk3";
-				};
+  dconf.settings = {
+    "org/gnome/desktop/peripherals/trackball" = {
+      scroll-wheel-emulation-button = 8;
+    };
 
-		"org/gnome/system/locale" = { region = "pt_BR.UTF-8"; };
+    "org/gnome/desktop/interface" = {
+      cursor-theme = "Sakuya-cursors";
+      icon-theme = "Nordzy-pink";
+      document-font-name = "MesloLGLDZ Nerd Font 12";
+      font-name = "Liberation Sans 11";
+      monospace-font-name = "MesloLGLDZ Nerd Font 12";
+      gtk-theme = "adw-gtk3";
+    };
 
-		"org/gnome/shell" = {
-				enabled-extensions = [ "gnomebedtime@ionutbortis.gmail.com" "espresso@coadmunkee.github.com" "gsconnect@andyholmes.github.io" "material-shell@papyelgringo" ];
-				};
+    "org/gnome/system/locale" = { region = "pt_BR.UTF-8"; };
 
+    "org/gnome/shell" = {
+      enabled-extensions = [
+        "gnomebedtime@ionutbortis.gmail.com"
+        "espresso@coadmunkee.github.com"
+        "gsconnect@andyholmes.github.io"
+        "material-shell@papyelgringo"
+      ];
+    };
 
-		"org/gnome/shell/keybindings" = {
-				switch-to-application-1 = [ "" ];
-				switch-to-application-2 = [ "" ];
-				switch-to-application-3 = [ "" ];
-				switch-to-application-4 = [ "" ];
-				};
-				
-		"org/gnome/desktop/wm/keybindings" = {
-				move-to-workspace-1 = [ "<Shift><Super>1" ];
-				move-to-workspace-2 = [ "<Shift><Super>2" ];
-				move-to-workspace-3 = [ "<Shift><Super>3" ];
-				move-to-workspace-4 = [ "<Shift><Super>4" ];
-				switch-to-workspace-1 = [ "<Super>1" ];
-				switch-to-workspace-2 = [ "<Super>2" ];
-				switch-to-workspace-3 = [ "<Super>3" ];
-				switch-to-workspace-4 = [ "<Super>4" ];
-				};
-		"org/gnome/settings-daemon/plugins/media-keys" = {
-				mic-mute = [ "<Shift><Super>BackSpace" ];
-				volume-down = [ "<Super>minus" ];
-				volume-mute = [ "<Super>BackSpace" ];
-				volume-up = [ "<Super>equal" ];
-				};
-		"org/gnome/settings-daemon/plugins/color" = {
-				night-light-enabled = true;
-				night-light-schedule-automatic = true;			
-				};
-		"org/gnome/desktop/wm/preferences" = {
-				num-workspaces = 1;
-				};
+    "org/gnome/shell/keybindings" = {
+      switch-to-application-1 = [ "" ];
+      switch-to-application-2 = [ "" ];
+      switch-to-application-3 = [ "" ];
+      switch-to-application-4 = [ "" ];
+    };
 
-		"org/gnome/desktop/input-sources" = {
-				sources = [ (mkTuple [ "xkb" "us" ]) (mkTuple [ "xkb" "us+alt-intl" ]) ];
-				xkb-options = [ "terminate:ctrl_alt_bksp" "caps:swapescape" ];
-				};
+    "org/gnome/desktop/wm/keybindings" = {
+      move-to-workspace-1 = [ "<Shift><Super>1" ];
+      move-to-workspace-2 = [ "<Shift><Super>2" ];
+      move-to-workspace-3 = [ "<Shift><Super>3" ];
+      move-to-workspace-4 = [ "<Shift><Super>4" ];
+      switch-to-workspace-1 = [ "<Super>1" ];
+      switch-to-workspace-2 = [ "<Super>2" ];
+      switch-to-workspace-3 = [ "<Super>3" ];
+      switch-to-workspace-4 = [ "<Super>4" ];
+    };
+    "org/gnome/settings-daemon/plugins/media-keys" = {
+      mic-mute = [ "<Shift><Super>BackSpace" ];
+      volume-down = [ "<Super>minus" ];
+      volume-mute = [ "<Super>BackSpace" ];
+      volume-up = [ "<Super>equal" ];
+    };
+    "org/gnome/settings-daemon/plugins/color" = {
+      night-light-enabled = true;
+      night-light-schedule-automatic = true;
+    };
+    "org/gnome/desktop/wm/preferences" = { num-workspaces = 1; };
 
-		"org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
-				binding = "<Shift><Super>minus";
-				command = "ddcutil setvcp 10 - 20";
-				name = "backlightdown";
-				};
-		"org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" = {
-				binding = "<Shift><Super>equal";
-				command = "ddcutil setvcp 10 + 20";
-				name = "backlightup";
-				};
-		"org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2" = {
-				binding = "<Super>Return";
-				command = "alacritty";
-				name = "terminal";
-				};
-		
-	"org/gnome/shell/extensions/materialshell/bindings" = {
+    "org/gnome/desktop/input-sources" = {
+      sources = [ (mkTuple [ "xkb" "us" ]) (mkTuple [ "xkb" "us+alt-intl" ]) ];
+      xkb-options = [ "terminate:ctrl_alt_bksp" "caps:swapescape" ];
+    };
+
+    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" =
+      {
+        binding = "<Shift><Super>minus";
+        command = "ddcutil setvcp 10 - 20";
+        name = "backlightdown";
+      };
+    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" =
+      {
+        binding = "<Shift><Super>equal";
+        command = "ddcutil setvcp 10 + 20";
+        name = "backlightup";
+      };
+    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2" =
+      {
+        binding = "<Super>Return";
+        command = "alacritty";
+        name = "terminal";
+      };
+
+    "org/gnome/shell/extensions/materialshell/bindings" = {
       cycle-tiling-layout = [ "<Super>w" ];
       kill-focused-window = "<Super>q";
       last-workspace = [ "<Super>z" ];
@@ -121,17 +128,17 @@ with lib.hm.gvariant;
       cycle-through-windows = true;
       cycle-through-workspaces = true;
       disable-notifications = true;
-    };		
-    
-	"org/gnome/desktop/background" = {
-				color-shading-type = "solid";
-				picture-options = "zoom";
-				picture-uri = "file:///home/lucio/.background-image";
-				picture-uri-dark = "file:///home/lucio/.background-image";
-				primary-color = "#000000000000";
-				secondary-color = "#000000000000";
-				};
+    };
 
-	}; #dconf end
+    "org/gnome/desktop/background" = {
+      color-shading-type = "solid";
+      picture-options = "zoom";
+      picture-uri = "file:///home/lucio/.background-image";
+      picture-uri-dark = "file:///home/lucio/.background-image";
+      primary-color = "#000000000000";
+      secondary-color = "#000000000000";
+    };
+
+  }; # dconf end
 }
 

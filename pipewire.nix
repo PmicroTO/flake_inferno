@@ -1,5 +1,4 @@
-{ config, pkgs, ... }:
-{
+{ config, pkgs, ... }: {
   sound.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
@@ -8,6 +7,6 @@
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
-#    media-session.enable = true;
-	};
+    #    media-session.enable = true;
+  };
 }
