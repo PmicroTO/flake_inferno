@@ -22,6 +22,7 @@
           ./home-m/dconf.nix
           #          ./home-m/nyoom.nix
           ./home-m/nvim.nix
+          ./home-m/nyoom-nvim.nix
         ];
       };
 

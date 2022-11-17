@@ -146,10 +146,8 @@
                   fish_add_path -p $HOME/.config/nvim/bin
       			set -U fish_greeting
       			'';
-                        interactiveShellInit = "
-                        any-nix-shell fish --info-right | source
-                        zoxide init fish | source 
-                        ";
+    interactiveShellInit =
+      "\n                        any-nix-shell fish --info-right | source\n                        zoxide init fish | source \n                        ";
 
   };
   home.shellAliases = {

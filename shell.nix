@@ -1,7 +1,1 @@
-{ pkgs ? import <nixpkgs> { } }:
-with pkgs;
-mkShell {
-  buildInputs = [
-    gimp
-  ];
-}
+{ pkgs ? import <nixpkgs> { } }: with pkgs; mkShell { buildInputs = [ gimp ]; }
