@@ -2,6 +2,6 @@
 with pkgs;
 mkShell {
   buildInputs = [
-    nvim
+    gimp
   ];
 }

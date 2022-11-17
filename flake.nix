@@ -37,6 +37,9 @@
           ./pipewire.nix
         ];
       };
+
+      devShells.x86_64-linux.default = import ./shell.nix { inherit pkgs; };
+
       system.configurationRevision = nixpkgs.lib.mkIf (self ? rev) self.rev;
 
     };
