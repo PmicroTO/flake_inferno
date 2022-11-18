@@ -25,7 +25,13 @@
       target = "/.config/nvim/lua";
 
     };
+    };
 
+  home.file = {
+    startify_custom = {
+      source = ./nvim/lua/alpha/themes/startify_custom.lua;
+      target = "/.config/nvim/lua/alpha/themes/startify_custom.lua";
+    };
   };
 
 }

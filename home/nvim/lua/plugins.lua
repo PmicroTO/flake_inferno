@@ -59,7 +59,15 @@ return require('packer').startup(function(use)
                 extensions = {}
             }
         end,
-        requires = {'kyazdani42/nvim-web-devicons', opt = true}
+        requires = {'kyazdani42/nvim-web-devicons'}
     }
+
+use {
+    'goolord/alpha-nvim',
+    requires = { 'kyazdani42/nvim-web-devicons' },
+    config = function ()
+        require'alpha'.setup(require'alpha.themes.startify_custom'.config)
+    end
+}
 
 end)
