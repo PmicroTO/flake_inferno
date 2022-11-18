@@ -6,14 +6,9 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    hyprland = {
-      url = "github:hyprwm/Hyprland";
-      # build with your own instance of nixpkgs
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
-  outputs = { self, nixpkgs, home-manager, hyprland, ... }:
+  outputs = { self, nixpkgs, home-manager, ... }:
 
     let
       system = "x86_64-linux";
@@ -24,14 +19,9 @@
       homeConfigurations.lucio = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [
-
-          hyprland.homeManagerModules.default
-          { wayland.windowManager.hyprland.enable = true; }
-          ./home-m/home.nix
-          ./home-m/dconf.nix
-          #          ./home-m/nyoom.nix
-          ./home-m/nvim.nix
-          #          ./home-m/nyoom-nvim.nix
+          ./home/home.nix
+          ./home/dconf.nix
+          ./home/nvim.nix
         ];
       };
 
