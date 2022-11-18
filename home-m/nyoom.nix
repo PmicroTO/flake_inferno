@@ -17,6 +17,9 @@
       repo = "nyoom.nvim";
       rev = "ec3faaacb52207e99c54a66e04f5425adb772faa";
       sha256 = "0r3xwrjw07f8n35fb3s9w4kkavsciqwsw408bfi7vdfyax5fxc5x";
+      sparseCheckout = "
+      !init.lua
+      ";
     };
     target = ".config/nvim";
     recursive = true;

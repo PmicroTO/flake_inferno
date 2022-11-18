@@ -6,15 +6,22 @@
     vimdiffAlias = true;
     withPython3 = true;
     withNodeJs = true;
-    extraPython3Packages = (ps: with ps; [ python-lsp-server ]);
     extraPackages = (with pkgs; [ tree-sitter ripgrep fd unzip ]);
     plugins = (with pkgs.vimPlugins; [
-      nvim-base16
-      telescope-nvim
-      nvim-web-devicons
-      hydra-nvim
-      vim-nix
+      packer
     ]);
+  };
+
+
+  home.file = {
+    nvim_lua = {
+      recursive = true;
+      source = ./nvim/lua;
+      target = /.config/nvim/lua;
+
+    };
+
+
   };
 
 }
