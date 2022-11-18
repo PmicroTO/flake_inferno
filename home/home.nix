@@ -12,6 +12,7 @@
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.allowUnfreePredicate = (pkg: true);
   home.packages = (with pkgs; [
+    luaformatter
     any-nix-shell
     nixfmt
     gcc
