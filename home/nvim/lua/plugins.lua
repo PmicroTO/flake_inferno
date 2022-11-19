@@ -5,6 +5,10 @@ return require('packer').startup(function(use)
     autocmd BufWritePost plugins.lua source <afile> | PackerCompile
   augroup end
 ]])
+
+
+require 'cfg-plugins.telescope'
+
     use {
         "RRethy/nvim-base16",
         config = "vim.cmd('colorscheme base16-tomorrow-night-eighties')"
@@ -76,8 +80,8 @@ return require('packer').startup(function(use)
             require'alpha'.setup(require'alpha.themes.startify_custom'.config)
         end
     }
-
-    use {
+    
+        use {
         'nvim-telescope/telescope.nvim',
         tag = '0.1.0',
         config = function()
