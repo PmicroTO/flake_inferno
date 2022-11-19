@@ -1,2 +1,2 @@
 require('plugins')
-require('tree-sitter-cfg')
+require('pconf.tree-sitter-cfg')

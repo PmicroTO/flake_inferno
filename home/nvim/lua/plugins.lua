@@ -1,4 +1,3 @@
--- 
 return require('packer').startup(function(use)
     vim.cmd([[
   augroup packer_user_config
@@ -9,7 +8,7 @@ return require('packer').startup(function(use)
 
     use {
         "RRethy/nvim-base16",
-        config = "vim.cmd('colorscheme base16-tomorrow-night-eighties')"
+        config = "vim.cmd('colorscheme base16-tokyo-night-dark')"
     }
 
     use {
@@ -18,7 +17,17 @@ return require('packer').startup(function(use)
             "williamboman/mason.nvim",
             config = function() require('pconf.mason') end
 
-        }, "williamboman/mason-lspconfig.nvim", "neovim/nvim-lspconfig"
+        }, {"williamboman/mason-lspconfig.nvim"}, {
+            "neovim/nvim-lspconfig",
+            requires = {
+                "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
+                config = function()
+                    require("lsp_lines").setup()
+                    vim.diagnostic.config({virtual_text = false})
+                end
+            }
+
+        }
     }
 
     use {
@@ -32,7 +41,7 @@ return require('packer').startup(function(use)
         'goolord/alpha-nvim',
         requires = {'kyazdani42/nvim-web-devicons'},
         config = function()
-            require'alpha'.setup(require'alpha.themes.startify_custom'.config)
+            require'alpha'.setup(require'alpha.themes.alexis12119_alpha'.config)
         end
     }
 
