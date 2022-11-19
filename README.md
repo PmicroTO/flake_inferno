@@ -2,4 +2,6 @@
 My machine
 
 
-![alt screenshot](https://github.com/wnxkiv85/flake_inferno/blob/main/Screenshot%20from%202022-11-10%2011-29-20.png?raw=true)
+![alt screenshot](https://github.com/wnxkiv85/flake_inferno/blob/main/desktop.png?raw=true)
+
+![alt dashboard_nvim](https://github.com/wnxkiv85/flake_inferno/blob/main/nvim.png?raw=true)
