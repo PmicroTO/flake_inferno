@@ -5,7 +5,6 @@ return require('packer').startup(function(use)
     autocmd BufWritePost plugins.lua source <afile> | PackerCompile
   augroup end
 ]])
-
     use {
         "RRethy/nvim-base16",
         config = "vim.cmd('colorscheme base16-tokyo-night-dark')"
@@ -41,7 +40,7 @@ return require('packer').startup(function(use)
         'goolord/alpha-nvim',
         requires = {'kyazdani42/nvim-web-devicons'},
         config = function()
-            require'alpha'.setup(require'alpha.themes.alexis12119_alpha'.config)
+            require 'alpha.themes.alexis12119_alpha'
         end
     }
 
