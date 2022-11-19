@@ -31,7 +31,6 @@ return require('packer').startup(function(use)
 
     use {
         'ojroques/nvim-hardline',
-
         config = function() require('pconf.line') end
 
     }
@@ -39,9 +38,7 @@ return require('packer').startup(function(use)
     use {
         'goolord/alpha-nvim',
         requires = {'kyazdani42/nvim-web-devicons'},
-        config = function()
-            require 'alpha.themes.alexis12119_alpha'
-        end
+        config = function() require 'alpha.themes.alexis12119_alpha' end
     }
 
     use {

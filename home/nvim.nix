@@ -7,9 +7,11 @@
     viAlias = true;
     vimAlias = true;
     vimdiffAlias = true;
-    withPython3 = true;
     withNodeJs = true;
+    withPython3 = true;
+    extraPython3Packages = (ps: with ps; [ python pip ]);
     extraPackages = (with pkgs; [
+      sumneko-lua-language-server
       wget
       ripgrep
       fd

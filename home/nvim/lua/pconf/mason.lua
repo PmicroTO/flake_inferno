@@ -1,7 +1,7 @@
 require("mason").setup()
 
 require("mason-lspconfig").setup({
-    ensure_installed = {"sumneko_lua", "pyright", "rnix"}
+    ensure_installed = {"pyright", "rnix"}
 })
 
 require("mason-lspconfig").setup_handlers {
