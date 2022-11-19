@@ -6,8 +6,7 @@ return require('packer').startup(function(use)
   augroup end
 ]])
 
-
-require 'cfg-plugins.telescope'
+    require 'cfg-plugins.telescope'
 
     use {
         "RRethy/nvim-base16",
@@ -80,8 +79,8 @@ require 'cfg-plugins.telescope'
             require'alpha'.setup(require'alpha.themes.startify_custom'.config)
         end
     }
-    
-        use {
+
+    use {
         'nvim-telescope/telescope.nvim',
         tag = '0.1.0',
         config = function()

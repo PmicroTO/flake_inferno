@@ -1,5 +1,4 @@
-{ config, pkgs, lib, ... }: 
-
+{ config, pkgs, lib, ... }:
 
 {
 
@@ -10,13 +9,17 @@
     vimdiffAlias = true;
     withPython3 = true;
     withNodeJs = true;
-    extraPackages = (with pkgs; [ wget ripgrep fd unzip tree-sitter luajitPackages.luarocks cmake ]);
-    plugins = (with pkgs.vimPlugins; [
-      packer-nvim
-      nvim-ts-rainbow
-    ]) ++ [
-      pkgs.master.vimPlugins.nvim-treesitter.withAllGrammars
-    ];
+    extraPackages = (with pkgs; [
+      wget
+      ripgrep
+      fd
+      unzip
+      tree-sitter
+      luajitPackages.luarocks
+      cmake
+    ]);
+    plugins = (with pkgs.vimPlugins; [ packer-nvim nvim-ts-rainbow ])
+      ++ [ pkgs.master.vimPlugins.nvim-treesitter.withAllGrammars ];
 
   };
   xdg.configFile."nvim/init.lua".source = ./nvim/init.lua;
@@ -27,7 +30,7 @@
       source = ./nvim/lua;
       target = "/.config/nvim/lua";
     };
-    };
+  };
 
   home.file = {
     startify_custom = {

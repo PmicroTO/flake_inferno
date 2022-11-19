@@ -14,13 +14,14 @@
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
-      overlay-master = final: prev: { master = nixpkgs-master.legacyPackages.${prev.system}; };
-    in
-    {
+      overlay-master = final: prev: {
+        master = nixpkgs-master.legacyPackages.${prev.system};
+      };
+    in {
       homeConfigurations.lucio = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [
-	({ config, pkgs, ... }: { nixpkgs.overlays = [ overlay-master ]; })
+          ({ config, pkgs, ... }: { nixpkgs.overlays = [ overlay-master ]; })
           ./home/home.nix
           ./home/dconf.nix
           ./home/nvim.nix
