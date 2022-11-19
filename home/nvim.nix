@@ -19,7 +19,7 @@
       cmake
     ]);
     plugins = (with pkgs.vimPlugins; [ packer-nvim nvim-ts-rainbow ])
-      ++ [ pkgs.master.vimPlugins.nvim-treesitter.withAllGrammars ];
+      ++ (with pkgs.master.vimPlugins; [ nvim-treesitter.withAllGrammars ]);
 
   };
   xdg.configFile."nvim/init.lua".source = ./nvim/init.lua;
