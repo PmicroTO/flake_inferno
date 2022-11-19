@@ -36,6 +36,11 @@ return require('packer').startup(function(use)
     }
 
     use {
+        'j-hui/fidget.nvim',
+        config = function() require('pconf.fidget') end
+    }
+
+    use {
         'goolord/alpha-nvim',
         requires = {'kyazdani42/nvim-web-devicons'},
         config = function() require 'alpha.themes.alexis12119_alpha' end
