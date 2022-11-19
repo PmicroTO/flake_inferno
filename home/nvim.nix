@@ -9,7 +9,6 @@
     vimdiffAlias = true;
     withNodeJs = true;
     withPython3 = true;
-    extraPython3Packages = (ps: with ps; [ python pip ]);
     extraPackages = (with pkgs; [
       sumneko-lua-language-server
       wget
@@ -22,8 +21,8 @@
     ]);
     plugins = (with pkgs.vimPlugins; [ packer-nvim nvim-ts-rainbow ])
       ++ (with pkgs.master.vimPlugins; [ nvim-treesitter.withAllGrammars ]);
-
   };
+
   xdg.configFile."nvim/init.lua".source = ./nvim/init.lua;
 
   home.file = {
