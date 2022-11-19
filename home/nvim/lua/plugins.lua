@@ -1,7 +1,4 @@
-require('pconf.mason')
-require('pconf.telescope')
-require('pconf.lualine')
-
+-- 
 return require('packer').startup(function(use)
     vim.cmd([[
   augroup packer_user_config
@@ -17,14 +14,20 @@ return require('packer').startup(function(use)
 
     use {
 
-        "williamboman/mason.nvim", "williamboman/mason-lspconfig.nvim",
-        "neovim/nvim-lspconfig"
+        {
+            "williamboman/mason.nvim",
+            config = function() require('pconf.mason') end
+
+        }, "williamboman/mason-lspconfig.nvim", "neovim/nvim-lspconfig"
     }
 
     use {
-        'nvim-lualine/lualine.nvim',
-        requires = {'kyazdani42/nvim-web-devicons'}
+        'ojroques/nvim-hardline',
+
+        config = function() require('pconf.line') end
+
     }
+
     use {
         'goolord/alpha-nvim',
         requires = {'kyazdani42/nvim-web-devicons'},
@@ -35,6 +38,7 @@ return require('packer').startup(function(use)
 
     use {
         'nvim-telescope/telescope.nvim',
+        config = function() require('pconf.telescope') end,
         tag = '0.1.0',
         requires = {
             {'nvim-lua/plenary.nvim'},
