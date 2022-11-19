@@ -7,7 +7,7 @@ return require('packer').startup(function(use)
 ]])
     use {
         "RRethy/nvim-base16",
-        config = "vim.cmd('colorscheme base16-tokyo-night-dark')"
+        config = "vim.cmd('colorscheme base16-tokyo-night-terminal-dark')"
     }
 
     use {
