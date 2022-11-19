@@ -1,4 +1,8 @@
-{ config, pkgs, lib, ... }: {
+{ config, pkgs, lib, ... }: 
+
+
+{
+
   programs.neovim = {
     enable = true;
     viAlias = true;
@@ -6,14 +10,13 @@
     vimdiffAlias = true;
     withPython3 = true;
     withNodeJs = true;
-    extraPackages = (with pkgs; [ wget ripgrep fd unzip tree-sitter ]);
+    extraPackages = (with pkgs; [ wget ripgrep fd unzip tree-sitter luajitPackages.luarocks cmake ]);
     plugins = (with pkgs.vimPlugins; [
-
       packer-nvim
-
-      (nvim-treesitter.withPlugins (plugins: pkgs.tree-sitter.allGrammars))
-
-    ]);
+      nvim-ts-rainbow
+    ]) ++ [
+      pkgs.master.vimPlugins.nvim-treesitter.withAllGrammars
+    ];
 
   };
   xdg.configFile."nvim/init.lua".source = ./nvim/init.lua;
@@ -23,7 +26,6 @@
       recursive = true;
       source = ./nvim/lua;
       target = "/.config/nvim/lua";
-
     };
     };
 

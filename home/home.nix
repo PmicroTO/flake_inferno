@@ -158,7 +158,7 @@
     flkhr =
       "home-manager switch --max-jobs 8 --flake /home/lucio/Projects/flake_inferno#lucio";
     flkup =
-      "sudo nixos-rebuild switch -j 8 --verbose --upgrade --flake /home/lucio/Projects/flake_inferno#inferno";
+      "sudo nixos-rebuild switch -j 8 --verbose --upgrade --flake /home/lucio/Projects/flake_inferno#inferno --recreate-lock-file" ;
     flkre =
       "sudo nixos-rebuild switch -j 8 --verbose --flake /home/lucio/Projects/flake_inferno#inferno";
     listports = "sudo netstat -tulpn | grep LISTEN ";

@@ -1,5 +1,10 @@
 return require('packer').startup(function(use)
-
+    vim.cmd([[
+  augroup packer_user_config
+    autocmd!
+    autocmd BufWritePost plugins.lua source <afile> | PackerCompile
+  augroup end
+]])
     use {
         "RRethy/nvim-base16",
         config = "vim.cmd('colorscheme base16-tomorrow-night-eighties')"
@@ -7,17 +12,20 @@ return require('packer').startup(function(use)
 
     use {
         "williamboman/mason.nvim",
+        config = function()
 
-        config = function() require("mason").setup() end,
-        requires = {
-            {
-                'williamboman/mason-lspconfig.nvim',
-                config = function()
-                    require("mason-lspconfig").setup()
-
+            require("mason").setup()
+            require("mason-lspconfig").setup()
+            require("mason-lspconfig").setup_handlers {
+                function(server_name) -- default handler (optional)
+                    require("lspconfig")[server_name].setup {}
                 end
-            }, {'neovim/nvim-lspconfig'}, {'mfussenegger/nvim-dap'},
-            {'jose-elias-alvarez/null-ls.nvim'}
+            }
+
+        end,
+        requires = {
+            {'williamboman/mason-lspconfig.nvim'}, {'neovim/nvim-lspconfig'},
+            {'mfussenegger/nvim-dap'}, {'jose-elias-alvarez/null-ls.nvim'}
         }
     }
 
@@ -61,7 +69,6 @@ return require('packer').startup(function(use)
         end,
         requires = {'kyazdani42/nvim-web-devicons'}
     }
-
     use {
         'goolord/alpha-nvim',
         requires = {'kyazdani42/nvim-web-devicons'},
@@ -70,6 +77,26 @@ return require('packer').startup(function(use)
         end
     }
 
-    use 'nanozuki/tabby.nvim'
+    use {
+        'nvim-telescope/telescope.nvim',
+        tag = '0.1.0',
+        config = function()
+
+            require('telescope').setup {
+                extensions = {
+                    fzy_native = {
+                        override_generic_sorter = true,
+                        override_file_sorter = true
+                    }
+                }
+            }
+            require('telescope').load_extension('fzy_native')
+
+        end,
+        requires = {
+            {'nvim-lua/plenary.nvim'},
+            {'nvim-telescope/telescope-fzy-native.nvim'}
+        }
+    }
 
 end)
