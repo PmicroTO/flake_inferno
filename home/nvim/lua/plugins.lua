@@ -1,9 +1,11 @@
 return require('packer').startup(function(use)
+
     vim.cmd([[
   augroup packer_user_config
     autocmd!
     autocmd BufWritePost plugins.lua source <afile> | PackerCompile
   augroup end
+
 ]])
     use {
         "RRethy/nvim-base16",
@@ -35,10 +37,7 @@ return require('packer').startup(function(use)
 
     }
 
-    use {
-        'j-hui/fidget.nvim',
-        config = function() require('pconf.fidget') end
-    }
+    use {'j-hui/fidget.nvim', config = function() require('pconf.fidget') end}
 
     use {
         'goolord/alpha-nvim',
@@ -54,6 +53,15 @@ return require('packer').startup(function(use)
             {'nvim-lua/plenary.nvim'},
             {'nvim-telescope/telescope-fzy-native.nvim'}
         }
+    }
+
+    use {
+        'nvim-tree/nvim-tree.lua',
+        config = function() require('pconf.nvim-tree') end,
+        requires = {
+            'nvim-tree/nvim-web-devicons' -- optional, for file icons
+        },
+        tag = 'nightly' -- optional, updated every week. (see issue #1193)
     }
 
 end)

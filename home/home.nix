@@ -12,7 +12,7 @@
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.allowUnfreePredicate = (pkg: true);
   home.packages = (with pkgs; [
-  alacritty
+    alacritty
     luaformatter
     any-nix-shell
     nixfmt
@@ -50,12 +50,11 @@
     espresso
     material-shell
   ]); # end.packages
-  
-  
+
   programs.alacritty = {
     enable = true;
     settings = {
-    import = [ ./alacritty_theme.yml ];
+      import = [ ./alacritty_theme.yml ];
       window = {
         decorations = "none";
         padding = {
@@ -140,7 +139,7 @@
     userName = "wnxkiv85";
   };
   home.file = {
-  ".alacritty_theme.yml".source = ./alacritty_theme.yml;
+    ".alacritty_theme.yml".source = ./alacritty_theme.yml;
     ".face" = {
       source = pkgs.fetchurl {
         url = "https://nitter.net/pic/media%2FFN_lMoOVUAAnVUd.jpg";

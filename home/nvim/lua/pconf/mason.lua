@@ -1,8 +1,6 @@
 require("mason").setup()
 
-require("mason-lspconfig").setup({
-    ensure_installed = { "pyright", "rnix"}
-})
+require("mason-lspconfig").setup({ensure_installed = {"pyright", "rnix"}})
 
 require("mason-lspconfig").setup_handlers {
     -- The first entry (without a key) will be the default handler
