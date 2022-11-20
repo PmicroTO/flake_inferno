@@ -1,36 +1,26 @@
 return require('packer').startup(function(use)
 
-    vim.cmd([[
-  augroup packer_user_config
-    autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerCompile
-  augroup end
-
-]])
     use {
         "RRethy/nvim-base16",
         config = "vim.cmd('colorscheme base16-tokyo-night-terminal-dark')"
     }
 
     use {
-
         {
             "williamboman/mason.nvim",
+
             config = function() require('pconf.mason') end
 
-        }, {"williamboman/mason-lspconfig.nvim"}, {
-            "neovim/nvim-lspconfig",
-            requires = {
+        }, {"williamboman/mason-lspconfig.nvim"},
+{"neovim/nvim-lspconfig",
+		requires = {
                 "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
                 config = function()
                     require("lsp_lines").setup()
                     vim.diagnostic.config({virtual_text = false})
                 end
-            }
-
-        }
+            } }
     }
-
     use {
         'ojroques/nvim-hardline',
         config = function() require('pconf.line') end

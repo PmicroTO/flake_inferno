@@ -12,6 +12,7 @@
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.allowUnfreePredicate = (pkg: true);
   home.packages = (with pkgs; [
+  wgetpaste
     nautilus-open-any-terminal
     luaformatter
     any-nix-shell
@@ -93,6 +94,8 @@
       			'';
     interactiveShellInit =
       "\n                        any-nix-shell fish --info-right | source\n                        zoxide init fish | source \n                        ";
+      functions = {
+      };
 
   };
   home.shellAliases = {
@@ -106,6 +109,7 @@
     flkre =
       "sudo nixos-rebuild switch -j 8 --verbose --flake /home/lucio/Projects/flake_inferno#inferno";
     listports = "sudo netstat -tulpn | grep LISTEN ";
+wp= "wgetpaste";
   };
   programs.tmux = {
     enable = true;
@@ -139,7 +143,6 @@
     userName = "wnxkiv85";
   };
   home.file = {
-    ".alacritty_theme.yml".source = ./alacritty_theme.yml;
     ".face" = {
       source = pkgs.fetchurl {
         url = "https://nitter.net/pic/media%2FFN_lMoOVUAAnVUd.jpg";

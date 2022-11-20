@@ -1,15 +1,5 @@
-    require("mason").setup()
-
-require("mason-lspconfig").setup({
-    ensure_installed = { "pyright","rnix" },
-})
-
-require'lspconfig'.bashls.setup{}
-require'lspconfig'.rnix.setup{}
-require'lspconfig'.pyright.setup{}
-
-    require'lspconfig'.sumneko_lua.setup {
- settings = {
+require'lspconfig'.sumneko_lua.setup {
+    settings = {
         Lua = {
             runtime = {
                 -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
@@ -26,6 +16,4 @@ require'lspconfig'.pyright.setup{}
             -- Do not send telemetry data containing a randomized but unique identifier
             telemetry = {enable = false}
         }
-    }
-
-    }
+}
