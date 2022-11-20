@@ -12,7 +12,7 @@
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.allowUnfreePredicate = (pkg: true);
   home.packages = (with pkgs; [
-    alacritty
+    nautilus-open-any-terminal
     luaformatter
     any-nix-shell
     nixfmt
