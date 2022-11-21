@@ -26,7 +26,7 @@ return require('packer').startup(function(use)
 
 		{ "jose-elias-alvarez/null-ls.nvim",
 			config = function()
-		require('pconf.autoformat')
+				require('pconf.autoformat')
 			end,
 			requires = "nvim-lua/plenary.nvim"
 
@@ -34,7 +34,7 @@ return require('packer').startup(function(use)
 
 		{ "jayp0521/mason-null-ls.nvim",
 			config = function()
-		require('pconf.mason') 
+				require('pconf.mason-null-ls')
 			end
 		}
 
