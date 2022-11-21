@@ -9,7 +9,7 @@
     vimdiffAlias = true;
     withNodeJs = true;
     withPython3 = true;
-    extraPackages = (with pkgs; [
+		    extraPackages = (with pkgs; [
       sumneko-lua-language-server
       wget
       ripgrep

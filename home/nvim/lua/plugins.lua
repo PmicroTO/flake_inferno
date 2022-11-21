@@ -25,9 +25,6 @@ return require('packer').startup(function(use)
 			} },
 
 		{ "jose-elias-alvarez/null-ls.nvim",
-			config = function()
-				require('pconf.autoformat')
-			end,
 			requires = "nvim-lua/plenary.nvim"
 
 		},
@@ -36,8 +33,7 @@ return require('packer').startup(function(use)
 			config = function()
 				require('pconf.mason-null-ls')
 			end
-		}
-
+		},
 	}
 
 	use {
