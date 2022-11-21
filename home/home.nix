@@ -12,18 +12,15 @@
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.allowUnfreePredicate = (pkg: true);
   home.packages = (with pkgs; [
-  wgetpaste
-    nautilus-open-any-terminal
-    luaformatter
+    wgetpaste
+    mailspring
     any-nix-shell
-    nixfmt
     gcc
     cargo
     wl-clipboard
     fontpreview
     nerdfonts
     steam-run
-    gnome.geary
     brave
     calibre
     transmission-gtk
@@ -84,9 +81,7 @@
         sha256 = "1ajh6klw1rkn2mqk4rdghflxlk6ykc3wxgwp2pzfnjd58ba161ki";
       };
 
-    }
-
-      ];
+    }];
     shellInit = ''
 
                   fish_add_path -p $HOME/.config/nvim/bin
@@ -94,8 +89,7 @@
       			'';
     interactiveShellInit =
       "\n                        any-nix-shell fish --info-right | source\n                        zoxide init fish | source \n                        ";
-      functions = {
-      };
+    functions = { };
 
   };
   home.shellAliases = {
@@ -109,7 +103,7 @@
     flkre =
       "sudo nixos-rebuild switch -j 8 --verbose --flake /home/lucio/Projects/flake_inferno#inferno";
     listports = "sudo netstat -tulpn | grep LISTEN ";
-wp= "wgetpaste";
+    wp = "wgetpaste";
   };
   programs.tmux = {
     enable = true;
@@ -192,3 +186,5 @@ wp= "wgetpaste";
     };
   };
 }
+
+

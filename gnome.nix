@@ -22,6 +22,7 @@
   environment.gnome.excludePackages =
     (with pkgs; [ gnome-photos gnome-tour rhythmbox gnome-console ])
     ++ (with pkgs.gnome; [
+      geary
       cheese
       gnome-music
       gnome-terminal
