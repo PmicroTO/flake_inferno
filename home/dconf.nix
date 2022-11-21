@@ -12,9 +12,9 @@ with lib.hm.gvariant;
     "org/gnome/desktop/interface" = {
       cursor-theme = "Sakuya-cursors";
       icon-theme = "Nordzy-pink";
-      document-font-name = "MesloLGLDZ Nerd Font 12";
+      document-font-name = "TerminessTTF Nerd Font Mono Medium 12";
       font-name = "Liberation Sans 11";
-      monospace-font-name = "MesloLGLDZ Nerd Font 12";
+      monospace-font-name = "TerminessTTF Nerd Font Mono Medium 12";
       gtk-theme = "adw-gtk3";
     };
 
