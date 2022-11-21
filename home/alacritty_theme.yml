@@ -1,35 +1,38 @@
-# TokyoNight Alacritty Colors
-# https://github.com/folke/tokyonight.nvim/blob/main/extras/alacritty_tokyonight_night.yml
+# Colors (SeaShells)
+# Source : https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes/SeaShells.itermcolors
 colors:
-  name: TokyoNight Night
-  author: Folke
   # Default colors
   primary:
-    background: '0x1a1b26'
-    foreground: '0xc0caf5'
+    background: '#061923'
+    foreground: '#e5c49e'
+
+  # Colors the cursor will use if `custom_cursor_colors` is true
+  cursor:
+    text: '#061822'
+    cursor: '#feaf3c'
+
+  selection:
+    text: '#ffe9d7'
+    background: '#265b75'
 
   # Normal colors
   normal:
-    black:   '0x15161E'
-    red:     '0xf7768e'
-    green:   '0x9ece6a'
-    yellow:  '0xe0af68'
-    blue:    '0x7aa2f7'
-    magenta: '0xbb9af7'
-    cyan:    '0x7dcfff'
-    white:   '0xa9b1d6'
+    black: '#1d485f'
+    red: '#db662d'
+    green: '#008eab'
+    yellow: '#feaf3c'
+    blue: '#255a62'
+    magenta: '#77dbf4'
+    cyan: '#5fb1c2'
+    white: '#e5c49e'
 
   # Bright colors
   bright:
-    black:   '0x414868'
-    red:     '0xf7768e'
-    green:   '0x9ece6a'
-    yellow:  '0xe0af68'
-    blue:    '0x7aa2f7'
-    magenta: '0xbb9af7'
-    cyan:    '0x7dcfff'
-    white:   '0xc0caf5'
-
-  indexed_colors:
-    - { index: 16, color: '0xff9e64' }
-    - { index: 17, color: '0xdb4b4b' }
+    black: '#545d65'
+    red: '#dd998a'
+    green: '#739da8'
+    yellow: '#fedaae'
+    blue: '#0bc7e3'
+    magenta: '#c6e8f1'
+    cyan: '#97b9c0'
+    white: '#ffe9d7'

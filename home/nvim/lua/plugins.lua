@@ -34,6 +34,9 @@ return require('packer').startup(function(use)
 				require('pconf.mason-null-ls')
 			end
 		},
+
+"lukas-reineke/lsp-format.nvim"
+
 	}
 
 	use {
