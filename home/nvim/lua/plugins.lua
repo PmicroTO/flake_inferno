@@ -2,7 +2,7 @@ return require('packer').startup(function(use)
 
 	use {
 		"RRethy/nvim-base16",
-		config = "vim.cmd('colorscheme base16-seti')"
+						config = "vim.cmd('colorscheme base16-seti')"
 	}
 
 	use {
@@ -34,8 +34,6 @@ return require('packer').startup(function(use)
 				require('pconf.mason-null-ls')
 			end
 		},
-
-		"lukas-reineke/lsp-format.nvim"
 
 	}
 
