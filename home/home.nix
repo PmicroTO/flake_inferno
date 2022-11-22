@@ -44,6 +44,7 @@
     gnome.pomodoro
     zoxide
   ]) ++ (with pkgs.gnomeExtensions; [
+    system-action-hibernate
     gsconnect
     gnome-bedtime
     espresso
