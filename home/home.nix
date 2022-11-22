@@ -13,6 +13,7 @@
   nixpkgs.config.allowUnfreePredicate = (pkg: true);
   home.packages = (with pkgs; [
     wgetpaste
+    kotatogram-desktop
     mailspring
     any-nix-shell
     gcc
