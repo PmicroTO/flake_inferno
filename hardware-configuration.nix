@@ -32,10 +32,6 @@
       preLVM = false;
       allowDiscards = true;
     };
-    swap = {
-      device = "/dev/disk/by-partuuid/5f92a962-fe03-4dbd-8276-99b76bdadb36";
-      allowDiscards = true;
-    };
   };
 
   fileSystems."/boot" = {
@@ -51,6 +47,7 @@
       label = "swap";
       blkDev = "/dev/disk/by-partuuid/5f92a962-fe03-4dbd-8276-99b76bdadb36";
       enable = true;
+#      keyFile = "/mnt-root/.swapkey";
     };
   }];
 

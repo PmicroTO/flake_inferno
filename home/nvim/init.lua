@@ -9,5 +9,5 @@ require('plugins')
 require('pconf.tree-sitter-cfg')
 
 vim.cmd([[
-autocmd BufWritePre * lua vim.lsp.buf.format{ async = false }
+autocmd BufWritePre * lua vim.lsp.buf.format{ async = true }
 ]])
