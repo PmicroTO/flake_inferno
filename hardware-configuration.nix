@@ -25,7 +25,6 @@
     fsType = "xfs";
     options = [ "logbsize=256k" ];
   };
-
   boot.initrd.luks.devices = {
     nix_root = {
       device = "/dev/disk/by-uuid/c10b9174-531e-43e3-abfe-05a4f0397e2e";
@@ -33,12 +32,10 @@
       allowDiscards = true;
     };
   };
-
   fileSystems."/boot" = {
     device = "/dev/disk/by-uuid/7BD7-B0DE";
     fsType = "vfat";
   };
-
   swapDevices = [{
     device = "/dev/disk/by-uuid/e58a561c-60a8-4fa4-92e6-f3dba68c3360";
     options = [ "defaults" "nofail" ];
@@ -47,28 +44,15 @@
       label = "swap";
       blkDev = "/dev/disk/by-partuuid/5f92a962-fe03-4dbd-8276-99b76bdadb36";
       enable = true;
-      keyFile = "/mnt-root/.swapkey";
     };
   }];
-
-  fileSystems."/mnt/data" = {
-    device = "/dev/disk/by-uuid/f1451973-4324-4d88-bb57-4a712f7beaf0";
-    options = [
-      "nosuid"
-      "noatime"
-      "nofail"
-      "noexec"
-      "group"
-      "nodev"
-      "x-gvfs-show"
-      "noauto"
-    ];
+  fileSystems."/mnt/data " = {
+    device = "/dev/disk/by-uuid/f1451973-4324-4d88-bb57-4a712f7beaf0 ";
+    options = [ "nosuid" "noatime" "nofail" "noexec" "group" "nodev" "x-gvfs-show" "noauto" ];
   };
-
-  fileSystems."/mnt/vms" = {
-    device = "/dev/disk/by-uuid/c02683d5-67c0-4225-9480-59101c9c6369";
-    options =
-      [ "nosuid" "noatime" "nofail" "noexec" "group" "nodev" "x-gvfs-show" ];
+  fileSystems."/mnt/vms " = {
+    device = "/dev/disk/by-uuid/c02683d5-67c0-4225-9480-59101c9c6369 ";
+    options = [ "nosuid" "noatime" "nofail" "noexec" "group" "nodev" "x-gvfs-show" ];
   };
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
@@ -83,3 +67,5 @@
   # high-resolution display
   hardware.video.hidpi.enable = lib.mkDefault true;
 }
+
+
