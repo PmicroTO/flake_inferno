@@ -69,7 +69,6 @@
         };
       };
     };
-
   };
   programs.fish = {
     enable = true;
