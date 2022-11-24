@@ -13,10 +13,7 @@
       ++ (with pkgs; [ ecryptfs ]);
   };
 
-
-
   networking.interfaces.wlp0s18f2u2.wakeOnLan.enable = true;
-
 
   environment.systemPackages =
     (with config.boot.kernelPackages; [ kernel rtl88x2bu ])

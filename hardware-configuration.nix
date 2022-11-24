@@ -44,11 +44,6 @@
     device = "/dev/disk/by-uuid/e58a561c-60a8-4fa4-92e6-f3dba68c3360";
     options = [ "defaults" "nofail" ];
     discardPolicy = "once";
-    encrypted = {
-      label = "swap";
-      blkDev = "/dev/disk/by-partuuid/5f92a962-fe03-4dbd-8276-99b76bdadb36";
-      enable = true;
-    };
   }];
   fileSystems."/mnt/data " = {
     device = "/dev/disk/by-uuid/f1451973-4324-4d88-bb57-4a712f7beaf0 ";
