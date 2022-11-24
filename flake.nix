@@ -25,6 +25,7 @@
           ./home/home.nix
           ./home/dconf.nix
           ./home/nvim.nix
+          ./home/tmux.nix
         ];
       };
 

@@ -44,7 +44,6 @@
     gnome.pomodoro
     zoxide
   ]) ++ (with pkgs.gnomeExtensions; [
-    hibernate-status-button
     gsconnect
     gnome-bedtime
     espresso
@@ -107,32 +106,7 @@
     listports = "sudo netstat -tulpn | grep LISTEN ";
     wp = "wgetpaste";
   };
-  programs.tmux = {
-    enable = true;
-    baseIndex = 1;
-    clock24 = true;
-    keyMode = "vi";
-    newSession = true;
-    prefix = "C-a";
-    extraConfig = ''
 
-      				set -ga terminal-overrides ",alacritty:Tc"
-      				set -g default-command "''${SHELL}"
-                                      set -g allow-passthrough 1 
-                                      set -s copy-command 'wl-copy'
-                                      set -g @plugin 'arcticicestudio/nord-tmux'
-                                      set -g @plugin 'whame/tmux-modal'
-                                      set -g @modal-yesno-cmd on
-                                      set -g @modal-keybindings-conf ''${HOME}/.config/tmux_modal.conf
-                                      set -g @plugin 'tmux-plugins/tmux-resurrect'
-                                      set -g @plugin 'tmux-plugins/tmux-continuum'
-                                      set -g @continuum-boot 'on'
-      				set -g @plugin 'tmux-plugins/tpm' 
-                                      run '~/.tmux/plugins/tpm/tpm' 
-
-      			'';
-
-  };
   programs.git = {
     enable = true;
     userEmail = "8f2w79@getgoogleoff.me";
@@ -180,11 +154,6 @@
         sha256 = "1395fv70gxkpqswnraw50fcaawnjn91j4a44yzz1c3vmm3jp4r38";
       };
       target = ".tmux/plugins/tpm";
-    };
-    "tmux_modal.conf" = {
-      text =
-        "\nKBD_CMD=C-space\nKBD_CMD_EXIT=C-space\nKBD_QUIT=q\nKBD_COPY_MODE=c\nKBD_PASTE=y\nKBD_CMD_PROMPT=:\nKBD_WIN=w\nKBD_WIN_GOTO_0=0\nKBD_WIN_GOTO_1=1\nKBD_WIN_GOTO_2=2\nKBD_WIN_GOTO_3=3\nKBD_WIN_GOTO_4=4\nKBD_WIN_GOTO_5=5\nKBD_WIN_GOTO_6=6\nKBD_WIN_GOTO_7=7\nKBD_WIN_GOTO_8=8\nKBD_WIN_GOTO_9=9\nKBD_WIN_GOTO_TREE=t\nKBD_WIN_GOTO_INDEX=i\nKBD_WIN_PANE_LEFT=h\nKBD_WIN_PANE_RIGHT=l\nKBD_WIN_PANE_UP=k\nKBD_WIN_PANE_DOWN=j\nKBD_WIN_PANE_DEL=d\nKBD_WIN_PREV=H\nKBD_WIN_NEXT=L\nKBD_WIN_DEL=D\nKBD_WIN_CREATE=c\nKBD_WIN_LAST=o\nKBD_WIN_ZOOM=z\nKBD_WIN_BREAK=b\nKBD_WIN_NR=n\nKBD_WIN_RENAME=,\nKBD_WIN_PANE=w\nKBD_WIN_SPLIT=s\nKBD_WIN_SPLIT_RIGHT=l\nKBD_WIN_SPLIT_DOWN=j\nKBD_WIN_MOVE=m\nKBD_WIN_MOVE_UP=k\nKBD_WIN_MOVE_DOWN=j\nKBD_WIN_ARRANGE=a\nKBD_WIN_ARRANGE_1=1\nKBD_WIN_ARRANGE_2=2\nKBD_WIN_ARRANGE_3=3\nKBD_WIN_ARRANGE_4=4\nKBD_WIN_RESIZE=r\nKBD_WIN_RESIZE_LEFT=h\nKBD_WIN_RESIZE_RIGHT=l\nKBD_WIN_RESIZE_DOWN=j\nKBD_WIN_RESIZE_UP=k\nKBD_WIN_RESIZE_MULTI_LEFT=H\nKBD_WIN_RESIZE_MULTI_RIGHT=L\nKBD_WIN_RESIZE_MULTI_DOWN=J\nKBD_WIN_RESIZE_MULTI_UP=K\nKBD_SESS=s\nKBD_SESS_DETACH=d\nKBD_SESS_PREV=h\nKBD_SESS_NEXT=l\nKBD_SESS_TREE=t\nKBD_SESS_DEL=D\nKBD_GOTO=g\nKBD_GOTO_WIN=w\nKBD_GOTO_WIN_0=0\nKBD_GOTO_WIN_1=1\nKBD_GOTO_WIN_2=2\nKBD_GOTO_WIN_3=3\nKBD_GOTO_WIN_4=4\nKBD_GOTO_WIN_5=5\nKBD_GOTO_WIN_6=6\nKBD_GOTO_WIN_7=7\nKBD_GOTO_WIN_8=8\nKBD_GOTO_WIN_9=9\nKBD_GOTO_WIN_TREE=t\nKBD_GOTO_WIN_INDEX=i\nKBD_GOTO_WIN_PREV=h\nKBD_GOTO_WIN_NEXT=l\nKBD_GOTO_WIN_LAST=o\nKBD_GOTO_SESS=s\nKBD_GOTO_SESS_PREV=h\nKBD_GOTO_SESS_NEXT=l\nKBD_GOTO_SESS_TREE=tKBD_WIN_PANE_LEFT=h\nKBD_WIN_PANE_RIGHT=l\nKBD_WIN_PANE_UP=k\nKBD_WIN_PANE_DOWN=j\nKBD_WIN_PANE_DEL=d\nKBD_WIN_PREV=H\nKBD_WIN_NEXT=L\nKBD_WIN_DEL=D\nKBD_WIN_CREATE=c\nKBD_WIN_LAST=o\nKBD_WIN_ZOOM=z\nKBD_WIN_BREAK=b\nKBD_WIN_NR=n\nKBD_WIN_RENAME=,\nKBD_WIN_PANE=w\nKBD_WIN_SPLIT=s\nKBD_WIN_SPLIT_RIGHT=l\nKBD_WIN_SPLIT_DOWN=j\nKBD_WIN_MOVE=m\nKBD_WIN_MOVE_UP=k\nKBD_WIN_MOVE_DOWN=j\nKBD_WIN_ARRANGE=a\nKBD_WIN_ARRANGE_1=1\nKBD_WIN_ARRANGE_2=2\nKBD_WIN_ARRANGE_3=3\nKBD_WIN_ARRANGE_4=4\nKBD_WIN_RESIZE=r\nKBD_WIN_RESIZE_LEFT=h\nKBD_WIN_RESIZE_RIGHT=l\nKBD_WIN_RESIZE_DOWN=j\nKBD_WIN_RESIZE_UP=k\nKBD_WIN_RESIZE_MULTI_LEFT=H\nKBD_WIN_RESIZE_MULTI_RIGHT=L\nKBD_WIN_RESIZE_MULTI_DOWN=J\nKBD_WIN_RESIZE_MULTI_UP=K\nKBD_SESS=s\nKBD_SESS_DETACH=d\nKBD_SESS_PREV=h\nKBD_SESS_NEXT=l\nKBD_SESS_TREE=t\nKBD_SESS_DEL=D\nKBD_GOTO=g\nKBD_GOTO_WIN=w\nKBD_GOTO_WIN_0=0\nKBD_GOTO_WIN_1=1\nKBD_GOTO_WIN_2=2\nKBD_GOTO_WIN_3=3\nKBD_GOTO_WIN_4=4\nKBD_GOTO_WIN_5=5\nKBD_GOTO_WIN_6=6\nKBD_GOTO_WIN_7=7\nKBD_GOTO_WIN_8=8\nKBD_GOTO_WIN_9=9\nKBD_GOTO_WIN_TREE=t\nKBD_GOTO_WIN_INDEX=i\nKBD_GOTO_WIN_PREV=h\nKBD_GOTO_WIN_NEXT=l\nKBD_GOTO_WIN_LAST=o\nKBD_GOTO_SESS=s\nKBD_GOTO_SESS_PREV=h\nKBD_GOTO_SESS_NEXT=l\nKBD_GOTO_SESS_TREE=t\n                          ";
-      target = ".config/tmux_modal.conf";
     };
   };
 }

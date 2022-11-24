@@ -13,14 +13,12 @@
       ++ (with pkgs; [ ecryptfs ]);
   };
 
-  networking.interfaces.wlp0s18f2u2.wakeOnLan.enable = true;
-
   environment.systemPackages =
     (with config.boot.kernelPackages; [ kernel rtl88x2bu ])
     ++ (with pkgs; [ ddcutil ]);
   boot = {
     kernelParams =
-      [ "amd_iommu=off" "iommu=soft" "resume=UUID=e58a561c-60a8-4fa4-92e6-f3dba68c3360" ];
+      [ "amd_iommu=off" "iommu=soft" ];
     consoleLogLevel = 0;
     initrd.verbose = false;
     kernelModules = [ "ecryptfs" ];

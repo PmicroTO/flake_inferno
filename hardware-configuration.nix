@@ -31,19 +31,19 @@
       preLVM = false;
       allowDiscards = true;
     };
-    swap = {
-      device = "/dev/disk/by-partuuid/5f92a962-fe03-4dbd-8276-99b76bdadb36";
-      allowDiscards = true;
-    };
   };
   fileSystems."/boot" = {
     device = "/dev/disk/by-uuid/7BD7-B0DE";
     fsType = "vfat";
   };
   swapDevices = [{
-    device = "/dev/disk/by-uuid/e58a561c-60a8-4fa4-92e6-f3dba68c3360";
+    device = "/dev/disk/by-partuuid/5f92a962-fe03-4dbd-8276-99b76bdadb36";
     options = [ "defaults" "nofail" ];
     discardPolicy = "once";
+    randomEncryption = {
+      enable = true;
+      allowDiscards = true;
+    };
   }];
   fileSystems."/mnt/data " = {
     device = "/dev/disk/by-uuid/f1451973-4324-4d88-bb57-4a712f7beaf0 ";
