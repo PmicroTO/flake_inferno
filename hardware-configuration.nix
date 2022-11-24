@@ -31,6 +31,10 @@
       preLVM = false;
       allowDiscards = true;
     };
+    swap = {
+      device = "/dev/disk/by-partuuid/5f92a962-fe03-4dbd-8276-99b76bdadb36";
+      allowDiscards = true;
+    };
   };
   fileSystems."/boot" = {
     device = "/dev/disk/by-uuid/7BD7-B0DE";

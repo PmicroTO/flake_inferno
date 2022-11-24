@@ -1,9 +1,7 @@
 return require('packer').startup(function(use)
 
-	use {
-		"RRethy/nvim-base16",
-						config = "vim.cmd('colorscheme base16-seti')"
-	}
+	----use { "RRethy/nvim-base16", config = "vim.cmd('colorscheme base16-seti')" }
+	use { "EdenEast/nightfox.nvim", config = "vim.cmd('colorscheme carbonfox')" }
 
 	use {
 		{
@@ -11,36 +9,29 @@ return require('packer').startup(function(use)
 
 			config = function() require('pconf.mason') end
 
-		},
-
-		{ "williamboman/mason-lspconfig.nvim" },
-
-		{ "neovim/nvim-lspconfig",
+		}, { "williamboman/mason-lspconfig.nvim" }, {
+			"neovim/nvim-lspconfig",
 			requires = {
 				"https://git.sr.ht/~whynothugo/lsp_lines.nvim",
 				config = function()
 					require("lsp_lines").setup()
 					vim.diagnostic.config({ virtual_text = false })
 				end
-			} },
-
-		{ "jose-elias-alvarez/null-ls.nvim",
-			requires = "nvim-lua/plenary.nvim"
-
+			}
 		},
 
-		{ "jayp0521/mason-null-ls.nvim",
-			config = function()
-				require('pconf.mason-null-ls')
-			end
-		},
+		{ "jose-elias-alvarez/null-ls.nvim", requires = "nvim-lua/plenary.nvim" },
+
+		{
+			"jayp0521/mason-null-ls.nvim",
+			config = function() require('pconf.mason-null-ls') end
+		}
 
 	}
 
 	use {
 		'ojroques/nvim-hardline',
 		config = function() require('pconf.line') end
-
 	}
 
 	use { 'j-hui/fidget.nvim', config = function() require('pconf.fidget') end }
@@ -64,10 +55,13 @@ return require('packer').startup(function(use)
 	use {
 		'nvim-tree/nvim-tree.lua',
 		config = function() require('pconf.nvim-tree') end,
-		requires = {
-			'nvim-tree/nvim-web-devicons'
-		},
+		requires = { 'nvim-tree/nvim-web-devicons' },
 		tag = 'nightly'
+	}
+
+	use {
+		"folke/which-key.nvim",
+		config = function() require("which-key").setup {} end
 	}
 
 end)
