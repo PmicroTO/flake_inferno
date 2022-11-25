@@ -33,7 +33,9 @@
     ventoy-bin-full
     taskwarrior
     dconf2nix
-    arcanPackages.espeak
+    spice-up
+    openshot-qt
+    poppler_utils
     detox
     hakuneko
     adw-gtk3

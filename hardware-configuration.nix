@@ -6,6 +6,23 @@
 {
   imports = [ (modulesPath + "/installer/scan/not-detected.nix") ];
 
+  hardware.opengl = {
+    enable = true;
+    driSupport = true;
+    extraPackages = with pkgs; [
+      rocm-opencl-icd
+      rocm-opencl-runtime
+      amdvlk
+      libdrm
+      vaapiVdpau
+#      libva1
+      libva
+      libvdpau
+      libvdpau-va-gl
+    ];
+  };
+
+
   boot.initrd.availableKernelModules = [
     "ahci"
     "ohci_pci"
@@ -16,7 +33,7 @@
     "usbhid"
     "sd_mod"
   ];
-  boot.initrd.kernelModules = [ "dm-snapshot" ];
+  boot.initrd.kernelModules = [ "dm-snapshot" "amdgpu" ];
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
 

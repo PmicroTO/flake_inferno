@@ -10,6 +10,8 @@
   environment.systemPackages = with pkgs; [
     rnnoise-plugin
     nmon
+    vdpauinfo
+    libva-utils 
     #		steam-run
     (pkgs.systemd.overrideAttrs (oldAttrs: {
       mesonFlags = oldAttrs.mesonFlags ++ [ "-Doptimization=3" ];
