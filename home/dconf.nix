@@ -56,7 +56,7 @@ with lib.hm.gvariant;
       night-light-enabled = true;
       night-light-schedule-automatic = true;
     };
-    "org/gnome/desktop/wm/preferences" = { num-workspaces = 1; };
+    "org/gnome/desktop/wm/preferences" = { num-workspaces = 6; };
 
     "org/gnome/desktop/input-sources" = {
       sources = [ (mkTuple [ "xkb" "us" ]) (mkTuple [ "xkb" "us+alt-intl" ]) ];

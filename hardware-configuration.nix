@@ -14,14 +14,9 @@
       rocm-opencl-runtime
       amdvlk
       libdrm
-      vaapiVdpau
-#      libva1
-      libva
-      libvdpau
-      libvdpau-va-gl
+      mesa
     ];
   };
-
 
   boot.initrd.availableKernelModules = [
     "ahci"

@@ -12,6 +12,7 @@
     nmon
     vdpauinfo
     libva-utils 
+    radeontop
     #		steam-run
     (pkgs.systemd.overrideAttrs (oldAttrs: {
       mesonFlags = oldAttrs.mesonFlags ++ [ "-Doptimization=3" ];
@@ -47,6 +48,7 @@
   environment = {
     pathsToLink = [ "/share/zsh" ];
     shells = with pkgs; [ fish ];
+    sessionVariables = { LIBVA_DRIVER_NAME = "radeonsi"; };
   };
 
   services = {

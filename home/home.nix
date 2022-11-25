@@ -12,6 +12,8 @@
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.allowUnfreePredicate = (pkg: true);
   home.packages = (with pkgs; [
+    ffmpeg_5-full
+    gimp
     wgetpaste
     kotatogram-desktop
     mailspring
@@ -46,6 +48,7 @@
     gnome.pomodoro
     zoxide
   ]) ++ (with pkgs.gnomeExtensions; [
+    resource-monitor
     gsconnect
     gnome-bedtime
     espresso
@@ -106,6 +109,7 @@
       "sudo nixos-rebuild switch -j 8 --verbose --flake /home/lucio/Projects/flake_inferno#inferno";
     listports = "sudo netstat -tulpn | grep LISTEN ";
     wp = "wgetpaste";
+    #	webmloo = "for i in *.webm; do ffmpeg -stream_loop -1 -t 5 -i \"$i\" -c copy \"\${i%.*}_5.webm\"; done";
   };
 
   programs.git = {
