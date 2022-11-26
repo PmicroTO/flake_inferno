@@ -10,7 +10,7 @@ with lib.hm.gvariant;
     "org/gnome/desktop/interface" = {
       cursor-theme = "Sakuya-cursors";
       icon-theme = "Flat-Remix-Grey-Light";
-      gtk-theme = "Flat-Remix-GTK-Grey-Light-Solid";
+      #      gtk-theme = "Flat-Remix-GTK-Grey-Light-Solid";
       font-name = "Liberation Sans 11";
       document-font-name = "TerminessTTF Nerd Font Mono Medium 12";
       monospace-font-name = "TerminessTTF Nerd Font Mono Medium 12";
@@ -92,8 +92,10 @@ with lib.hm.gvariant;
     "org/gnome/desktop/background" = {
       color-shading-type = "solid";
       picture-options = "zoom";
-      picture-uri = "file:///home/lucio/.background-image";
-      picture-uri-dark = "file:///home/lucio/.background-image";
+      #      picture-uri = "file:///home/lucio/.background-image";
+      #      picture-uri-dark = "file:///home/lucio/.background-image";
+      picture-uri = "file:///run/current-system/sw/share/backgrounds/gnome/vnc-l.webp";
+      picture-uri-dark = "file:///run/current-system/sw/share/backgrounds/gnome/vnc-d.webp";
       primary-color = "#000000000000";
       secondary-color = "#000000000000";
     };

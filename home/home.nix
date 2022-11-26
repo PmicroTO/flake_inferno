@@ -7,12 +7,13 @@
     sessionVariables = {
       EDITOR = "vi";
       VISUAL = "vi";
-      GTK_THEME = "Flat-Remix-GTK-Grey-Light-Solid";
+      GTK_THEME = "Flat-Remix-GTK-Grey-Light";
     };
   };
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.allowUnfreePredicate = (pkg: true);
   home.packages = (with pkgs; [
+    android-tools
     flat-remix-gtk
     flat-remix-gnome
     flat-remix-icon-theme
@@ -46,10 +47,7 @@
     detox
     hakuneko
     adw-gtk3
-    ecryptfs
-    ecryptfs-helper
     droidcam
-    webcamoid
     gnome.pomodoro
     zoxide
   ]) ++ (with pkgs.gnomeExtensions; [

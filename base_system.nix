@@ -17,7 +17,6 @@
   ];
 
   time.timeZone = "America/Fortaleza";
-
   i18n.defaultLocale = "en_US.UTF-8";
   i18n.extraLocaleSettings = {
     LC_ADDRESS = "pt_BR.utf8";
@@ -33,7 +32,7 @@
 
   users.users.lucio = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" "i2c" "audio" ];
+    extraGroups = [ "wheel" "networkmanager" "i2c" "audio" "video" ];
     shell = pkgs.fish;
   };
 
@@ -71,6 +70,3 @@
   system.stateVersion = "22.05";
 
 }
-
-
-

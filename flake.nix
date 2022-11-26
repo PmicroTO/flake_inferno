@@ -38,7 +38,7 @@
           ./gnome.nix
           ./hardware-configuration.nix
           ./networking.nix
-          ./pipewire_conf.nix
+#          ./pipewire_conf.nix
           ./pipewire.nix
         ];
       };
