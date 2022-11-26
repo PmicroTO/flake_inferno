@@ -12,6 +12,7 @@
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.allowUnfreePredicate = (pkg: true);
   home.packages = (with pkgs; [
+    tomb
     ffmpeg_5-full
     gimp
     wgetpaste

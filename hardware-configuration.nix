@@ -11,7 +11,6 @@
     driSupport = true;
     extraPackages = with pkgs; [ mesa.drivers ];
   };
-
   boot.initrd.availableKernelModules = [
     "ahci"
     "ohci_pci"
@@ -34,7 +33,7 @@
   boot.initrd.luks.devices = {
     nix_root = {
       device = "/dev/disk/by-uuid/c10b9174-531e-43e3-abfe-05a4f0397e2e";
-      preLVM = false;
+      #      preLVM = false; # don't need it if running systemd initrd
       allowDiscards = true;
     };
   };

@@ -26,7 +26,7 @@
           ./home/dconf.nix
           ./home/nvim.nix
           ./home/tmux.nix
-          ./home/pipewire_conf.nix
+#          ./home/pipewire_conf.nix
         ];
       };
 
