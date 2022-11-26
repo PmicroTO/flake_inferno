@@ -1,5 +1,5 @@
 { config, pkgs, ... }: {
-  sound.enable = true;
+  sound.enable = false;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
@@ -7,6 +7,7 @@
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
-    #    media-session.enable = true;
+    # If you want to use JACK applications, uncomment this
+    #jack.enable = true;
   };
 }

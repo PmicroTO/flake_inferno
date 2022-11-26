@@ -7,7 +7,7 @@
       consoleMode = "max";
       memtest86.enable = true;
     };
-    resumeDevice = "";
+    loader.timeout = 1;
     kernelPackages = pkgs.linuxPackages_latest;
     extraModulePackages = (with config.boot.kernelPackages; [ rtl88x2bu ])
       ++ (with pkgs; [ ecryptfs ]);

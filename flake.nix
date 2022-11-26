@@ -26,6 +26,7 @@
           ./home/dconf.nix
           ./home/nvim.nix
           ./home/tmux.nix
+          ./home/pipewire_conf.nix
         ];
       };
 
@@ -37,7 +38,7 @@
           ./gnome.nix
           ./hardware-configuration.nix
           ./networking.nix
-          ./pipewire_conf.nix
+#          ./pipewire_conf.nix
           ./pipewire.nix
         ];
       };

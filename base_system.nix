@@ -13,7 +13,6 @@
     vdpauinfo
     libva-utils
     radeontop
-    #		steam-run
     (pkgs.systemd.overrideAttrs (oldAttrs: {
       mesonFlags = oldAttrs.mesonFlags ++ [ "-Doptimization=3" ];
     }))
@@ -36,7 +35,7 @@
 
   users.users.lucio = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" "i2c" ];
+    extraGroups = [ "wheel" "networkmanager" "i2c" "audio" ];
     shell = pkgs.fish;
   };
 
