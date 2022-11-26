@@ -3,7 +3,7 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 { config, pkgs, lib, ... }:
-
+with lib.hm.gvariant;
 {
   services = {
     xserver = {
@@ -15,11 +15,11 @@
       displayManager.autoLogin.user = "lucio";
     };
     gnome = {
-      gnome-keyring.enable = lib.mkDefault false;
+      gnome-keyring.enable = mkDefault false;
     };
     power-profiles-daemon.enable = false;
     upower.enable = lib.mkDefault config.powerManagement.disable;
-    packagekit.enable = lib.mkDefault false;
+    packagekit.enable = mkDefault false;
   };
 
   xdg.portal.enable = true;

@@ -3,39 +3,47 @@
 with lib.hm.gvariant;
 
 {
-
   dconf.settings = {
     "org/gnome/desktop/peripherals/trackball" = {
       scroll-wheel-emulation-button = 8;
     };
-
     "org/gnome/desktop/interface" = {
       cursor-theme = "Sakuya-cursors";
-      icon-theme = "Nordzy-pink";
-      document-font-name = "TerminessTTF Nerd Font Mono Medium 12";
+      icon-theme = "Flat-Remix-Grey-Light";
+      gtk-theme = "Flat-Remix-GTK-Grey-Light-Solid";
       font-name = "Liberation Sans 11";
+      document-font-name = "TerminessTTF Nerd Font Mono Medium 12";
       monospace-font-name = "TerminessTTF Nerd Font Mono Medium 12";
-      gtk-theme = "adw-gtk3";
     };
-
     "org/gnome/system/locale" = { region = "pt_BR.UTF-8"; };
-
     "org/gnome/shell" = {
       enabled-extensions = [
         "gnomebedtime@ionutbortis.gmail.com"
         "espresso@coadmunkee.github.com"
         "gsconnect@andyholmes.github.io"
-        "material-shell@papyelgringo"
+        "user-theme@gnome-shell-extensions.gcampax.github.com"
+        "Resource_Monitor@Ory0n"
+        "workspace-indicator@gnome-shell-extensions.gcampax.github.com"
       ];
     };
-
+    "org/gnome/shell/extension/user-theme" = {
+      name = "Flat-Remix-Grey-Light-fullPanel";
+    };
+    "org/gnome/shell/extension/bedtime-mode" = {
+      bedtime-mode-active = true;
+      color-tone-factor = 70;
+    };
+    "org/gnome/shell/extension/espresso" = {
+      has-battery = false;
+      show-notifications = false;
+      user-enabled = true;
+    };
     "org/gnome/shell/keybindings" = {
       switch-to-application-1 = [ "" ];
       switch-to-application-2 = [ "" ];
       switch-to-application-3 = [ "" ];
       switch-to-application-4 = [ "" ];
     };
-
     "org/gnome/desktop/wm/keybindings" = {
       move-to-workspace-1 = [ "<Shift><Super>1" ];
       move-to-workspace-2 = [ "<Shift><Super>2" ];
@@ -56,13 +64,12 @@ with lib.hm.gvariant;
       night-light-enabled = true;
       night-light-schedule-automatic = true;
     };
-    "org/gnome/desktop/wm/preferences" = { num-workspaces = 6; };
+    "org/gnome/desktop/wm/preferences" = { num-workspaces = 4; };
 
     "org/gnome/desktop/input-sources" = {
       sources = [ (mkTuple [ "xkb" "us" ]) (mkTuple [ "xkb" "us+alt-intl" ]) ];
       xkb-options = [ "terminate:ctrl_alt_bksp" "caps:swapescape" ];
     };
-
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" =
       {
         binding = "<Shift><Super>minus";
@@ -82,54 +89,6 @@ with lib.hm.gvariant;
         name = "terminal";
       };
 
-    "org/gnome/shell/extensions/materialshell/bindings" = {
-      cycle-tiling-layout = [ "<Super>w" ];
-      kill-focused-window = "<Super>q";
-      last-workspace = [ "<Super>z" ];
-      move-window-bottom = [ "<Super><Shift>j" ];
-      move-window-left = [ "<Super><Shift>l" ];
-      move-window-monitor-down = [ "" ];
-      move-window-monitor-left = [ "" ];
-      move-window-monitor-right = [ "" ];
-      move-window-monitor-up = [ "" ];
-      move-window-right = [ "<Shift><Super>h" ];
-      move-window-top = [ "<Shift><Super>k" ];
-      next-window = [ "<Super>l" ];
-      next-workspace = [ "<Super>j" ];
-      previous-window = [ "<Super>h" ];
-      previous-workspace = [ "<Super>k" ];
-    };
-
-    "org/gnome/shell/extensions/materialshell/layouts" = {
-      default-layout = "grid";
-      float = false;
-      grid = true;
-      half = false;
-      split = false;
-    };
-
-    "org/gnome/shell/extensions/materialshell/theme" = {
-      blur-background = false;
-      clock-app-launcher = false;
-      clock-horizontal = false;
-      focus-effect = "border";
-      horizontal-panel-position = "bottom";
-      panel-icon-color = false;
-      panel-icon-style = "application";
-      panel-opacity = 100;
-      panel-size = 48;
-      primary-color = "#9a9996";
-      taskbar-item-style = "icon";
-      theme = "dark";
-      vertical-panel-position = "left";
-    };
-
-    "org/gnome/shell/extensions/materialshell/tweaks" = {
-      cycle-through-windows = true;
-      cycle-through-workspaces = true;
-      disable-notifications = true;
-    };
-
     "org/gnome/desktop/background" = {
       color-shading-type = "solid";
       picture-options = "zoom";
@@ -138,7 +97,6 @@ with lib.hm.gvariant;
       primary-color = "#000000000000";
       secondary-color = "#000000000000";
     };
-
   }; # dconf end
 }
 

@@ -1,7 +1,7 @@
 {
   description = "my machine";
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-22.11";
     nixpkgs-master.url = "github:nixos/nixpkgs/master";
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -38,7 +38,7 @@
           ./gnome.nix
           ./hardware-configuration.nix
           ./networking.nix
-#          ./pipewire_conf.nix
+          ./pipewire_conf.nix
           ./pipewire.nix
         ];
       };

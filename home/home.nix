@@ -7,11 +7,15 @@
     sessionVariables = {
       EDITOR = "vi";
       VISUAL = "vi";
+      GTK_THEME = "Flat-Remix-GTK-Grey-Light-Solid";
     };
   };
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.allowUnfreePredicate = (pkg: true);
   home.packages = (with pkgs; [
+    flat-remix-gtk
+    flat-remix-gnome
+    flat-remix-icon-theme
     tomb
     ffmpeg_5-full
     gimp
@@ -53,9 +57,7 @@
     gsconnect
     gnome-bedtime
     espresso
-    material-shell
   ]); # end.packages
-
   programs.alacritty = {
     enable = true;
     settings = {
