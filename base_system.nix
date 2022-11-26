@@ -11,7 +11,7 @@
     rnnoise-plugin
     nmon
     vdpauinfo
-    libva-utils 
+    libva-utils
     radeontop
     #		steam-run
     (pkgs.systemd.overrideAttrs (oldAttrs: {
@@ -46,9 +46,8 @@
 
   };
   environment = {
-    pathsToLink = [ "/share/zsh" ];
+    pathsToLink = [ "/share/fish" ];
     shells = with pkgs; [ fish ];
-    sessionVariables = { LIBVA_DRIVER_NAME = "radeonsi"; };
   };
 
   services = {
