@@ -7,6 +7,7 @@
       consoleMode = "max";
       memtest86.enable = true;
     };
+    initrd.systemd.enable = true;
     loader.timeout = 1;
     kernelPackages = pkgs.linuxPackages_latest;
     extraModulePackages = (with config.boot.kernelPackages; [ rtl88x2bu ])
@@ -31,3 +32,4 @@
     options = "--delete-older-than 7d";
   };
 }
+

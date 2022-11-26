@@ -8,9 +8,7 @@
     dockerCompat = true;
   };
   environment.systemPackages = with pkgs; [
-    rnnoise-plugin
     nmon
-    vdpauinfo
     libva-utils
     radeontop
     (pkgs.systemd.overrideAttrs (oldAttrs: {
