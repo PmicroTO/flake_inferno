@@ -2,17 +2,26 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
-  services.xserver = {
-    enable = true;
-    excludePackages = [ pkgs.xterm ];
-    displayManager.gdm.enable = true;
-    desktopManager.gnome.enable = true;
-    displayManager.autoLogin.enable = true;
-    displayManager.autoLogin.user = "lucio";
+  services = {
+    xserver = {
+      enable = true;
+      excludePackages = [ pkgs.xterm ];
+      displayManager.gdm.enable = true;
+      desktopManager.gnome.enable = true;
+      displayManager.autoLogin.enable = true;
+      displayManager.autoLogin.user = "lucio";
+    };
+    gnome = {
+      gnome-keyring.enable = lib.mkDefault false;
+    };
+    power-profiles-daemon.enable = false;
+    upower.enable = lib.mkDefault config.powerManagement.disable;
+    packagekit.enable = lib.mkDefault false;
   };
+
   xdg.portal.enable = true;
   programs.dconf.enable = true;
   security.pam.services.lucio.enableGnomeKeyring = true;
@@ -34,5 +43,6 @@
       totem
       gnome-maps
       yelp
+      gnome-software
     ]);
 }
