@@ -9,7 +9,10 @@
   hardware.opengl = {
     enable = true;
     driSupport = true;
-    extraPackages = with pkgs; [ mesa.drivers rocm-opencl-icd ];
+    extraPackages = with pkgs; [
+      rocm-opencl-icd
+      rocm-opencl-runtime
+    ];
   };
   boot.initrd.availableKernelModules = [
     "ahci"
