@@ -9,13 +9,7 @@
   hardware.opengl = {
     enable = true;
     driSupport = true;
-    extraPackages = with pkgs; [
-      rocm-opencl-icd
-      rocm-opencl-runtime
-      amdvlk
-      libdrm
-      mesa
-    ];
+    extraPackages = with pkgs; [ mesa.drivers ];
   };
 
   boot.initrd.availableKernelModules = [
