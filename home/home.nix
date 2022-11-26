@@ -37,7 +37,6 @@
     dconf2nix
     spice-up
     openshot-qt
-    lyrebird
     poppler_utils
     detox
     hakuneko
