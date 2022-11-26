@@ -13,6 +13,7 @@
     displayManager.autoLogin.enable = true;
     displayManager.autoLogin.user = "lucio";
   };
+  xdg.portal.enable = true;
   programs.dconf.enable = true;
   security.pam.services.lucio.enableGnomeKeyring = true;
   # Workaround for GNOME autologin: https://github.com/NixOS/nixpkgs/issues/103746#issuecomment-945091229
