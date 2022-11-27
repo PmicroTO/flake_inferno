@@ -14,6 +14,8 @@
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.allowUnfreePredicate = (pkg: true);
   home.packages = (with pkgs; [
+    mumble
+    teams
     android-tools
     whitesur-gtk-theme
     whitesur-icon-theme
