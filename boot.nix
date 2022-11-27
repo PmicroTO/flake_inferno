@@ -11,6 +11,7 @@
       systemd.enable = true;
       verbose = false;
     };
+    extraModprobeConfig = " options v4l2loopback exclusive_caps=1 ";
     kernelParams = [ "amd_iommu=off" "iommu=soft" "quiet" "loglevel=3" ];
     consoleLogLevel = 0;
     loader.timeout = 1;
