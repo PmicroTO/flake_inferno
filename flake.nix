@@ -17,16 +17,18 @@
       overlay-master = final: prev: {
         master = nixpkgs-master.legacyPackages.${prev.system};
       };
-    in {
+    in
+    {
       homeConfigurations.lucio = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [
           ({ config, pkgs, ... }: { nixpkgs.overlays = [ overlay-master ]; })
           ./home/home.nix
           ./home/dconf.nix
-          ./home/nvim.nix
+          #          ./home/nvim.nix
+          ./home/helix.nix
           ./home/tmux.nix
-#          ./home/pipewire_conf.nix
+          #          ./home/pipewire_conf.nix
         ];
       };
 
@@ -38,7 +40,7 @@
           ./gnome.nix
           ./hardware-configuration.nix
           ./networking.nix
-#          ./pipewire_conf.nix
+          #          ./pipewire_conf.nix
           ./pipewire.nix
         ];
       };
