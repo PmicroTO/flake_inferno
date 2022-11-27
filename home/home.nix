@@ -7,16 +7,15 @@
     sessionVariables = {
       EDITOR = "vi";
       VISUAL = "vi";
-      GTK_THEME = "Flat-Remix-GTK-Grey-Light";
+      GTK_THEME = "WhiteSur-Light-solid";
     };
   };
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.allowUnfreePredicate = (pkg: true);
   home.packages = (with pkgs; [
     android-tools
-    flat-remix-gtk
-    flat-remix-gnome
-    flat-remix-icon-theme
+    whitesur-gtk-theme
+    whitesur-icon-theme
     tomb
     ffmpeg_5-full
     gimp
@@ -43,6 +42,7 @@
     dconf2nix
     spice-up
     openshot-qt
+    flowblade
     poppler_utils
     detox
     hakuneko
@@ -51,6 +51,10 @@
     gnome.pomodoro
     zoxide
   ]) ++ (with pkgs.gnomeExtensions; [
+    no-activities-button
+    no-overview
+    blur-my-shell
+    dock-from-dash
     resource-monitor
     gsconnect
     gnome-bedtime

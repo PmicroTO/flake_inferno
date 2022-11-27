@@ -9,7 +9,7 @@ with lib.hm.gvariant;
     };
     "org/gnome/desktop/interface" = {
       cursor-theme = "Sakuya-cursors";
-      icon-theme = "Flat-Remix-Grey-Light";
+      icon-theme = "WhiteSur";
       #      gtk-theme = "Flat-Remix-GTK-Grey-Light-Solid";
       font-name = "Liberation Sans 11";
       document-font-name = "TerminessTTF Nerd Font Mono Medium 12";
@@ -24,14 +24,23 @@ with lib.hm.gvariant;
         "user-theme@gnome-shell-extensions.gcampax.github.com"
         "Resource_Monitor@Ory0n"
         "workspace-indicator@gnome-shell-extensions.gcampax.github.com"
+	"blur-my-shell@aunetx"
+"dock-from-dash@fthx"
+"no_activities@yaya.cout"
+"no-overview@fthx"
+"places-menu@gnome-shell-extensions.gcampax.github.com"
       ];
     };
     "org/gnome/shell/extension/user-theme" = {
-      name = "Flat-Remix-Grey-Light-fullPanel";
+      name = "WhiteSur-Light-solid";
     };
     "org/gnome/shell/extension/bedtime-mode" = {
       bedtime-mode-active = true;
-      color-tone-factor = 70;
+      color-tone-factor = 80;
+    };
+    "org/gnome/shell/extensions/blur-my-shell" = {
+      color-and-noise = true;
+      hacks-level = 0;
     };
     "org/gnome/shell/extension/espresso" = {
       has-battery = false;
@@ -92,10 +101,10 @@ with lib.hm.gvariant;
     "org/gnome/desktop/background" = {
       color-shading-type = "solid";
       picture-options = "zoom";
-      #      picture-uri = "file:///home/lucio/.background-image";
-      #      picture-uri-dark = "file:///home/lucio/.background-image";
-      picture-uri = "file:///run/current-system/sw/share/backgrounds/gnome/vnc-l.webp";
-      picture-uri-dark = "file:///run/current-system/sw/share/backgrounds/gnome/vnc-d.webp";
+      picture-uri = "file:///home/lucio/.background-image";
+      picture-uri-dark = "file:///home/lucio/.background-image";
+      # picture-uri = "file:///run/current-system/sw/share/backgrounds/gnome/vnc-l.webp";
+      #picture-uri-dark = "file:///run/current-system/sw/share/backgrounds/gnome/vnc-d.webp";
       primary-color = "#000000000000";
       secondary-color = "#000000000000";
     };
