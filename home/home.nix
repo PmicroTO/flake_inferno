@@ -77,7 +77,7 @@
       };
       font = {
         normal = {
-          family = "TerminessTTF Nerd Font Mono";
+          family = "MesloLGS Nerd Font";
           style = "Regular";
         };
       };

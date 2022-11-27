@@ -11,9 +11,9 @@ with lib.hm.gvariant;
       cursor-theme = "Sakuya-cursors";
       icon-theme = "WhiteSur";
       #      gtk-theme = "Flat-Remix-GTK-Grey-Light-Solid";
-      font-name = "Liberation Sans 11";
-      document-font-name = "TerminessTTF Nerd Font Mono Medium 12";
-      monospace-font-name = "TerminessTTF Nerd Font Mono Medium 12";
+      font-name = "MesloLGS Nerd Font 12";
+      document-font-name = "MesloLGS Nerd Font 12";
+      monospace-font-name = "MesloLGS Nerd Font 12";
     };
     "org/gnome/system/locale" = { region = "pt_BR.UTF-8"; };
     "org/gnome/shell" = {
