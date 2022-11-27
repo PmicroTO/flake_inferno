@@ -9,7 +9,7 @@ with lib.hm.gvariant;
     };
     "org/gnome/desktop/interface" = {
       cursor-theme = "Sakuya-cursors";
-      icon-theme = "WhiteSur";
+      icon-theme = "Qogir-dark";
       #      gtk-theme = "Flat-Remix-GTK-Grey-Light-Solid";
       font-name = "Liberation Sans 12";
       document-font-name = "GohuFont Nerd Font Mono 12";
