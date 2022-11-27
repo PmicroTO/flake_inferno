@@ -8,6 +8,7 @@
       EDITOR = "vi";
       VISUAL = "vi";
       GTK_THEME = "WhiteSur-Light-solid";
+      NIXOS_OZONE_WL = "1";
     };
   };
   nixpkgs.config.allowUnfree = true;
