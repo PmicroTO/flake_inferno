@@ -5,9 +5,9 @@
     homeDirectory = "/home/lucio";
     stateVersion = "22.11";
     sessionVariables = {
-      EDITOR = "vi";
-      VISUAL = "vi";
-      GTK_THEME = "WhiteSur-Light-solid";
+      EDITOR = "hx";
+      VISUAL = "hx";
+      GTK_THEME = "WhiteSur-Dark-solid";
       NIXOS_OZONE_WL = "1";
     };
   };

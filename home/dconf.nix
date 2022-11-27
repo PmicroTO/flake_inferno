@@ -32,7 +32,7 @@ with lib.hm.gvariant;
       ];
     };
     "org/gnome/shell/extension/user-theme" = {
-      name = "WhiteSur-Light-solid";
+      name = "WhiteSur-Dark-solid";
     };
     "org/gnome/shell/extension/bedtime-mode" = {
       bedtime-mode-active = true;
@@ -101,10 +101,10 @@ with lib.hm.gvariant;
     "org/gnome/desktop/background" = {
       color-shading-type = "solid";
       picture-options = "zoom";
-      picture-uri = "file:///home/lucio/.background-image";
-      picture-uri-dark = "file:///home/lucio/.background-image";
-      # picture-uri = "file:///run/current-system/sw/share/backgrounds/gnome/vnc-l.webp";
-      #picture-uri-dark = "file:///run/current-system/sw/share/backgrounds/gnome/vnc-d.webp";
+      #picture-uri = "file:///home/lucio/.background-image";
+      #picture-uri-dark = "file:///home/lucio/.background-image";
+      picture-uri = "file:///run/current-system/sw/share/backgrounds/gnome/vnc-l.webp";
+      picture-uri-dark = "file:///run/current-system/sw/share/backgrounds/gnome/vnc-d.webp";
       primary-color = "#000000000000";
       secondary-color = "#000000000000";
     };
