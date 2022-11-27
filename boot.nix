@@ -12,7 +12,7 @@
       verbose = false;
     };
     extraModprobeConfig = " options v4l2loopback exclusive_caps=1 ";
-    kernelParams = [ "amd_iommu=off" "iommu=soft" "quiet" "loglevel=3" ];
+    kernelParams = [ "amd_iommu=off" "iommu=soft" "quiet" "loglevel=3" "video=HDMI-A-1:2560x1080@75" ];
     consoleLogLevel = 0;
     loader.timeout = 1;
     kernelPackages = pkgs.linuxPackages_zen;
