@@ -11,9 +11,9 @@ with lib.hm.gvariant;
       cursor-theme = "Sakuya-cursors";
       icon-theme = "WhiteSur";
       #      gtk-theme = "Flat-Remix-GTK-Grey-Light-Solid";
-      font-name = "MesloLGS Nerd Font 12";
-      document-font-name = "MesloLGS Nerd Font 12";
-      monospace-font-name = "MesloLGS Nerd Font 12";
+      font-name = "Liberation Sans 12";
+      document-font-name = "GohuFont Nerd Font Mono 12";
+      monospace-font-name = "GohuFont Nerd Font Mono 12";
     };
     "org/gnome/system/locale" = { region = "pt_BR.UTF-8"; };
     "org/gnome/shell" = {
@@ -21,7 +21,7 @@ with lib.hm.gvariant;
         "gnomebedtime@ionutbortis.gmail.com"
         "espresso@coadmunkee.github.com"
         "gsconnect@andyholmes.github.io"
-        "user-theme@gnome-shell-extensions.gcampax.github.com"
+#        "user-theme@gnome-shell-extensions.gcampax.github.com"
         "Resource_Monitor@Ory0n"
         "workspace-indicator@gnome-shell-extensions.gcampax.github.com"
 	"blur-my-shell@aunetx"

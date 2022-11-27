@@ -7,7 +7,7 @@
     sessionVariables = {
       EDITOR = "hx";
       VISUAL = "hx";
-      GTK_THEME = "WhiteSur-Dark-solid";
+#      GTK_THEME = "WhiteSur-Dark-solid";
       NIXOS_OZONE_WL = "1";
     };
   };
@@ -17,8 +17,7 @@
     mumble
     teams
     android-tools
-    whitesur-gtk-theme
-    whitesur-icon-theme
+    qogir-icon-theme
     tomb
     ffmpeg_5-full
     gimp
@@ -77,8 +76,8 @@
       };
       font = {
         normal = {
-          family = "MesloLGS Nerd Font";
-          style = "Regular";
+          family = "GohuFont Nerd Font Mono";
+#          style = "Regular";
         };
       };
     };
