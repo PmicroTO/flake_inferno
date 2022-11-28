@@ -8,7 +8,7 @@
       EDITOR = "hx";
       VISUAL = "hx";
       #      GTK_THEME = "WhiteSur-Dark-solid";
-      NIXOS_OZONE_WL = "1";
+      # NIXOS_OZONE_WL = "1";
     };
   };
   nixpkgs.config.allowUnfree = true;
@@ -34,7 +34,7 @@
     fontpreview
     nerdfonts
     steam-run
-    brave
+    #    brave
     calibre
     transmission-gtk
     pika-backup
