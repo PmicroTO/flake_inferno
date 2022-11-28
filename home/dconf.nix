@@ -21,14 +21,14 @@ with lib.hm.gvariant;
         "gnomebedtime@ionutbortis.gmail.com"
         "espresso@coadmunkee.github.com"
         "gsconnect@andyholmes.github.io"
-#        "user-theme@gnome-shell-extensions.gcampax.github.com"
+        #        "user-theme@gnome-shell-extensions.gcampax.github.com"
         "Resource_Monitor@Ory0n"
         "workspace-indicator@gnome-shell-extensions.gcampax.github.com"
-	"blur-my-shell@aunetx"
-"dock-from-dash@fthx"
-"no_activities@yaya.cout"
-"no-overview@fthx"
-"places-menu@gnome-shell-extensions.gcampax.github.com"
+        "blur-my-shell@aunetx"
+        "dock-from-dash@fthx"
+        "no_activities@yaya.cout"
+        "no-overview@fthx"
+        "places-menu@gnome-shell-extensions.gcampax.github.com"
       ];
     };
     "org/gnome/shell/extension/user-theme" = {
@@ -103,8 +103,8 @@ with lib.hm.gvariant;
       picture-options = "zoom";
       #picture-uri = "file:///home/lucio/.background-image";
       #picture-uri-dark = "file:///home/lucio/.background-image";
-      picture-uri = "file:///run/current-system/sw/share/backgrounds/gnome/vnc-l.webp";
-      picture-uri-dark = "file:///run/current-system/sw/share/backgrounds/gnome/vnc-d.webp";
+      picture-uri = "file:///nix/store/35ar90nmzs3n8zqs1sfqlx6z8mk77qqm-simple-blue-2016-02-19/share/backgrounds/nixos/nix-wallpaper-simple-blue.png";
+      picture-uri-dark = "file:///nix/store/sn0a9jq9ykq55805v6sdkjm4gsaki9q9-simple-dark-gray-2016-02-19/share/backgrounds/nixos/nix-wallpaper-simple-dark-gray.png";
       primary-color = "#000000000000";
       secondary-color = "#000000000000";
     };
