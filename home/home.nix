@@ -7,13 +7,15 @@
     sessionVariables = {
       EDITOR = "hx";
       VISUAL = "hx";
-#      GTK_THEME = "WhiteSur-Dark-solid";
+      #      GTK_THEME = "WhiteSur-Dark-solid";
       NIXOS_OZONE_WL = "1";
     };
   };
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.allowUnfreePredicate = (pkg: true);
   home.packages = (with pkgs; [
+    rnix-lsp
+    discord
     mumble
     teams
     android-tools
@@ -77,7 +79,7 @@
       font = {
         normal = {
           family = "GohuFont Nerd Font Mono";
-#          style = "Regular";
+          #          style = "Regular";
         };
       };
     };
