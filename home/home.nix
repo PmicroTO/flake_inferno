@@ -14,6 +14,7 @@
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.allowUnfreePredicate = (pkg: true);
   home.packages = (with pkgs; [
+    libreoffice
     rnix-lsp
     discord
     mumble
@@ -118,6 +119,7 @@
       "sudo nixos-rebuild switch -j 8 --verbose --flake /home/lucio/Projects/flake_inferno#inferno";
     listports = "sudo netstat -tulpn | grep LISTEN ";
     wp = "wgetpaste";
+    ".." = "cd ..";
     #	webmloo = "for i in *.webm; do ffmpeg -stream_loop -1 -t 5 -i \"$i\" -c copy \"\${i%.*}_5.webm\"; done";
   };
 
