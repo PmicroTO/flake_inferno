@@ -14,6 +14,7 @@
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.allowUnfreePredicate = (pkg: true);
   home.packages = (with pkgs; [
+    brave
     libreoffice
     rnix-lsp
     discord
