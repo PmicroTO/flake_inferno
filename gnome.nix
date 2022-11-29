@@ -43,5 +43,6 @@
       gnome-maps
       yelp
       gnome-software
+      seahorse
     ]);
 }
