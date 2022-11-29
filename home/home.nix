@@ -24,7 +24,7 @@
     qogir-icon-theme
     tomb
     ffmpeg_5-full
-    gimp
+    (gimp-with-plugins.override { plugins = with gimpPlugins; [ bimp ]; })
     wgetpaste
     kotatogram-desktop
     mailspring
