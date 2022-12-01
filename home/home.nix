@@ -24,22 +24,18 @@
     android-tools
     qogir-icon-theme
     tomb
+    pinentry-curses
     ffmpeg_5-full
     (gimp-with-plugins.override { plugins = with gimpPlugins; [ bimp ]; })
     wgetpaste
-    kotatogram-desktop
+    #    kotatogram-desktop
     mailspring
     any-nix-shell
-    gcc
-    cargo
-    wl-clipboard
     fontpreview
     nerdfonts
     steam-run
-    #    brave
     calibre
     transmission-gtk
-    pika-backup
     vlc
     authenticator
     nordzy-icon-theme
@@ -47,13 +43,8 @@
     ventoy-bin-full
     taskwarrior
     dconf2nix
-    spice-up
-    openshot-qt
-    flowblade
-    poppler_utils
     detox
     hakuneko
-    adw-gtk3
     droidcam
     gnome.pomodoro
     zoxide
