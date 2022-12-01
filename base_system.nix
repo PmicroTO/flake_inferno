@@ -59,6 +59,8 @@
       "\n		ACTION==\"add|change\", KERNEL==\"sd[a-z]*\", ATTR{queue/rotational}==\"0\", ATTR{queue/scheduler}=\"none\" \n		ACTION==\"add|change\", KERNEL==\"sd[a-z]*\", ATTR{queue/rotational}==\"1\", ATTR{queue/scheduler}=\"bfq\"\n		";
   };
 
+  security.sudo.wheelNeedsPassword = false;
+
   nix = {
     package = pkgs.nixFlakes;
     extraOptions = "	experimental-features = nix-command flakes\n";

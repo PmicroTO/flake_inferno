@@ -15,6 +15,7 @@
   nixpkgs.config.allowUnfreePredicate = (pkg: true);
   home.packages = (with pkgs; [
     gnome.gnome-tweaks
+    yt-dlp
     brave
     libreoffice
     rnix-lsp
@@ -114,7 +115,7 @@
     wp = "wgetpaste";
     ".." = "cd ..";
     #	webmloo = "for i in *.webm; do ffmpeg -stream_loop -1 -t 5 -i \"$i\" -c copy \"\${i%.*}_5.webm\"; done";
-    to = "tomb open $HOME/personal.tomb -k $HOME/personal.tomb.key";
+    to = "tomb open $HOME/personal.tomb -k $HOME/personal.tomb.key ; sleep 600 ; tomb slam all";
     slam = "tomb slam all";
   };
 
