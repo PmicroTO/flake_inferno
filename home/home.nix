@@ -114,6 +114,8 @@
     wp = "wgetpaste";
     ".." = "cd ..";
     #	webmloo = "for i in *.webm; do ffmpeg -stream_loop -1 -t 5 -i \"$i\" -c copy \"\${i%.*}_5.webm\"; done";
+    to = "tomb open $HOME/personal.tomb -k $HOME/personal.tomb.key";
+    slam = "tomb slam all";
   };
 
   programs.git = {
