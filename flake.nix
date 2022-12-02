@@ -28,7 +28,6 @@
           #          ./home/nvim.nix
           ./home/helix.nix
           ./home/tmux.nix
-          #          ./home/pipewire_conf.nix
         ];
       };
 

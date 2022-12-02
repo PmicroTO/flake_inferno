@@ -13,6 +13,7 @@
   };
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.allowUnfreePredicate = (pkg: true);
+  fonts.fontconfig.enable = true;
   home.packages = (with pkgs; [
     gnome.gnome-tweaks
     yt-dlp

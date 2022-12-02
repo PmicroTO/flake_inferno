@@ -23,8 +23,7 @@
 
   xdg.portal.enable = true;
   programs.dconf.enable = true;
-  security.pam.services.lucio.enableGnomeKeyring = true;
-  # Workaround for GNOME autologin: https://github.com/NixOS/nixpkgs/issues/103746#issuecomment-945091229
+    # Workaround for GNOME autologin: https://github.com/NixOS/nixpkgs/issues/103746#issuecomment-945091229
   systemd.services."getty@tty1".enable = false;
   systemd.services."autovt@tty1".enable = false;
   #	services.gnome.core-utilities.enable = false;
