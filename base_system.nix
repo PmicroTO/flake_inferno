@@ -51,6 +51,7 @@
       daemon.enable = true;
       updater.enable = true;
     };
+    dbus.implementation = "broker";
     fstrim = {
       enable = true;
       interval = "weekly";
