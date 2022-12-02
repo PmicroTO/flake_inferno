@@ -41,6 +41,8 @@
           ./networking.nix
           #          ./pipewire_conf.nix
           ./pipewire.nix
+          ./dwm/xorg.nix
+          ./dwm/dwm.nix
         ];
       };
 
