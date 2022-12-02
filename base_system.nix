@@ -32,7 +32,7 @@
 
   users.users.lucio = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" "i2c" "audio" "video" ];
+    extraGroups = [ "wheel" "networkmanager" "i2c" ];
     shell = pkgs.fish;
   };
 
