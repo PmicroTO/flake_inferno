@@ -5,6 +5,8 @@
 
     ".local/share/applications/fish.desktop".source = ./desktop-entries/fish.desktop;
     ".local/share/applications/cups.desktop".source = ./desktop-entries/cups.desktop;
+    ".config/helix/config.toml".source = ./config/helix/config.toml;
+
 
     ".face" = {
       source = pkgs.fetchurl {

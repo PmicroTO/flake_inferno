@@ -1,0 +1,19 @@
+theme = "tokyonight"
+
+[editor]
+auto-pairs = false
+line-number = "relative"
+gutters = ["diagnostics", "line-numbers", "spacer"]
+true-color = true
+
+[editor.statusline]
+center = ["mode", "spinner", "diagnostics"]
+left = ["file-name", "file-type", "file-encoding"]
+right = ["selections", "file-line-ending", "position"]
+separator = "|"
+
+[editor.whitespace]
+render = "all"
+
+[editor.lsp]
+display-messages = true

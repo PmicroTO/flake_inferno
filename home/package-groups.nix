@@ -22,10 +22,11 @@ rec {
   ];
 
   editor = [
+    helix
     rnix-lsp
     nodePackages.bash-language-server
     texlab
-    (python39.withPackages
+    (python3.withPackages
       (ps: with ps; [
         python-lsp-server
         autopep8
