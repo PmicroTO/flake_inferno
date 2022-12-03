@@ -13,6 +13,7 @@
           "a476548d48768690f44fd8c67f0a566224112bc1003a3a9fa6b3edc18d8bc14e";
       };
     };
+
     ".background-image" = {
       source = pkgs.fetchurl {
         url =
@@ -21,6 +22,7 @@
           "0ndadcyqhwjv54m1qb7jlk7jg61p0fck8z4w37z4rbl0zklb5s4l";
       };
     };
+
     "Sakuya-cursors" = {
       source = pkgs.fetchzip {
         url = "https://0x0.st/o4wb.zip";
@@ -30,15 +32,6 @@
       target = ".local/share/icons/Sakuya-cursors";
     };
 
-    "base16-shell-master" = {
-      source = pkgs.fetchzip {
-        url =
-          "https://github.com/chriskempson/base16-shell/archive/refs/heads/master.zip";
-        sha512 =
-          "0c0lm47wwcqd2lc0293awr8kvpib8pcq1kgnilnbg0d2g0b65if0aj0yrmv1sg3z78c15ssksv9j7ikbhhwifdg3360ypk2plrfyrny";
-      };
-      target = ".config/base16-shell";
-    };
     "tpm" = {
       source = pkgs.fetchFromGitHub {
         owner = "tmux-plugins";
@@ -48,6 +41,7 @@
       };
       target = ".tmux/plugins/tpm";
     };
+
   };
 }
 
