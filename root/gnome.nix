@@ -28,7 +28,10 @@ with lib;
   # Workaround for GNOME autologin: https://github.com/NixOS/nixpkgs/issues/103746#issuecomment-945091229
   systemd.services."getty@tty1".enable = false;
   systemd.services."autovt@tty1".enable = false;
-
   # "debloat", ironically
   services.gnome.core-utilities.enable = false;
+  environment.gnome.excludePackages = with pkgs; [
+    gnome-tour
+    gnome.gnome-bluetooth
+  ];
 }
