@@ -33,11 +33,11 @@ rec {
     fontpreview
     hakuneko
     libreoffice
-    calibre
-    bookworm
+    mupdf
   ];
 
   utils = [
+    scantailor-advanced
     radeontop
     bottom
     droidcam

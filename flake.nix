@@ -43,6 +43,7 @@
           ./root/networking.nix
           #          ./pipewire_conf.nix
           ./root/pipewire.nix
+          ./root/containers.nix
         ];
       };
 
