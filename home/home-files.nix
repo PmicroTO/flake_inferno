@@ -2,6 +2,10 @@
 
 {
   home.file = {
+
+    ".local/share/applications/fish.desktop".source = ./desktop-entries/fish.desktop;
+    ".local/share/applications/cups.desktop".source = ./desktop-entries/cups.desktop;
+
     ".face" = {
       source = pkgs.fetchurl {
         url = "https://nitter.net/pic/media%2FFN_lMoOVUAAnVUd.jpg";
