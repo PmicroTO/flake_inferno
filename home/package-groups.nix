@@ -62,10 +62,9 @@ rec {
 
   gnome = with pkgs.gnome; [
     gnome-tweaks
-    pomodoro
     nautilus
     file-roller
-  ] ++ [ dconf2nix image-roll ];
+  ] ++ [ dconf2nix image-roll gnome-solanum ];
 
   gnome-extensions = with pkgs.gnomeExtensions; [
     no-activities-button

@@ -99,9 +99,9 @@ in
     ".background-image" = {
       source = pkgs.fetchurl {
         url =
-          "https://raw.githubusercontent.com/wnxkiv85/flake_inferno/main/wallpaper.jpeg";
+          "https://w.wallhaven.cc/full/39/wallhaven-39m7r6.jpg";
         sha256 =
-          "c11872838c13eaab4a128541a9413526b629e6ed7027b9ac67bb4a5fe0c30284";
+          "0ndadcyqhwjv54m1qb7jlk7jg61p0fck8z4w37z4rbl0zklb5s4l";
       };
     };
     "Sakuya-cursors" = {
