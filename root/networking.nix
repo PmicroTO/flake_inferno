@@ -5,6 +5,7 @@
   services.printing = {
     enable = true;
     drivers = [ pkgs.epson-escpr ];
+    webInterface = false;
   };
   services.avahi = {
     enable = true;
@@ -20,6 +21,7 @@
     enable = true;
     arguments = [ "-config" "cc6b68" "-cache-size" "20MB" ];
   };
+
   programs.ssh.startAgent = true;
 
   networking.firewall = {

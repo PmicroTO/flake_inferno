@@ -22,10 +22,5 @@
     (with config.boot.kernelPackages; [ kernel rtl88x2bu ])
     ++ (with pkgs; [ ddcutil ]);
   hardware.i2c.enable = true;
-  nix.gc = {
-    automatic = true;
-    dates = "weekly";
-    options = "--delete-older-than 7d";
-  };
 }
 
