@@ -24,10 +24,17 @@ rec {
   editor = [
     rnix-lsp
     nodePackages.bash-language-server
-    python39Packages.python-lsp-server
     texlab
+    (python39.withPackages
+    (ps: with ps; [
+      python-lsp-server
+      yapf
+      rope
+      pycodestyle
+      pyflakes
+      mccabe
+    ]))
   ];
-
   viewers = [
     clapper
     fontpreview
