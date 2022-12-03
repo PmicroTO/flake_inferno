@@ -24,6 +24,9 @@ rec {
 
   editor = [
     rnix-lsp
+    nodePackages.bash-language-server
+    python39Packages.python-lsp-server
+    texlab
   ];
 
   viewers = [
