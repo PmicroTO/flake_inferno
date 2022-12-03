@@ -24,6 +24,8 @@
         inherit pkgs;
         modules = [
           ({ config, pkgs, ... }: { nixpkgs.overlays = [ overlay-master ]; })
+          ./home/home-shell.nix
+          ./home/home-files.nix
           ./home/home.nix
           ./home/dconf.nix
           ./home/helix.nix

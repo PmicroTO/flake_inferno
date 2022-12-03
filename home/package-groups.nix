@@ -7,7 +7,6 @@ rec {
     brave
     thunderbird
     authenticator
-    tidal-hifi
   ];
 
   mediaed = [
@@ -35,6 +34,7 @@ rec {
     hakuneko
     libreoffice
     calibre
+    bookworm
   ];
 
   utils = [
