@@ -16,6 +16,7 @@ with lib;
       displayManager.autoLogin.enable = true;
       displayManager.autoLogin.user = "lucio";
     };
+    gnome.gnome-keyring.enable = mkForce false;
     power-profiles-daemon.enable = false;
     upower.enable = mkDefault config.powerManagement.disable;
   };
@@ -32,6 +33,5 @@ with lib;
   services.gnome.core-utilities.enable = false;
   environment.gnome.excludePackages = with pkgs; [
     gnome-tour
-    gnome.gnome-bluetooth
   ];
 }

@@ -5,7 +5,6 @@
   services.printing = {
     enable = true;
     drivers = [ pkgs.epson-escpr ];
-    webInterface = false;
   };
   services.avahi = {
     enable = true;
