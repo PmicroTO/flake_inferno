@@ -28,7 +28,7 @@ rec {
     (python39.withPackages
       (ps: with ps; [
         python-lsp-server
-        yapf
+        autopep8
         rope
         pycodestyle
         pyflakes
