@@ -33,5 +33,6 @@ with lib;
   services.gnome.core-utilities.enable = false;
   environment.gnome.excludePackages = with pkgs; [
     gnome-tour
+    gnome.gnome-keyring
   ];
 }
