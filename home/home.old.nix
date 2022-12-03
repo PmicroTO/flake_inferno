@@ -1,12 +1,5 @@
-{ config, pkgs, lib, ... }:
-
-let
-  packageGroups = import ./package-groups.nix { inherit pkgs; };
-in
-
-{
+{ config, pkgs, lib, ... }: {
   programs.home-manager.enable = true;
-
   home = {
     username = "lucio";
     homeDirectory = "/home/lucio";
@@ -21,8 +14,53 @@ in
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.allowUnfreePredicate = (pkg: true);
   fonts.fontconfig.enable = true;
-  home.packages = with packageGroups; base ++ connect ++ gnomebase;
-  # end.packages
+  home.packages = (with pkgs; [
+    #    gnome.gnome-tweaks
+    yt-dlp
+    brave
+    libreoffice
+    rnix-lsp
+    discord
+    mumble
+    teams
+    android-tools
+    qogir-icon-theme
+    tomb
+    pinentry-curses
+    ffmpeg_5-full
+    (gimp-with-plugins.override { plugins = with gimpPlugins; [ bimp ]; })
+    wgetpaste
+    #    kotatogram-desktop
+    mailspring
+    claws-mail
+    any-nix-shell
+    fontpreview
+    nerdfonts
+    steam-run
+    calibre
+    transmission-gtk
+    vlc
+    authenticator
+    nordzy-icon-theme
+    disfetch
+    ventoy-bin-full
+    taskwarrior
+    dconf2nix
+    detox
+    hakuneko
+    droidcam
+    gnome.pomodoro
+    zoxide
+  ]) ++ (with pkgs.gnomeExtensions; [
+    no-activities-button
+    no-overview
+    blur-my-shell
+    dock-from-dash
+    resource-monitor
+    gsconnect
+    gnome-bedtime
+    espresso
+  ]); # end.packages
   programs.alacritty = {
     enable = true;
     settings = {

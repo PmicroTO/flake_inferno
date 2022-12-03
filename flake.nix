@@ -1,7 +1,7 @@
 {
   description = "my machine";
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-22.11";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-master.url = "github:nixos/nixpkgs/master";
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -18,6 +18,7 @@
         master = nixpkgs-master.legacyPackages.${prev.system};
       };
     in
+
     {
       homeConfigurations.lucio = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
@@ -34,15 +35,16 @@
       nixosConfigurations.inferno = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-          ./base_system.nix
-          ./boot.nix
-          ./gnome.nix
-          ./hardware-configuration.nix
-          ./networking.nix
+          ./root/base_system.nix
+          ./root/boot.nix
+          #./root/gnome_trimmed.nix
+          ./root/gnome.nix
+          ./root/hardware-configuration.nix
+          ./root/networking.nix
           #          ./pipewire_conf.nix
-          ./pipewire.nix
-          ./dwm/xorg.nix
-          ./dwm/dwm.nix
+          ./root/pipewire.nix
+          #          ./dwm/xorg.nix
+          #         ./dwm/dwm.nix
         ];
       };
 
