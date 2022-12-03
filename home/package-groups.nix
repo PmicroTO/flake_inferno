@@ -26,15 +26,16 @@ rec {
     nodePackages.bash-language-server
     texlab
     (python39.withPackages
-    (ps: with ps; [
-      python-lsp-server
-      yapf
-      rope
-      pycodestyle
-      pyflakes
-      mccabe
-    ]))
+      (ps: with ps; [
+        python-lsp-server
+        yapf
+        rope
+        pycodestyle
+        pyflakes
+        mccabe
+      ]))
   ];
+
   viewers = [
     clapper
     fontpreview
