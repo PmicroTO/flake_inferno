@@ -21,32 +21,40 @@ with lib.hm.gvariant;
         "gnomebedtime@ionutbortis.gmail.com"
         "espresso@coadmunkee.github.com"
         "gsconnect@andyholmes.github.io"
-        #        "user-theme@gnome-shell-extensions.gcampax.github.com"
-        "Resource_Monitor@Ory0n"
-        "workspace-indicator@gnome-shell-extensions.gcampax.github.com"
-        "blur-my-shell@aunetx"
         "dock-from-dash@fthx"
         "no_activities@yaya.cout"
         "no-overview@fthx"
-        "places-menu@gnome-shell-extensions.gcampax.github.com"
+        ### not sure why, but forge needs two entries
+        "forge@jmmaranan.co"
+        "forge@jmmaranan.com"
+        ###
+        "workspace-indicator@gnome-shell-extensions.gcampax.github.com"
+        "pomodoro@arun.codito.in"
       ];
-    };
-    "org/gnome/shell/extension/user-theme" = {
-      name = "WhiteSur-Dark-solid";
     };
     "org/gnome/shell/extension/bedtime-mode" = {
       bedtime-mode-active = true;
       color-tone-factor = 80;
-    };
-    "org/gnome/shell/extensions/blur-my-shell" = {
-      color-and-noise = true;
-      hacks-level = 0;
     };
     "org/gnome/shell/extension/espresso" = {
       has-battery = false;
       show-notifications = false;
       user-enabled = true;
     };
+    "org/gnome/shell/extension/forge" = {
+      css-last-update = mkUint32 37;
+      stacked-tiling-mode-enabled = false;
+      tabbed-tiling-mode-enabled = false;
+      tiling-mode-enabled = true;
+      window-gap-hidden-on-single = true;
+      window-gap-size-increment = mkUint32 0;
+      workspace-skip-tile = "0";
+    };
+    "org/gnome/shell/extension/forge/keybindings" = {
+      mod-mask-mouse-tile = "Super";
+      window-swap-last-active = [ ];
+    };
+
     "org/gnome/shell/keybindings" = {
       switch-to-application-1 = [ "" ];
       switch-to-application-2 = [ "" ];

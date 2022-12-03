@@ -9,7 +9,7 @@
   hardware.opengl = {
     enable = true;
     driSupport = true;
-    extraPackages = with pkgs; [ ];
+    extraPackages = with pkgs; [ rocm-opencl-icd amdvlk ];
   };
   boot.initrd.availableKernelModules = [
     "ahci"

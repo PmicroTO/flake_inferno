@@ -5,8 +5,9 @@ rec {
   web = [
     yt-dlp
     brave
-    claws-mail
+    thunderbird
     authenticator
+    tidal-hifi
   ];
 
   mediaed = [
@@ -26,7 +27,7 @@ rec {
   ];
 
   viewers = [
-    vlc
+    clapper
     fontpreview
     hakuneko
     libreoffice
@@ -34,6 +35,8 @@ rec {
   ];
 
   utils = [
+    radeontop
+    bottom
     droidcam
     android-tools
     detox
@@ -59,24 +62,23 @@ rec {
     pomodoro
     nautilus
     file-roller
-  ] ++ [ nautilus-open-any-terminal dconf2nix ];
+  ] ++ [ dconf2nix image-roll ];
 
   gnome-extensions = with pkgs.gnomeExtensions; [
     no-activities-button
     no-overview
-    blur-my-shell
     dock-from-dash
-    resource-monitor
     gsconnect
     gnome-bedtime
     espresso
+    forge
   ];
 
-  base = utils ++ viewers ++ editor ;
-  manipulation = mediaed ;
+  base = utils ++ viewers ++ editor;
+  manipulation = mediaed;
   connect = web ++ social;
   gnomebase = gnome ++ gnome-extensions ++ theming;
-  
+
 }
 
 
