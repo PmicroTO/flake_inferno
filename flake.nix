@@ -26,7 +26,6 @@
           ({ config, pkgs, ... }: { nixpkgs.overlays = [ overlay-master ]; })
           ./home/home.nix
           ./home/dconf.nix
-          #          ./home/nvim.nix
           ./home/helix.nix
           ./home/tmux.nix
         ];
@@ -37,14 +36,11 @@
         modules = [
           ./root/base_system.nix
           ./root/boot.nix
-          #./root/gnome_trimmed.nix
           ./root/gnome.nix
           ./root/hardware-configuration.nix
           ./root/networking.nix
           #          ./pipewire_conf.nix
           ./root/pipewire.nix
-          #          ./dwm/xorg.nix
-          #         ./dwm/dwm.nix
         ];
       };
 
