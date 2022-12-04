@@ -21,11 +21,10 @@ with lib.hm.gvariant;
         "gnomebedtime@ionutbortis.gmail.com"
         "espresso@coadmunkee.github.com"
         "gsconnect@andyholmes.github.io"
-        "no_activities@yaya.cout"
-        "no-overview@fthx"
         "workspace-indicator@gnome-shell-extensions.gcampax.github.com"
         "pomodoro@arun.codito.in"
         "tiling-assistant@leleat-on-github"
+        "just-perfection-desktop@just-perfection"
       ];
     };
     "org/gnome/shell/extension/bedtime-mode" = {
@@ -116,8 +115,8 @@ with lib.hm.gvariant;
       move-to-workspace-right = [ ];
       panel-run-dialog = [ "<Super>r" ];
       show-desktop = [ ];
-      switch-applications = [ "<Super>Tab" ];
-      switch-applications-backward = [ "<Shift><Super>Tab" ];
+      switch-applications = [ ];
+      switch-applications-backward = [ ];
       switch-group = [ ];
       switch-group-backward = [ ];
       switch-input-source = [ "<Super>space" ];
@@ -131,6 +130,8 @@ with lib.hm.gvariant;
       switch-to-workspace-last = [ ];
       switch-to-workspace-left = [ ];
       switch-to-workspace-right = [ ];
+      switch-windows = [ "<Super>Tab" ];
+      switch-windows-backward = [ "<Shift><Super>Tab" ];
       unmaximize = [ ];
     };
     "org/gnome/settings-daemon/plugins/media-keys" = {
@@ -147,7 +148,7 @@ with lib.hm.gvariant;
 
     "org/gnome/desktop/input-sources" = {
       sources = [ (mkTuple [ "xkb" "us" ]) (mkTuple [ "xkb" "us+alt-intl" ]) ];
-      xkb-options = [ "terminate:ctrl_alt_bksp" "caps:swapescape" "altwin:swap_lalt_lwin" "lv3:switch" "lv3:switch" "lv3:ralt_alt" "grp:shifts_toggle" ];
+      xkb-options = [ "terminate:ctrl_alt_bksp" "caps:escape" "altwin:swap_lalt_lwin" "lv3:switch" "lv3:switch" "lv3:ralt_alt" "grp:shifts_toggle" "grp_led:caps" ];
     };
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" =
       {
