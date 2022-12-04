@@ -19,9 +19,9 @@
     ".background-image" = {
       source = pkgs.fetchurl {
         url =
-          "https://w.wallhaven.cc/full/39/wallhaven-39m7r6.jpg";
+          "https://w.wallhaven.cc/full/13/wallhaven-13g2qw.jpg";
         sha256 =
-          "0ndadcyqhwjv54m1qb7jlk7jg61p0fck8z4w37z4rbl0zklb5s4l";
+          "1y8ld6qjybcksdq6l4pf62khgycwv4kwyvjzc2r2p0mbcgfnyzcp";
       };
     };
 
