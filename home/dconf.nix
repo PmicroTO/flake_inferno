@@ -25,6 +25,7 @@ with lib.hm.gvariant;
         "no-overview@fthx"
         "workspace-indicator@gnome-shell-extensions.gcampax.github.com"
         "pomodoro@arun.codito.in"
+        "tiling-assistant@leleat-on-github"
       ];
     };
     "org/gnome/shell/extension/bedtime-mode" = {
