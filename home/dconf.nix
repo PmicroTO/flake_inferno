@@ -152,13 +152,13 @@ with lib.hm.gvariant;
     };
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" =
       {
-        binding = "<Shift><Super>minus";
+        binding = "<Alt><Super>minus";
         command = "ddcutil setvcp 10 - 20";
         name = "backlightdown";
       };
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" =
       {
-        binding = "<Shift><Super>equal";
+        binding = "<Alt><Super>equal";
         command = "ddcutil setvcp 10 + 20";
         name = "backlightup";
       };
