@@ -147,8 +147,8 @@ with lib.hm.gvariant;
     "org/gnome/desktop/wm/preferences" = { num-workspaces = 4; };
 
     "org/gnome/desktop/input-sources" = {
-      sources = [ (mkTuple [ "xkb" "us" ]) (mkTuple [ "xkb" "us+alt-intl" ]) ];
-      xkb-options = [ "terminate:ctrl_alt_bksp" "caps:escape" "altwin:swap_lalt_lwin" "lv3:switch" "lv3:switch" "lv3:ralt_alt" "grp:shifts_toggle" "grp_led:caps" ];
+      sources = [ (mkTuple [ "xkb" "us" ]) (mkTuple [ "xkb" "us+intl" ]) ];
+      xkb-options = [ "terminate:ctrl_alt_bksp" "caps:escape" "altwin:swap_lalt_lwin" "lv3:ralt_alt" "grp:shifts_toggle" "grp_led:caps" "lv3:menu_switch" ];
     };
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" =
       {
