@@ -21,13 +21,8 @@ with lib.hm.gvariant;
         "gnomebedtime@ionutbortis.gmail.com"
         "espresso@coadmunkee.github.com"
         "gsconnect@andyholmes.github.io"
-        "dock-from-dash@fthx"
         "no_activities@yaya.cout"
         "no-overview@fthx"
-        ### not sure why, but forge needs two entries
-        "forge@jmmaranan.co"
-        "forge@jmmaranan.com"
-        ###
         "workspace-indicator@gnome-shell-extensions.gcampax.github.com"
         "pomodoro@arun.codito.in"
       ];
@@ -41,19 +36,6 @@ with lib.hm.gvariant;
       show-notifications = false;
       user-enabled = true;
     };
-    "org/gnome/shell/extension/forge" = {
-      css-last-update = mkUint32 37;
-      stacked-tiling-mode-enabled = false;
-      tabbed-tiling-mode-enabled = false;
-      tiling-mode-enabled = true;
-      window-gap-hidden-on-single = true;
-      window-gap-size-increment = mkUint32 0;
-      workspace-skip-tile = "0";
-    };
-    "org/gnome/shell/extension/forge/keybindings" = {
-      mod-mask-mouse-tile = "Super";
-      window-swap-last-active = [ ];
-    };
 
     "org/gnome/shell/keybindings" = {
       switch-to-application-1 = [ "" ];
@@ -62,14 +44,48 @@ with lib.hm.gvariant;
       switch-to-application-4 = [ "" ];
     };
     "org/gnome/desktop/wm/keybindings" = {
-      move-to-workspace-1 = [ "<Shift><Super>1" ];
-      move-to-workspace-2 = [ "<Shift><Super>2" ];
-      move-to-workspace-3 = [ "<Shift><Super>3" ];
-      move-to-workspace-4 = [ "<Shift><Super>4" ];
+      begin-move = [ ];
+      begin-resize = [ ];
+      close = [ "<Super>q" ];
+      cycle-group = [ ];
+      cycle-group-backward = [ ];
+      cycle-panels = [ ];
+      cycle-panels-backward = [ ];
+      cycle-windows = [ ];
+      cycle-windows-backward = [ ];
+      lower = [ ];
+      maximize = [ ];
+      maximize-horizontally = [ ];
+      minimize = [ ];
+      move-to-monitor-down = [ ];
+      move-to-monitor-left = [ ];
+      move-to-monitor-right = [ ];
+      move-to-monitor-up = [ ];
+      move-to-workspace-1 = [ "<Alt><Super>1" ];
+      move-to-workspace-2 = [ "<Alt><Super>2" ];
+      move-to-workspace-3 = [ "<Alt><Super>3" ];
+      move-to-workspace-4 = [ "<Alt><Super>4" ];
+      move-to-workspace-last = [ ];
+      move-to-workspace-left = [ ];
+      move-to-workspace-right = [ ];
+      panel-run-dialog = [ "<Super>r" ];
+      show-desktop = [ ];
+      switch-applications = [ "<Super>Tab" ];
+      switch-applications-backward = [ "<Shift><Super>Tab" ];
+      switch-group = [ ];
+      switch-group-backward = [ ];
+      switch-input-source = [ "<Super>space" ];
+      switch-input-source-backward = [ "<Shift><Super>space" ];
+      switch-panels = [ ];
+      switch-panels-backward = [ ];
       switch-to-workspace-1 = [ "<Super>1" ];
       switch-to-workspace-2 = [ "<Super>2" ];
       switch-to-workspace-3 = [ "<Super>3" ];
       switch-to-workspace-4 = [ "<Super>4" ];
+      switch-to-workspace-last = [ ];
+      switch-to-workspace-left = [ ];
+      switch-to-workspace-right = [ ];
+      unmaximize = [ ];
     };
     "org/gnome/settings-daemon/plugins/media-keys" = {
       mic-mute = [ "<Shift><Super>BackSpace" ];
@@ -85,7 +101,7 @@ with lib.hm.gvariant;
 
     "org/gnome/desktop/input-sources" = {
       sources = [ (mkTuple [ "xkb" "us" ]) (mkTuple [ "xkb" "us+alt-intl" ]) ];
-      xkb-options = [ "terminate:ctrl_alt_bksp" "caps:swapescape" ];
+      xkb-options = [ "terminate:ctrl_alt_bksp" "caps:swapescape" "altwin:swap_lalt_lwin" ];
     };
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" =
       {

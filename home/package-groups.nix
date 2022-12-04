@@ -82,7 +82,8 @@ rec {
     gsconnect
     gnome-bedtime
     espresso
-    forge
+    dash-to-panel
+    tiling-assistant
   ];
 
   base = utils ++ viewers ++ editor;
