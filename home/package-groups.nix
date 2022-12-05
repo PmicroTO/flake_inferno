@@ -81,8 +81,9 @@ rec {
     gsconnect
     gnome-bedtime
     espresso
-    tiling-assistant
     task-widget
+    no-overview
+    no-activities-button
   ];
 
   base = utils ++ viewers ++ editor;

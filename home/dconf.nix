@@ -23,8 +23,10 @@ with lib.hm.gvariant;
         "gsconnect@andyholmes.github.io"
         "workspace-indicator@gnome-shell-extensions.gcampax.github.com"
         "pomodoro@arun.codito.in"
-        "tiling-assistant@leleat-on-github"
-        "just-perfection-desktop@just-perfection"
+        "no_activities@yaya.cout"
+        "no-overview@fthx"
+        "task-widget@juozasmiskinis.gitlab.io"
+
       ];
     };
     "org/gnome/shell/extension/bedtime-mode" = {
@@ -37,56 +39,16 @@ with lib.hm.gvariant;
       user-enabled = true;
     };
 
-    "org/gnome/shell/extension/tiling-assistant" = {
-      activate-layout0 = [ ];
-      activate-layout1 = [ ];
-      activate-layout2 = [ ];
-      activate-layout3 = [ ];
-      active-window-hint = 1;
-      active-window-hint-color = "rgb(53,132,228)";
-      auto-tile = [ ];
-      center-window = [ "<Super>c" ];
-      debugging-free-rects = [ ];
-      debugging-show-tiled-rects = [ ];
-      default-move-mode = 0;
-      dynamic-keybinding-behaviour = 1;
-      enable-tiling-popup = true;
-      import-layout-examples = false;
-      last-version-installed = 39;
-      maximize-with-gap = false;
-      restore-window = [ "<Alt>c" ];
-      search-popup-layout = [ ];
-      single-screen-gap = 0;
-      tile-bottom-half = [ "<Super>j" ];
-      tile-bottom-half-ignore-ta = [ ];
-      tile-bottomleft-quarter = [ ];
-      tile-bottomleft-quarter-ignore-ta = [ ];
-      tile-bottomright-quarter = [ ];
-      tile-bottomright-quarter-ignore-ta = [ ];
-      tile-edit-mode = [ ];
-      tile-left-half = [ "<Super>h" ];
-      tile-left-half-ignore-ta = [ ];
-      tile-maximize = [ "<Super>0" ];
-      tile-maximize-horizontally = [ ];
-      tile-maximize-vertically = [ ];
-      tile-right-half = [ "<Super>l" ];
-      tile-right-half-ignore-ta = [ ];
-      tile-top-half = [ "<Super>k" ];
-      tile-top-half-ignore-ta = [ ];
-      tile-topleft-quarter = [ ];
-      tile-topleft-quarter-ignore-ta = [ ];
-      tile-topright-quarter = [ ];
-      tile-topright-quarter-ignore-ta = [ ];
-      toggle-always-on-top = [ ];
-      toggle-tiling-popup = [ ];
-      window-gap = 0;
-    };
-
     "org/gnome/shell/keybindings" = {
       switch-to-application-1 = [ "" ];
       switch-to-application-2 = [ "" ];
       switch-to-application-3 = [ "" ];
       switch-to-application-4 = [ "" ];
+      switch-to-application-5 = [ "" ];
+      switch-to-application-6 = [ "" ];
+      switch-to-application-7 = [ "" ];
+      switch-to-application-8 = [ "" ];
+      switch-to-application-9 = [ "" ];
     };
     "org/gnome/desktop/wm/keybindings" = {
       begin-move = [ ];
@@ -132,6 +94,7 @@ with lib.hm.gvariant;
       switch-to-workspace-right = [ ];
       switch-windows = [ "<Super>Tab" ];
       switch-windows-backward = [ "<Shift><Super>Tab" ];
+      toggle-maximized = [ "<Super>0" ];
       unmaximize = [ ];
     };
     "org/gnome/settings-daemon/plugins/media-keys" = {
