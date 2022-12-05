@@ -74,18 +74,15 @@ rec {
     nautilus
     file-roller
     seahorse
-  ] ++ [ dconf2nix image-roll gnome-solanum endeavour ];
+  ] ++ [ dconf2nix image-roll gnome-solanum ];
 
   gnome-extensions = with pkgs.gnomeExtensions; [
     just-perfection
-    no-activities-button
-    no-overview
-    dock-from-dash
     gsconnect
     gnome-bedtime
     espresso
-    dash-to-panel
     tiling-assistant
+    task-widget
   ];
 
   base = utils ++ viewers ++ editor;
