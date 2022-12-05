@@ -73,7 +73,8 @@ rec {
     gnome-tweaks
     nautilus
     file-roller
-  ] ++ [ dconf2nix image-roll gnome-solanum ];
+    seahorse
+  ] ++ [ dconf2nix image-roll gnome-solanum endeavour ];
 
   gnome-extensions = with pkgs.gnomeExtensions; [
     just-perfection
