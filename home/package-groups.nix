@@ -75,7 +75,7 @@ rec {
     nautilus
     file-roller
     seahorse
-  ] ++ [ dconf2nix gnome-solanum ];
+  ] ++ [ dconf2nix gnome-solanum gnome-text-editor ];
 
   gnome-extensions = with pkgs.gnomeExtensions; [
     just-perfection
