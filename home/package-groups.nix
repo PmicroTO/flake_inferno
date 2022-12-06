@@ -39,6 +39,7 @@ rec {
 
   viewers = [
     clapper
+    imv
     fontpreview
     hakuneko
     libreoffice
@@ -74,7 +75,7 @@ rec {
     nautilus
     file-roller
     seahorse
-  ] ++ [ dconf2nix image-roll gnome-solanum ];
+  ] ++ [ dconf2nix gnome-solanum ];
 
   gnome-extensions = with pkgs.gnomeExtensions; [
     just-perfection
