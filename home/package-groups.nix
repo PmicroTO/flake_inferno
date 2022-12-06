@@ -38,6 +38,7 @@ rec {
   ];
 
   viewers = [
+    logseq
     clapper
     imv
     fontpreview
