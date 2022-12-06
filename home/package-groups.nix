@@ -47,6 +47,9 @@ rec {
   ];
 
   utils = [
+    zip
+    rar
+    p7zip
     scantailor-advanced
     radeontop
     bottom
