@@ -5,7 +5,6 @@ rec {
   web = [
     yt-dlp
     brave
-    thunderbird
     authenticator
   ];
 
@@ -13,6 +12,12 @@ rec {
     ffmpeg_5-full
     (gimp-with-plugins.override { plugins = with gimpPlugins; [ bimp ]; })
   ];
+
+  organization = [
+    nb
+    thunderbird
+  ];
+
 
   social = [
     discord
@@ -38,7 +43,6 @@ rec {
   ];
 
   viewers = [
-    logseq
     clapper
     imv
     fontpreview
@@ -91,7 +95,7 @@ rec {
     no-activities-button
   ];
 
-  base = utils ++ viewers ++ editor;
+  base = utils ++ viewers ++ editor ++ organization;
   manipulation = mediaed;
   connect = web ++ social;
   gnomebase = gnome ++ gnome-extensions ++ theming;
