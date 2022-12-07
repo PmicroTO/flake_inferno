@@ -5,6 +5,7 @@ rec {
   web = [
     yt-dlp
     brave
+    librewolf
     authenticator
   ];
 
@@ -79,20 +80,21 @@ rec {
   ];
 
   gnome = with pkgs.gnome; [
+    gnome-boxes
     gnome-tweaks
     nautilus
     file-roller
     seahorse
-  ] ++ [ dconf2nix gnome-solanum gnome-text-editor ];
+  ] ++ [ dconf2nix gnome-solanum gnome-text-editor easyeffects ];
 
   gnome-extensions = with pkgs.gnomeExtensions; [
-    just-perfection
     gsconnect
     gnome-bedtime
     espresso
     task-widget
     no-overview
     no-activities-button
+    easyeffects-preset-selector
   ];
 
   base = utils ++ viewers ++ editor ++ organization;
