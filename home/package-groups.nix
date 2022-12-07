@@ -14,8 +14,8 @@ rec {
   ];
 
   organization = [
-    nb
     thunderbird
+    logseq
   ];
 
 
