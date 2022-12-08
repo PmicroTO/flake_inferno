@@ -54,7 +54,6 @@ rec {
   ];
 
   utils = [
-    powerline
     bottles
     zip
     rar
@@ -88,9 +87,10 @@ rec {
     nautilus
     file-roller
     seahorse
-  ] ++ [ dconf2nix gnome-solanum gnome-text-editor easyeffects tdrop safeeyes break-time ];
+  ] ++ [ dconf2nix gnome-solanum gnome-text-editor easyeffects tdrop workrave ];
 
   gnome-extensions = with pkgs.gnomeExtensions; [
+    hide-top-bar
     gsconnect
     gnome-bedtime
     espresso

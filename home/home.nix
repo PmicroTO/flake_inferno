@@ -27,11 +27,12 @@ in
     enable = true;
     settings = {
       import = [ ./alacritty_theme.yml ];
+      dynamic_title = true;
       window = {
-        decorations = "none";
+        decorations = "full";
         padding = {
-          x = 3;
-          y = 3;
+          x = 5;
+          y = 5;
         };
         dynamic_padding = true;
       };

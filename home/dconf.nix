@@ -21,12 +21,8 @@ with lib.hm.gvariant;
         "gnomebedtime@ionutbortis.gmail.com"
         "espresso@coadmunkee.github.com"
         "gsconnect@andyholmes.github.io"
-        "workspace-indicator@gnome-shell-extensions.gcampax.github.com"
-        "pomodoro@arun.codito.in"
         "no_activities@yaya.cout"
         "no-overview@fthx"
-        "task-widget@juozasmiskinis.gitlab.io"
-        "places-menu@gnome-shell-extensions.gcampax.github.com"
         "another-window-session-manager@gmail.com"
       ];
     };
@@ -46,6 +42,13 @@ with lib.hm.gvariant;
       restore-session-interval = 16;
     };
 
+    "org/gnome/shell/extensions/hidetopbar" = {
+      enable-active-window = false;
+      enable-intellihide = false;
+      mouse-sensitive = true;
+      mouse-sensitive-fullscreen-window = true;
+    };
+
     "org/gnome/shell/keybindings" = {
       switch-to-application-1 = [ "" ];
       switch-to-application-2 = [ "" ];
@@ -57,6 +60,7 @@ with lib.hm.gvariant;
       switch-to-application-8 = [ "" ];
       switch-to-application-9 = [ "" ];
     };
+
     "org/gnome/desktop/wm/keybindings" = {
       begin-move = [ ];
       begin-resize = [ ];
@@ -142,7 +146,7 @@ with lib.hm.gvariant;
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3" =
       {
         binding = "<Super>t";
-        command = "tdrop -ma -w -1280 -y 0 -s dropdown alacritty";
+        command = "tdrop -ma -w -1280 -y 0 alacritty";
         name = "tdrop";
       };
 
