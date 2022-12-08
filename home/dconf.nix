@@ -26,17 +26,29 @@ with lib.hm.gvariant;
         "no_activities@yaya.cout"
         "no-overview@fthx"
         "task-widget@juozasmiskinis.gitlab.io"
-
+        "places-menu@gnome-shell-extensions.gcampax.github.com"
+        "another-window-session-manager@gmail.com"
       ];
     };
+
+
     "org/gnome/shell/extension/bedtime-mode" = {
       bedtime-mode-active = true;
       color-tone-factor = 80;
     };
-    "org/gnome/shell/extension/espresso" = {
-      has-battery = false;
-      show-notifications = false;
-      user-enabled = true;
+
+    "org/gnome/shell/extension/bedtime-mode" = {
+      bedtime-mode-active = true;
+      color-tone-factor = 80;
+    };
+
+    "org/gnome/shell/extension/another-window-session-manager" = {
+      close-windows-rules = ''
+        {}
+      '';
+      enable-autorestore-sessions = true;
+      restore-at-startup-without-asking = true;
+      restore-session-interval = 16;
     };
 
     "org/gnome/shell/keybindings" = {
