@@ -142,7 +142,7 @@ with lib.hm.gvariant;
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3" =
       {
         binding = "<Super>t";
-        command = "tdrop -ma -w -4 -y 0 -s dropdown alacritty";
+        command = "tdrop -ma -w -1280 -y 0 -s dropdown alacritty";
         name = "tdrop";
       };
 

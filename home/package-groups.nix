@@ -88,7 +88,7 @@ rec {
     nautilus
     file-roller
     seahorse
-  ] ++ [ dconf2nix gnome-solanum gnome-text-editor easyeffects tdrop ];
+  ] ++ [ dconf2nix gnome-solanum gnome-text-editor easyeffects tdrop safeeyes break-time ];
 
   gnome-extensions = with pkgs.gnomeExtensions; [
     gsconnect
