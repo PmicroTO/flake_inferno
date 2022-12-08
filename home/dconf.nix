@@ -24,6 +24,7 @@ with lib.hm.gvariant;
         "no_activities@yaya.cout"
         "no-overview@fthx"
         "another-window-session-manager@gmail.com"
+        "hidetopbar@mathieu.bidon.ca"
       ];
     };
 

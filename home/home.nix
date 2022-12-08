@@ -29,7 +29,7 @@ in
       import = [ ./alacritty_theme.yml ];
       dynamic_title = true;
       window = {
-        decorations = "full";
+        decorations = "none";
         padding = {
           x = 5;
           y = 5;
