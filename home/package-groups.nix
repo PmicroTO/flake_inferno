@@ -32,7 +32,7 @@ rec {
     rnix-lsp
     nodePackages.bash-language-server
     texlab
-    (python311.withPackages
+    (python310.withPackages
       (ps: with ps; [
         python-lsp-server
         autopep8
@@ -86,7 +86,7 @@ rec {
     nautilus
     file-roller
     seahorse
-  ] ++ [ dconf2nix gnome-solanum gnome-text-editor easyeffects ];
+  ] ++ [ dconf2nix gnome-solanum gnome-text-editor easyeffects tdrop ];
 
   gnome-extensions = with pkgs.gnomeExtensions; [
     gsconnect
