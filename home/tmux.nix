@@ -21,6 +21,8 @@
       set -g @continuum-boot 'on'
       set -g @plugin 'tmux-plugins/tpm' 
       run '~/.tmux/plugins/tpm/tpm' 
+      source ${pkgs.powerline}/share/tmux/powerline.conf
+
     '';
   };
   home.file.".config/tmux/tmux_modal.conf".source = ./config/tmux/tmux_modal.conf;

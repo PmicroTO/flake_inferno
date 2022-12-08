@@ -53,6 +53,7 @@ rec {
   ];
 
   utils = [
+    powerline
     bottles
     zip
     rar
