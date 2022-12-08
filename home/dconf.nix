@@ -139,6 +139,13 @@ with lib.hm.gvariant;
         name = "terminal";
       };
 
+    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3" =
+      {
+        binding = "<Super>t";
+        command = "tdrop -ma -w -4 -y 0 -s dropdown alacritty";
+        name = "tdrop";
+      };
+
     "org/gnome/desktop/background" = {
       color-shading-type = "solid";
       picture-options = "zoom";
