@@ -12,6 +12,7 @@ rec {
   mediaed = [
     ffmpeg_5-full
     (gimp-with-plugins.override { plugins = with gimpPlugins; [ bimp ]; })
+    handbrake
   ];
 
   organization = [
