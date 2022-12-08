@@ -37,11 +37,6 @@ with lib.hm.gvariant;
       color-tone-factor = 80;
     };
 
-    "org/gnome/shell/extension/bedtime-mode" = {
-      bedtime-mode-active = true;
-      color-tone-factor = 80;
-    };
-
     "org/gnome/shell/extension/another-window-session-manager" = {
       close-windows-rules = ''
         {}
