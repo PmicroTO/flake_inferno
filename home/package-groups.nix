@@ -32,7 +32,7 @@ rec {
     rnix-lsp
     nodePackages.bash-language-server
     texlab
-    (python3.withPackages
+    (python311.withPackages
       (ps: with ps; [
         python-lsp-server
         autopep8
