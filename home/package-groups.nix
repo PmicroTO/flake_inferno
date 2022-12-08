@@ -53,6 +53,7 @@ rec {
   ];
 
   utils = [
+    bottles
     zip
     rar
     p7zip
@@ -91,10 +92,9 @@ rec {
     gsconnect
     gnome-bedtime
     espresso
-    task-widget
     no-overview
     no-activities-button
-    easyeffects-preset-selector
+    gnomeExtensions.another-window-session-manager
   ];
 
   base = utils ++ viewers ++ editor ++ organization;
