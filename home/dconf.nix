@@ -41,14 +41,16 @@ with lib.hm.gvariant;
       appicon-margin = 8;
       appicon-padding = 4;
       available-monitors = [ 0 ];
+      hide-overview-on-startup = true;
       hotkeys-overlay-combo = "TEMPORARILY";
       intellihide-key-toggle = [ "<Super>i" ];
+      isolate-workspaces = true;
       leftbox-padding = -1;
       panel-anchors = ''
         {"0":"MIDDLE"}
       '';
       panel-element-positions = ''
-        {"0":[{"element":"showAppsButton","visible":false,"position":"stackedTL"},{"element":"activitiesButton","visible":false,"position":"stackedTL"},{"element":"leftBox","visible":true,"position":"stackedTL"},{"element":"taskbar","visible":true,"position":"stackedTL"},{"element":"centerBox","visible":true,"position":"stackedBR"},{"element":"rightBox","visible":true,"position":"stackedBR"},{"element":"dateMenu","visible":true,"position":"stackedBR"},{"element":"systemMenu","visible":true,"position":"stackedBR"},{"element":"desktopButton","visible":true,"position":"stackedBR"}]}
+        {"0":[{"element":"showAppsButton","visible":false,"position":"stackedTL"},{"element":"activitiesButton","visible":false,"position":"stackedTL"},{"element":"leftBox","visible":true,"position":"stackedTL"},{"element":"taskbar","visible":true,"position":"stackedTL"},{"element":"centerBox","visible":true,"position":"stackedBR"},{"element":"rightBox","visible":true,"position":"stackedBR"},{"element":"dateMenu","visible":true,"position":"stackedBR"},{"element":"systemMenu","visible":true,"position":"stackedBR"},{"element":"desktopButton","visible":false,"position":"stackedBR"}]}
       '';
       panel-lengths = ''
         {"0":100}
@@ -63,6 +65,7 @@ with lib.hm.gvariant;
       trans-use-custom-bg = true;
       tray-padding = -1;
       window-preview-title-position = "TOP";
+
     };
 
     ### SHELL/WM
