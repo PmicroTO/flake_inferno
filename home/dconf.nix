@@ -36,12 +36,13 @@ with lib.hm.gvariant;
       restore-at-startup-without-asking = true;
     };
 
-    "org/gnome/shell/extensions/extensions/dash-to-panel" = {
+    "org/gnome/shell/extensions/dash-to-panel" = {
       animate-appicon-hover-animation-extent = "{'RIPPLE': 4, 'PLANK': 4, 'SIMPLE': 1}";
       appicon-margin = 8;
       appicon-padding = 4;
       available-monitors = [ 0 ];
       hotkeys-overlay-combo = "TEMPORARILY";
+      intellihide-key-toggle = [ "<Super>i" ];
       leftbox-padding = -1;
       panel-anchors = ''
         {"0":"MIDDLE"}
@@ -56,7 +57,10 @@ with lib.hm.gvariant;
         {"0":32}
       '';
       primary-monitor = 0;
+      shortcut = [ "<Super>q" ];
       status-icon-padding = -1;
+      trans-bg-color = "#3d3846";
+      trans-use-custom-bg = true;
       tray-padding = -1;
       window-preview-title-position = "TOP";
     };
