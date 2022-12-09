@@ -6,7 +6,6 @@ rec {
     yt-dlp
     brave
     librewolf
-    authenticator
   ];
 
   mediaed = [
