@@ -74,12 +74,15 @@ with lib.hm.gvariant;
 
     "org/gnome/settings-daemon/plugins/media-keys" = {
       custom-keybindings = [ "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/" ];
+      email = [ "<Super>m" ];
+      help = [ ];
       magnifier-zoom-in = [ ];
       magnifier-zoom-out = [ ];
       mic-mute = [ "<Alt><Super>BackSpace" ];
       volume-down = [ "<Super>minus" ];
       volume-mute = [ "<Super>BackSpace" ];
       volume-up = [ "<Super>equal" ];
+      www = [ "<Super>b" ];
     };
 
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
@@ -144,6 +147,8 @@ with lib.hm.gvariant;
       panel-run-dialog = [ "<Super>r" ];
       raise = [ ];
       raise-or-lower = [ ];
+      switch-applications = [ ];
+      switch-applications-backward = [ ];
       switch-group = [ ];
       switch-group-backward = [ ];
       switch-to-workspace-1 = [ "<Super>1" ];
@@ -152,6 +157,8 @@ with lib.hm.gvariant;
       switch-to-workspace-4 = [ "<Super>4" ];
       switch-to-workspace-left = [ ];
       switch-to-workspace-right = [ ];
+      switch-windows = [ "<Super>Tab" ];
+      switch-windows-backward = [ "<Shift><Super>Tab" ];
       toggle-fullscreen = [ "<Super>0" ];
       toggle-maximized = [ ];
       toggle-on-all-workspaces = [ ];
