@@ -27,7 +27,6 @@ in
     enable = true;
     settings = {
       import = [ ./alacritty_theme.yml ];
-      dynamic_title = true;
       window = {
         decorations = "none";
         padding = {

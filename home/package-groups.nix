@@ -20,7 +20,6 @@ rec {
     logseq
   ];
 
-
   social = [
     discord
     mumble
@@ -49,30 +48,40 @@ rec {
     imv
     fontpreview
     hakuneko
-    libreoffice
     mupdf
   ];
 
-  utils = [
+  documents = [
+    scantailor-advanced
+    libreoffice
+  ];
+
+  gutils = [
     bottles
+    easyeffects
+  ];
+
+  utils = [
     zip
     rar
     p7zip
-    scantailor-advanced
     radeontop
     bottom
     droidcam
     android-tools
     detox
     taskwarrior
-    tomb
-    pinentry-curses
     wgetpaste
     any-nix-shell
     steam-run
     disfetch
     ventoy-bin-full
     zoxide
+  ];
+
+  bury = [
+    tomb
+    pinentry-curses
   ];
 
   theming = [
@@ -87,10 +96,10 @@ rec {
     nautilus
     file-roller
     seahorse
-  ] ++ [ dconf2nix gnome-solanum gnome-text-editor easyeffects tdrop workrave ];
+  ] ++ [ dconf2nix gnome-text-editor workrave ];
 
   gnome-extensions = with pkgs.gnomeExtensions; [
-    hide-top-bar
+    dash-to-panel
     gsconnect
     gnome-bedtime
     espresso
@@ -99,11 +108,10 @@ rec {
     gnomeExtensions.another-window-session-manager
   ];
 
-  base = utils ++ viewers ++ editor ++ organization;
+  base = utils ++ gutils ++ viewers ++ editor ++ organization ++ bury ++ documents;
   manipulation = mediaed;
   connect = web ++ social;
   gnomebase = gnome ++ gnome-extensions ++ theming;
-
 }
 
 

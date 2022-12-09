@@ -7,7 +7,6 @@
     ".local/share/applications/cups.desktop".source = ./desktop-entries/cups.desktop;
     ".config/helix/config.toml".source = ./config/helix/config.toml;
 
-
     ".face" = {
       source = pkgs.fetchurl {
         url = "https://nitter.net/pic/media%2FFN_lMoOVUAAnVUd.jpg";
@@ -32,16 +31,6 @@
           "1l4l9i0v1n4c4p9047wywhcwr4kdir1lrl34pi1fjbswgvsjyzwmjrxqy1zjihz3prpck040mdxaimqcmhzn9icz93221ids6rvvk33";
       };
       target = ".local/share/icons/Sakuya-cursors";
-    };
-
-    "tpm" = {
-      source = pkgs.fetchFromGitHub {
-        owner = "tmux-plugins";
-        repo = "tpm";
-        rev = "b699a7e01c253ffb7818b02d62bce24190ec1019";
-        sha256 = "1395fv70gxkpqswnraw50fcaawnjn91j4a44yzz1c3vmm3jp4r38";
-      };
-      target = ".tmux/plugins/tpm";
     };
 
   };

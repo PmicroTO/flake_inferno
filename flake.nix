@@ -28,7 +28,6 @@
           ./home/home-files.nix
           ./home/home.nix
           ./home/dconf.nix
-          ./home/tmux.nix
         ];
       };
 
