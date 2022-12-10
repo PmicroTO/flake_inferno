@@ -22,7 +22,7 @@ rec {
     discord
     mumble
     teams
-    #    kotatogram-desktop
+    kotatogram-desktop
   ];
 
   editor = [

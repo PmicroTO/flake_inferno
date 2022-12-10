@@ -126,6 +126,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/desktop/wm/keybindings" = {
+
       activate-window-menu = [ ];
       begin-move = [ ];
       begin-resize = [ ];
@@ -162,10 +163,11 @@ with lib.hm.gvariant;
       switch-to-workspace-right = [ ];
       switch-windows = [ "<Super>Tab" ];
       switch-windows-backward = [ "<Shift><Super>Tab" ];
-      toggle-fullscreen = [ "<Super>0" ];
-      toggle-maximized = [ ];
+      toggle-fullscreen = [ "<Super>minus" ];
+      toggle-maximized = [ "<Super>0" ];
       toggle-on-all-workspaces = [ ];
       unmaximize = [ ];
+
     };
 
     "org/gnome/shell/keybindings" = {
