@@ -61,7 +61,7 @@ with lib.hm.gvariant;
       primary-monitor = 0;
       shortcut = [ "<Super>q" ];
       status-icon-padding = -1;
-      trans-bg-color = "#3d3846";
+      trans-bg-color = "#000000";
       trans-use-custom-bg = true;
       tray-padding = -1;
       window-preview-title-position = "TOP";

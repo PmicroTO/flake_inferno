@@ -106,7 +106,6 @@ rec {
     #    gsconnect
     gnome-bedtime
     espresso
-    gnomeExtensions.another-window-session-manager
   ];
 
   base = utils ++ gutils ++ viewers ++ editor ++ organization ++ bury ++ documents;
