@@ -103,11 +103,9 @@ rec {
 
   gnome-extensions = with pkgs.gnomeExtensions; [
     dash-to-panel
-    gsconnect
+    #    gsconnect
     gnome-bedtime
     espresso
-    no-overview
-    no-activities-button
     gnomeExtensions.another-window-session-manager
   ];
 
