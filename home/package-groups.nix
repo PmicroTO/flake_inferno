@@ -4,7 +4,6 @@ rec {
 
   web = [
     yt-dlp
-    brave
     librewolf
   ];
 
