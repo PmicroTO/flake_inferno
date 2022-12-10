@@ -45,7 +45,7 @@ in
   };
   programs.git = {
     enable = true;
-    userEmail = "8f2w79@getgoogleoff.me";
+    userEmail = "lucio_a.khfzo@aleeas.com";
     userName = "wnxkiv85";
   };
 }
