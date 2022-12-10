@@ -135,6 +135,7 @@ with lib.hm.gvariant;
       cycle-group-backward = [ ];
       cycle-windows = [ ];
       cycle-windows-backward = [ ];
+      lower = [ "<Super>j" ];
       maximize = [ ];
       minimize = [ ];
       move-to-monitor-down = [ ];
@@ -164,7 +165,7 @@ with lib.hm.gvariant;
       switch-windows = [ "<Super>Tab" ];
       switch-windows-backward = [ "<Shift><Super>Tab" ];
       toggle-fullscreen = [ "<Super>minus" ];
-      toggle-maximized = [ "<Super>0" ];
+      toggle-maximized = [ "<Super>k" ];
       toggle-on-all-workspaces = [ ];
       unmaximize = [ ];
 
