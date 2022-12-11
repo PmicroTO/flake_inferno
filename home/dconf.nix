@@ -165,7 +165,7 @@ with lib.hm.gvariant;
       switch-to-workspace-right = [ ];
       switch-windows = [ "<Super>Tab" ];
       switch-windows-backward = [ "<Shift><Super>Tab" ];
-      toggle-fullscreen = [ "<Super>minus" ];
+      toggle-fullscreen = [ "<Super>0" ];
       toggle-maximized = [ "<Super>k" ];
       toggle-on-all-workspaces = [ ];
       unmaximize = [ ];
@@ -182,6 +182,8 @@ with lib.hm.gvariant;
       switch-to-application-7 = [ "" ];
       switch-to-application-8 = [ "" ];
       switch-to-application-9 = [ "" ];
+      toggle-message-tray = [ ];
+
     };
 
     ### LOOKS
