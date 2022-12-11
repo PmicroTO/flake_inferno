@@ -19,6 +19,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/shell/extensions/bedtime-mode" = {
+      bedtime-mode-active = true;
       color-tone-factor = 80;
       ondemand-button-location = "menu";
       ondemand-button-visibility = "always";
