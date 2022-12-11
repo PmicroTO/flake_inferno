@@ -51,7 +51,7 @@ rec {
   documents = [
     scantailor-advanced
     libreoffice
-    focuswritter
+    focuswriter
     mupdf
   ];
 
