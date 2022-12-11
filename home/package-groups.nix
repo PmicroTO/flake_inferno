@@ -46,12 +46,13 @@ rec {
     imv
     fontpreview
     hakuneko
-    mupdf
   ];
 
   documents = [
     scantailor-advanced
     libreoffice
+    focuswritter
+    mupdf
   ];
 
   gutils = [
@@ -97,7 +98,6 @@ rec {
     pomodoro
   ] ++ [
     dconf2nix
-    gnome-text-editor
   ];
 
   gnome-extensions = with pkgs.gnomeExtensions; [
