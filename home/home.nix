@@ -43,11 +43,29 @@ in
       };
     };
   };
+
   programs.git = {
     enable = true;
     userEmail = "lucio_a.khfzo@aleeas.com";
     userName = "wnxkiv85";
   };
+
+  xdg.userDirs = {
+
+    enable = true;
+    createDirectories = true;
+    desktop = "${config.home.homeDirectory}/user-dirs/desk";
+    documents = "${config.home.homeDirectory}/user-dirs/docs";
+    download = "${config.home.homeDirectory}/user-dirs/down";
+    music = "${config.home.homeDirectory}/user-dirs/mus";
+    pictures = "${config.home.homeDirectory}/user-dirs/pics";
+    publicShare = "${config.home.homeDirectory}/user-dirs/public";
+    templates = "${config.home.homeDirectory}/user-dirs/templates";
+    videos = "${config.home.homeDirectory}/user-dirs/vid";
+    extraConfig = {
+      XDG_GIT_DIR = "${config.home.homeDirectory}/user-dirs/git";
+    };
+
+  };
+
 }
-
-

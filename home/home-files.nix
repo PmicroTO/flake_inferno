@@ -3,8 +3,6 @@
 {
   home.file = {
 
-    ".local/share/applications/fish.desktop".source = ./desktop-entries/fish.desktop;
-    ".local/share/applications/cups.desktop".source = ./desktop-entries/cups.desktop;
     ".config/helix/config.toml".source = ./config/helix/config.toml;
 
     ".face" = {
@@ -32,6 +30,9 @@
       };
       target = ".local/share/icons/Sakuya-cursors";
     };
+        
+    ".local/share/applications/fish.desktop".source = ./config/hide.desktop;
+    ".local/share/applications/cups.desktop".source = ./config/hide.desktop;
 
   };
 }
