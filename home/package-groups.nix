@@ -26,6 +26,7 @@ rec {
   ];
 
   editor = [
+    gnome-text-editor
     helix
     rnix-lsp
     nodePackages.bash-language-server
@@ -51,7 +52,6 @@ rec {
   documents = [
     scantailor-advanced
     libreoffice
-    focuswriter
     mupdf
   ];
 
