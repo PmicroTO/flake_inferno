@@ -81,7 +81,7 @@
   fileSystems."/home/lucio/.cache" = {
     device = "tmpfs";
     fsType = "tmpfs";
-    options = [ "nosuid" "noatime" "nofail" "noexec" "size=2G" ];
+    options = [ "nosuid" "noatime" "nofail" "size=2G" ];
   };
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking

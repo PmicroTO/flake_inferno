@@ -74,6 +74,7 @@ rec {
     wgetpaste
     any-nix-shell
     steam-run
+    appimage-run
     disfetch
     ventoy-bin-full
     zoxide
