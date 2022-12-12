@@ -65,6 +65,7 @@ in
     extraConfig = {
       XDG_GIT_DIR = "${config.home.homeDirectory}/user-dirs/git";
       XDG_MISC_DIR = "${config.home.homeDirectory}/user-dirs/misc";
+      XDG_STUDY_DIR = "${config.home.homeDirectory}/user-dirs/study";
     };
   };
 

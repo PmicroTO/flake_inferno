@@ -12,19 +12,21 @@
     extraPackages = with pkgs; [ rocm-opencl-icd amdvlk ];
   };
 
-  boot.initrd.availableKernelModules = [
-    "ahci"
-    "ohci_pci"
-    "ehci_pci"
-    "pata_atiixp"
-    "xhci_pci"
-    "usb_storage"
-    "usbhid"
-    "sd_mod"
-  ];
-
   boot = {
-    initrd.kernelModules = [ "dm-snapshot" "amdgpu" ];
+    initrd = {
+      kernelModules = [ "dm-snapshot" "amdgpu" ];
+      availableKernelModules = [
+        "ahci"
+        "ohci_pci"
+        "ehci_pci"
+        "pata_atiixp"
+        "xhci_pci"
+        "usb_storage"
+        "usbhid"
+        "sd_mod"
+      ];
+
+    };
     extraModulePackages = [ ];
     kernelModules = [ "kvm-amd" ];
   };
@@ -60,7 +62,7 @@
 
   fileSystems."/mnt/data " = {
     device = "/dev/disk/by-uuid/f1451973-4324-4d88-bb57-4a712f7beaf0";
-    options = [ "nosuid" "noatime" "nofail" "noexec" "group" "nodev" "x-gvfs-show" "noauto" ];
+    options = [ "nosuid" "noatime" "nofail" "noexec" "group" "nodev" "x-gvfs-show" ]; #"noauto" 
   };
 
   fileSystems."/mnt/vms " = {
@@ -94,5 +96,3 @@
   # high-resolution display
   hardware.video.hidpi.enable = lib.mkDefault true;
 }
-
-

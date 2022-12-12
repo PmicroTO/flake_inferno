@@ -58,6 +58,7 @@ rec {
   gutils = [
     bottles
     easyeffects
+    pika-backup
   ];
 
   utils = [

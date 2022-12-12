@@ -3,11 +3,12 @@
   programs.fish = {
     enable = true;
     shellInit = ''
-      			set -U fish_greeting
-      			'';
-    interactiveShellInit =
-      "\n                        any-nix-shell fish --info-right | source\n                        zoxide init fish | source \n                        ";
-    functions = { };
+      set -U fish_greeting
+    '';
+    interactiveShellInit = ''
+      any-nix-shell fish --info-right | source
+      zoxide init fish | source
+    '';
   };
   programs.starship = {
     enable = true;
@@ -15,7 +16,6 @@
   };
   home.shellAliases = {
     taskpurge = "task $(task uuids due.before:now) purge";
-    opvault = "ecryptfs-mount-private ; sleep 300 ; ecryptfs-umount-private";
     ls = "ls -A --color=auto -cltp --si --group-directories-first";
     flkhr =
       "home-manager switch --max-jobs 8 --flake $XDG_GIT_DIR/flake_inferno#lucio";
@@ -27,9 +27,14 @@
     wp = "wgetpaste";
     ".." = "cd ..";
     #	webmloo = "for i in *.webm; do ffmpeg -stream_loop -1 -t 5 -i \"$i\" -c copy \"\${i%.*}_5.webm\"; done";
-    to = "tomb open $HOME/tomb/personal.tomb -k $HOME/tomb/personal.tomb.key ; sleep 600 ; tomb slam all";
+    to = "tomb open $HOME/tomb/personal.tomb -k $HOME/user-dirs/tomb/personal.tomb.key ; sleep 600 ; tomb slam all";
     slam = "tomb slam all";
+    g = "git";
+    gc = "git commit -a";
+    ga = "git add -A";
+    gp = "git push";
   };
+
 }
 
 
