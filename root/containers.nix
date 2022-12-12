@@ -13,7 +13,7 @@
     options = {
       enableBookUploading = true;
       enableBookConversion = true;
-      calibreLibrary = "/home/lucio/Documents/Calibre\ Library/";
+      calibreLibrary = "/home/lucio/user-dirs/docs/calibre-library";
     };
   };
 }
