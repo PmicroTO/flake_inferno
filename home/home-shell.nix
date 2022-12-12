@@ -10,10 +10,10 @@
       zoxide init fish | source
     '';
     functions = {
-      __fish_tomb = {
+      to = {
         body = '' 
           tomb open $HOME/user-dirs/tomb/personal.tomb -k $HOME/user-dirs/tomb/personal.tomb.key
-          sleep 10 ;
+          sleep 10;
           tomb slam all    
         '';
       };
@@ -37,7 +37,6 @@
     ".." = "cd ..";
     #	webmloo = "for i in *.webm; do ffmpeg -stream_loop -1 -t 5 -i \"$i\" -c copy \"\${i%.*}_5.webm\"; done";
     #to = "tomb open $HOME/user-dirs/tomb/personal.tomb -k $HOME/user-dirs/tomb/personal.tomb.key ; sleep 600 ; tomb slam all";
-    to = "__fish_tomb";
     slam = "tomb slam all";
     g = "git";
     gc = "git commit -a";
