@@ -64,8 +64,8 @@ in
     videos = "${config.home.homeDirectory}/user-dirs/vid";
     extraConfig = {
       XDG_GIT_DIR = "${config.home.homeDirectory}/user-dirs/git";
+      XDG_MISC_DIR = "${config.home.homeDirectory}/user-dirs/misc";
     };
-
   };
 
 }

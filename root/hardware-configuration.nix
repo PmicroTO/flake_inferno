@@ -11,6 +11,7 @@
     driSupport = true;
     extraPackages = with pkgs; [ rocm-opencl-icd amdvlk ];
   };
+
   boot.initrd.availableKernelModules = [
     "ahci"
     "ohci_pci"
@@ -21,15 +22,19 @@
     "usbhid"
     "sd_mod"
   ];
-  boot.initrd.kernelModules = [ "dm-snapshot" "amdgpu" ];
-  boot.kernelModules = [ "kvm-amd" ];
-  boot.extraModulePackages = [ ];
+
+  boot = {
+    initrd.kernelModules = [ "dm-snapshot" "amdgpu" ];
+    extraModulePackages = [ ];
+    kernelModules = [ "kvm-amd" ];
+  };
 
   fileSystems."/" = {
     device = "/dev/disk/by-uuid/5f78a007-da6b-4110-9bfc-226340acb8a1";
     fsType = "xfs";
     options = [ "logbsize=256k" ];
   };
+
   boot.initrd.luks.devices = {
     nix_root = {
       device = "/dev/disk/by-uuid/c10b9174-531e-43e3-abfe-05a4f0397e2e";
@@ -37,10 +42,12 @@
       allowDiscards = true;
     };
   };
+
   fileSystems."/boot" = {
     device = "/dev/disk/by-uuid/7BD7-B0DE";
     fsType = "vfat";
   };
+
   swapDevices = [{
     device = "/dev/disk/by-partuuid/5f92a962-fe03-4dbd-8276-99b76bdadb36";
     options = [ "defaults" "nofail" ];
@@ -50,13 +57,29 @@
       allowDiscards = true;
     };
   }];
+
   fileSystems."/mnt/data " = {
-    device = "/dev/disk/by-uuid/f1451973-4324-4d88-bb57-4a712f7beaf0 ";
+    device = "/dev/disk/by-uuid/f1451973-4324-4d88-bb57-4a712f7beaf0";
     options = [ "nosuid" "noatime" "nofail" "noexec" "group" "nodev" "x-gvfs-show" "noauto" ];
   };
+
   fileSystems."/mnt/vms " = {
-    device = "/dev/disk/by-uuid/c02683d5-67c0-4225-9480-59101c9c6369 ";
+    device = "/dev/disk/by-uuid/c02683d5-67c0-4225-9480-59101c9c6369";
     options = [ "nosuid" "noatime" "nofail" "noexec" "group" "nodev" "x-gvfs-show" ];
+  };
+
+  ### tmpfs
+
+  fileSystems."/home/lucio/user-dirs/down" = {
+    device = "tmpfs";
+    fsType = "tmpfs";
+    options = [ "nosuid" "noatime" "nofail" "noexec" "size=6G" ];
+  };
+
+  fileSystems."/home/lucio/.cache" = {
+    device = "tmpfs";
+    fsType = "tmpfs";
+    options = [ "nosuid" "noatime" "nofail" "noexec" "size=2G" ];
   };
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
