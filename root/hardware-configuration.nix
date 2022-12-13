@@ -60,28 +60,30 @@
     };
   }];
 
-  fileSystems."/mnt/data " = {
-    device = "/dev/disk/by-uuid/f1451973-4324-4d88-bb57-4a712f7beaf0";
-    options = [ "nosuid" "noatime" "nofail" "noexec" "group" "nodev" "x-gvfs-show" ]; #"noauto" 
+  fileSystems."/mnt/backups" = {
+    device = "/dev/disk/by-partuuid/adb52c4f-f46b-45d0-89ac-de20809792b4";
+    options = [ "defaults" "nosuid" "noatime" "nofail" "noexec" "group" "nodev" "x-gvfs-show" ]; #"noauto" 
+    fsType = "auto";
   };
 
-  fileSystems."/mnt/vms " = {
-    device = "/dev/disk/by-uuid/c02683d5-67c0-4225-9480-59101c9c6369";
-    options = [ "nosuid" "noatime" "nofail" "noexec" "group" "nodev" "x-gvfs-show" ];
+  fileSystems."/mnt/vdisks" = {
+    device = "/dev/disk/by-partuuid/0f8a8858-d062-4d79-a044-042991490a0b";
+    options = [ "defaults" "nosuid" "noatime" "nofail" "noexec" "group" "nodev" "x-gvfs-show" ];
+    fsType = "auto";
   };
 
   ### tmpfs
 
   fileSystems."/home/lucio/user-dirs/down" = {
-    device = "tmpfs";
+    device = "none";
     fsType = "tmpfs";
-    options = [ "nosuid" "noatime" "nofail" "noexec" "size=6G" ];
+    options = [ "defaults" "nosuid" "noexec" "size=6G" ];
   };
 
   fileSystems."/home/lucio/.cache" = {
-    device = "tmpfs";
+    device = "none";
     fsType = "tmpfs";
-    options = [ "nosuid" "noatime" "nofail" "size=2G" ];
+    options = [ "defaults" "size=2G" ];
   };
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
