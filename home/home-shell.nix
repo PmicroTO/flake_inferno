@@ -13,7 +13,7 @@
       to = {
         body = '' 
           tomb open $HOME/user-dirs/tomb/personal.tomb -k $HOME/user-dirs/tomb/personal.tomb.key
-          sleep 10;
+          sleep 600;
           tomb slam all    
         '';
       };
