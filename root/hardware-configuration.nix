@@ -25,7 +25,7 @@
         "usbhid"
         "sd_mod"
       ];
-
+      cleanTmpDir = true;
     };
     extraModulePackages = [ ];
     kernelModules = [ "kvm-amd" ];
