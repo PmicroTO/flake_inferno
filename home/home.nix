@@ -28,7 +28,12 @@ in
     "L+ /home/lucio/.cache - - - - /tmp/lucio-cache"
 
     "D /tmp/lucio-down 0700 lucio wheel 1w"
-    "L+ /home/lucio/user-dirs/down - - - - /tmp/lucio-down"  ];
+    "L+ /home/lucio/user-dirs/down - - - - /tmp/lucio-down"
+
+    "D /tmp/lucio-scsh 0700 lucio wheel 1w"
+    "L+ /home/lucio/user-dirs/pics/Screenshots - - - - /tmp/lucio-scsh"
+
+  ];
 
   programs.alacritty = {
     enable = true;
