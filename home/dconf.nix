@@ -80,6 +80,9 @@ with lib.hm.gvariant;
 
     "org/gnome/desktop/wm/preferences" = { num-workspaces = 4; };
     "org/gnome/desktop/interface" = { enable-hot-corners = false; toolkit-acessibility = false; };
+    "system/locale" = {
+      region = "en_GB.UTF-8";
+    };
 
     ### KEYS
 
@@ -116,7 +119,7 @@ with lib.hm.gvariant;
 
     "org/gnome/desktop/input-sources" = {
       sources = [ (mkTuple [ "xkb" "us" ]) (mkTuple [ "xkb" "us+intl" ]) ];
-      xkb-options = [ "terminate:ctrl_alt_bksp" "caps:escape" "altwin:swap_lalt_lwin" "lv3:ralt_alt" "grp:shifts_toggle" "grp_led:caps" "lv3:menu_switch" ];
+      xkb-options = [ "altwin:swap_lalt_lwin" "caps:escape" "lv3:menu_switch" "grp:shifts_toggle" "lvl3:ralt_alt "];
     };
 
     "org/gnome/desktop/peripherals/trackball" = {
