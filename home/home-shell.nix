@@ -42,7 +42,6 @@
     gc = "git commit -a";
     ga = "git add -A";
     gp = "git push";
-    cd = "z";
   };
 
 }
