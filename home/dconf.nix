@@ -119,7 +119,7 @@ with lib.hm.gvariant;
 
     "org/gnome/desktop/input-sources" = {
       sources = [ (mkTuple [ "xkb" "us" ]) (mkTuple [ "xkb" "us+intl" ]) ];
-      xkb-options = [ "altwin:swap_lalt_lwin" "caps:escape" "lv3:menu_switch" "grp:shifts_toggle" "lvl3:ralt_alt "];
+      xkb-options = [ "altwin:swap_lalt_lwin" "caps:escape" "lv3:menu_switch" "grp:shifts_toggle" "lvl3:ralt_alt" "lv3:ralt_alt" ];
     };
 
     "org/gnome/desktop/peripherals/trackball" = {
@@ -218,11 +218,7 @@ with lib.hm.gvariant;
       picture-uri-dark = "file:///run/current-system/sw/share/backgrounds/gnome/vnc-d.webp";
       primary-color = "#77767B";
       secondary-color = "#000000";
-
-
-
     };
-
   }; # dconf end
 }
 
