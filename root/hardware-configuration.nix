@@ -25,10 +25,10 @@
         "usbhid"
         "sd_mod"
       ];
-      cleanTmpDir = true;
     };
     extraModulePackages = [ ];
     kernelModules = [ "kvm-amd" ];
+    tmpOnTmpfs = true;
   };
 
   fileSystems."/" = {
@@ -70,20 +70,6 @@
     device = "/dev/disk/by-partuuid/0f8a8858-d062-4d79-a044-042991490a0b";
     options = [ "defaults" "nosuid" "noatime" "nofail" "noexec" "group" "nodev" "x-gvfs-show" ];
     fsType = "auto";
-  };
-
-  ### tmpfs
-
-  fileSystems."/home/lucio/user-dirs/down" = {
-    device = "none";
-    fsType = "tmpfs";
-    options = [ "defaults" "nosuid" "noexec" "size=6G" ];
-  };
-
-  fileSystems."/home/lucio/.cache" = {
-    device = "none";
-    fsType = "tmpfs";
-    options = [ "defaults" "size=2G" ];
   };
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking

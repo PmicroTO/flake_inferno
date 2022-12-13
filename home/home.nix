@@ -22,7 +22,14 @@ in
   nixpkgs.config.allowUnfreePredicate = (pkg: true);
   fonts.fontconfig.enable = true;
   home.packages = with packageGroups; base ++ connect ++ gnomebase;
-  # end.packages
+  systemd.user.tmpfiles.rules = [
+
+    "D /tmp/lucio-cache 0700 lucio wheel 1w"
+    "L+ /home/lucio/.cache - - - - /tmp/lucio-cache"
+
+    "D /tmp/lucio-down 0700 lucio wheel 1w"
+    "L+ /home/lucio/user-dirs/down - - - - /tmp/lucio-down"  ];
+
   programs.alacritty = {
     enable = true;
     settings = {
