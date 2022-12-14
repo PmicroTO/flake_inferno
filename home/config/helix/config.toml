@@ -1,17 +1,23 @@
 theme = "papercolor-light"
 
 [editor]
-auto-pairs = false
+#auto-pairs = false
 line-number = "relative"
 gutters = ["diagnostics", "line-numbers", "spacer"]
 true-color = true
 shell = ["fish", "-i",  "-c"]
+color-modes = true
 
 [editor.statusline]
-center = ["mode", "spinner", "diagnostics"]
+center = ["spinner", "diagnostics"]
 left = ["file-name", "file-type", "file-encoding"]
-right = ["selections", "file-line-ending", "position"]
+right = ["selections", "file-line-ending", "position", "mode"]
 separator = "|"
+
+[editor.indent-guides]
+render = true
+character = "┊"
+skip-levels = 0
 
 [editor.whitespace]
 render = "all"
