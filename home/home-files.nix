@@ -4,6 +4,7 @@
   home.file = {
 
     ".config/helix/config.toml".source = ./config/helix/config.toml;
+    ".config/helix/languages.toml".source = ./config/helix/languages.toml;
 
     ".face" = {
       source = pkgs.fetchurl {
@@ -32,14 +33,14 @@
     };
 
     ".local/share/applications/fish.desktop".source = ./config/hide.desktop;
-    
+
     ".local/share/applications/cups.desktop".source = ./config/hide.desktop;
-    
+
     ".local/share/VeroptBR3215AOC.oxt".source = pkgs.fetchurl {
       url = "https://pt-br.libreoffice.org/assets/Uploads/PT-BR-Documents/VERO/VeroptBR3215AOC.oxt";
       sha256 = "1vhh09867gcrkbdcnzd89zx7d60q2g32ybapifgnkmd0mbca6wbm";
     };
-    
+
   };
 }
 
