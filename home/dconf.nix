@@ -44,6 +44,8 @@ with lib.hm.gvariant;
       appicon-margin = 8;
       appicon-padding = 4;
       available-monitors = [ 0 ];
+      dot-style-focused = "DOTS";
+      dot-style-unfocused = "DOTS";
       hide-overview-on-startup = true;
       hotkeys-overlay-combo = "TEMPORARILY";
       intellihide-key-toggle = [ "<Super>i" ];

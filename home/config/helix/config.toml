@@ -1,4 +1,4 @@
-theme = "acme"
+theme = "papercolor-light"
 
 [editor]
 auto-pairs = false
