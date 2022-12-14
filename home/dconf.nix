@@ -215,6 +215,14 @@ with lib.hm.gvariant;
       primary-color = "#77767B";
       secondary-color = "#000000";
     };
+
+    ### MISC
+
+    "org/gnome/desktop/session" = {
+      idle-delay = mkUint32 480;
+    };
+
+
   }; # dconf end
 }
 
