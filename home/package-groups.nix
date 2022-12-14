@@ -27,7 +27,12 @@ rec {
 
   editor = [
     gnome-text-editor
+
+    ###hx
     helix
+    wl-clipboard
+    xclip
+
     rnix-lsp
     nodePackages.bash-language-server
     texlab
