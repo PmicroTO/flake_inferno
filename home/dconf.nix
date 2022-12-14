@@ -32,12 +32,6 @@ with lib.hm.gvariant;
       show-notifications = false;
     };
 
-    "org/gnome/shell/extensions/extensions/another-window-session-manager" = {
-      enable-autorestore-sessions = true;
-      enable-close-by-rules = false;
-      restore-at-startup-without-asking = true;
-    };
-
     "org/gnome/shell/extensions/dash-to-panel" = {
 
       animate-appicon-hover-animation-extent = "{'RIPPLE': 4, 'PLANK': 4, 'SIMPLE': 1}";
