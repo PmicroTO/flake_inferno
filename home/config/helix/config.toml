@@ -5,6 +5,7 @@ auto-pairs = false
 line-number = "relative"
 gutters = ["diagnostics", "line-numbers", "spacer"]
 true-color = true
+shell = ["fish", "-i",  "-c"]
 
 [editor.statusline]
 center = ["mode", "spinner", "diagnostics"]
@@ -17,3 +18,7 @@ render = "all"
 
 [editor.lsp]
 display-messages = true
+
+[keys.normal]
+"!" = "shell_append_output"
+"A-!" = "shell_insert_output"

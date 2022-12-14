@@ -42,7 +42,7 @@
     gc = "git commit -a";
     ga = "git add -A";
     gp = "git push";
-    python = "py";
+    py = "python3";
   };
 }
 
