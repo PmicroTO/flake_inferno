@@ -119,7 +119,7 @@ with lib.hm.gvariant;
 
     "org/gnome/desktop/input-sources" = {
       sources = [ (mkTuple [ "xkb" "us" ]) (mkTuple [ "xkb" "us+intl" ]) ];
-      xkb-options = [ "altwin:swap_lalt_lwin" "caps:escape" "lv3:menu_switch" "grp:shifts_toggle" "lvl3:ralt_alt" "lv3:ralt_alt" ];
+      xkb-options = [ "altwin:swap_lalt_lwin" "caps:escape" "lv3:menu_switch" "grp:shifts_toggle" "lvl3:ralt_alt" "lv3:ralt_alt" "grp_led:caps" ];
     };
 
     "org/gnome/desktop/peripherals/trackball" = {
