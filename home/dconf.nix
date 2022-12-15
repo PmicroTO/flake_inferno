@@ -14,7 +14,6 @@ with lib.hm.gvariant;
         "gsconnect@andyholmes.github.io"
         "dash-to-panel@jderose9.github.com"
         "workspace-indicator@gnome-shell-extensions.gcampax.github.com"
-        "places-menu@gnome-shell-extensions.gcampax.github.com"
         "pomodoro@arun.codito.in"
       ];
     };

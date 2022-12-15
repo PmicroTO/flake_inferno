@@ -44,6 +44,7 @@
     ga = "git add -A";
     gp = "git push";
     py = "python3";
+    n = "nnn";
   };
 }
 

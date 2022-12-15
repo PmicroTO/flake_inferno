@@ -67,6 +67,7 @@ rec {
   ];
 
   utils = [
+    nnn
     zip
     rar
     p7zip
@@ -99,7 +100,6 @@ rec {
   gnome = with pkgs.gnome; [
     gnome-boxes
     gnome-tweaks
-    nautilus
     file-roller
     seahorse
     pomodoro
