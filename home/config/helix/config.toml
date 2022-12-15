@@ -10,8 +10,8 @@ color-modes = true
 
 [editor.statusline]
 center = ["spinner", "diagnostics"]
-left = ["file-name", "file-type", "file-encoding"]
-right = ["selections", "file-line-ending", "position", "mode"]
+left = ["mode", "file-name", "file-type", "file-encoding"]
+right = ["selections", "file-line-ending", "position"]
 separator = "|"
 
 [editor.indent-guides]
