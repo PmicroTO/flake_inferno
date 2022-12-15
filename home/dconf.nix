@@ -222,6 +222,12 @@ with lib.hm.gvariant;
       idle-delay = mkUint32 480;
     };
 
+    "org/gnome/desktop/privacy" = {
+      old-files-age = mkUint32 7;
+      recent-files-max-age = 7;
+      remove-old-temp-files = true;
+      remove-old-trash-files = true;
+    };
 
   }; # dconf end
 }

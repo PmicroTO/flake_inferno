@@ -16,8 +16,8 @@ with lib;
       displayManager.autoLogin.enable = true;
       displayManager.autoLogin.user = "lucio";
     };
-    power-profiles-daemon.enable = false;
-    upower.enable = mkDefault config.powerManagement.disable;
+    #    power-profiles-daemon.enable = false;
+    #    upower.enable = mkDefault config.powerManagement.disable;
   };
 
   xdg.portal = {
