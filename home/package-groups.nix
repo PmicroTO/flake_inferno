@@ -112,6 +112,7 @@ rec {
     #    gsconnect
     gnome-bedtime
     espresso
+    disable-unredirect-fullscreen-windows
   ];
 
   base = utils ++ gutils ++ viewers ++ editor ++ organization ++ bury ++ documents;

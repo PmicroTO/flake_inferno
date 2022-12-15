@@ -11,10 +11,10 @@ with lib.hm.gvariant;
       enabled-extensions = [
         "gnomebedtime@ionutbortis.gmail.com"
         "espresso@coadmunkee.github.com"
-        "gsconnect@andyholmes.github.io"
         "dash-to-panel@jderose9.github.com"
         "workspace-indicator@gnome-shell-extensions.gcampax.github.com"
         "pomodoro@arun.codito.in"
+        "unredirect@vaina.lt" #necessary to temporary fix bedtime mode wayland fullscreen
       ];
     };
 
