@@ -229,6 +229,18 @@ with lib.hm.gvariant;
       remove-old-trash-files = true;
     };
 
+    "org/gnome/settings-daemon/plugins/color" = {
+      night-light-enabled = true;
+      night-light-schedule-automatic = false;
+      night-light-schedule-from = 19.0;
+      night-light-schedule-to = 4.0;
+      night-light-temperature = mkUint32 3700;
+    };
+
+    "org/gnome/settings-daemon/plugins/power" = {
+      power-button-action = "interactive";
+      sleep-inactive-ac-timeout = 1500;
+    };
   }; # dconf end
 }
 
