@@ -16,6 +16,7 @@ in
       VISUAL = "hx";
       #      GTK_THEME = "WhiteSur-Dark-solid";
       # NIXOS_OZONE_WL = "1";
+      MOZ_ENABLE_WAYLAND = 1;
     };
   };
   nixpkgs.config.allowUnfree = true;
