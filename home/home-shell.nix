@@ -4,6 +4,7 @@
     enable = true;
     shellInit = ''
       set -U fish_greeting
+      set -U fish_vi_key_bindings   
     '';
     interactiveShellInit = ''
       any-nix-shell fish --info-right | source
