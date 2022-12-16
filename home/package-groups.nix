@@ -57,7 +57,7 @@ rec {
     scantailor-advanced
     libreoffice
     #    mupdf #too slugish
-    sioyek
+    evince
   ];
 
   gutils = [
@@ -104,6 +104,7 @@ rec {
     file-roller
     seahorse
     pomodoro
+    nautilus
   ] ++ [
     dconf2nix
   ];
