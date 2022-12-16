@@ -47,7 +47,7 @@ rec {
   ];
 
   viewers = [
-    clapper
+    vlc
     imv
     fontpreview
     hakuneko
