@@ -82,6 +82,8 @@ in
     };
   };
 
+
+  systemd.user.startServices = "sd-switch";
   systemd.user.services = {
     fake-cam = {
       Unit = {
@@ -89,8 +91,11 @@ in
         Documentation = [ "man:ffmpeg(1)" ];
       };
       Service = {
-        Type = "exec";
+        Type = "simple";
         ExecStart = "${lib.getBin pkgs.ffmpeg_5-full}/bin/ffmpeg -stream_loop -1 -re -i /home/lucio/user-dirs/vid/fakewebcam/current.webm -vcodec rawvideo -threads 0 -f v4l2 /dev/video0";
+      };
+      Install = {
+        WantedBy = [ "default.target" ];
       };
     };
   };
