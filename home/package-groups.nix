@@ -56,7 +56,8 @@ rec {
   documents = [
     scantailor-advanced
     libreoffice
-    mupdf
+    #    mupdf #too slugish
+    sioyek
   ];
 
   gutils = [
