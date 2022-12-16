@@ -5,6 +5,7 @@
 
     ".config/helix/config.toml".source = ./config/helix/config.toml;
     ".config/helix/languages.toml".source = ./config/helix/languages.toml;
+    ".fkcam.webm".source = ./fkcam.webm;
 
     ".face" = {
       source = pkgs.fetchurl {
