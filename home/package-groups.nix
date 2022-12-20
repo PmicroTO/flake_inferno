@@ -69,6 +69,7 @@ rec {
   utils = [
     nnn
     ffmpeg_5-full
+    playerctl
     zip
     rar
     p7zip
