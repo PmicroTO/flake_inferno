@@ -217,10 +217,6 @@ with lib.hm.gvariant;
 
     ### MISC
 
-    "org/gnome/desktop/session" = {
-      idle-delay = mkUint32 480;
-    };
-
     "org/gnome/desktop/privacy" = {
       old-files-age = mkUint32 7;
       recent-files-max-age = 7;
@@ -238,8 +234,13 @@ with lib.hm.gvariant;
 
     "org/gnome/settings-daemon/plugins/power" = {
       power-button-action = "interactive";
-      sleep-inactive-ac-timeout = 1500;
+      sleep-inactive-ac-timeout = 2700;
     };
+
+    "org/gnome/desktop/session" = {
+      idle-delay = mkUint32 0;
+    };
+
   }; # dconf end
 }
 
