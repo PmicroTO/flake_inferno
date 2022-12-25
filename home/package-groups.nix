@@ -4,7 +4,7 @@ rec {
 
   web = [
     yt-dlp
-    librewolf
+    firefox
   ];
 
   mediaed = [
@@ -64,6 +64,7 @@ rec {
     bottles
     easyeffects
     pika-backup
+    bitwarden
   ];
 
   utils = [
