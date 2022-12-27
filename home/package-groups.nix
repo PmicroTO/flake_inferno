@@ -87,6 +87,7 @@ rec {
     disfetch
     ventoy-bin-full
     zoxide
+    mcfly
   ];
 
   bury = [

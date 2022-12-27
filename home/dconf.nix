@@ -20,7 +20,7 @@ with lib.hm.gvariant;
 
     "org/gnome/shell/extensions/bedtime-mode" = {
       bedtime-mode-active = true;
-      color-tone-factor = 80;
+      color-tone-factor = 70;
       ondemand-button-location = "menu";
       ondemand-button-visibility = "always";
     };
@@ -227,8 +227,8 @@ with lib.hm.gvariant;
     "org/gnome/settings-daemon/plugins/color" = {
       night-light-enabled = true;
       night-light-schedule-automatic = false;
-      night-light-schedule-from = 19.0;
-      night-light-schedule-to = 4.0;
+      night-light-schedule-from = 0.0;
+      night-light-schedule-to = 23.983333333333334;
       night-light-temperature = mkUint32 3700;
     };
 

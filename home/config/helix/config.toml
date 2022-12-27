@@ -1,4 +1,4 @@
-theme = "papercolor-light"
+theme = "catppuccin_latte"
 
 [editor]
 #auto-pairs = false

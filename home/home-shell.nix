@@ -7,8 +7,9 @@
       set -U fish_vi_key_bindings   
     '';
     interactiveShellInit = ''
-      any-nix-shell fish --info-right | source
-      zoxide init fish | source
+            any-nix-shell fish --info-right | source
+            zoxide init fish | source
+      mcfly init fish | source  
     '';
     functions = {
       to = {
