@@ -5,7 +5,6 @@ with lib.hm.gvariant;
 {
   dconf.settings = {
 
-
     ### EXTENSIONS
     "org/gnome/shell" = {
       enabled-extensions = [
@@ -188,7 +187,6 @@ with lib.hm.gvariant;
       switch-to-application-8 = [ "" ];
       switch-to-application-9 = [ "" ];
       toggle-message-tray = [ ];
-
     };
 
     ### LOOKS
