@@ -122,7 +122,7 @@ rec {
 
   base = utils ++ gutils ++ viewers ++ editor ++ organization ++ bury ++ documents;
   manipulation = mediaed;
-  connect = web ++ social;
+  connect = web;
   gnomebase = gnome ++ gnome-extensions ++ theming;
 }
 
