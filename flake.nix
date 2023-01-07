@@ -1,7 +1,7 @@
 {
   description = "my machine";
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-22.11";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-master.url = "github:nixos/nixpkgs/master";
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -10,16 +10,13 @@
   };
 
   outputs = { self, nixpkgs, nixpkgs-master, home-manager, ... }:
-
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
       overlay-master = final: prev: {
         master = nixpkgs-master.legacyPackages.${prev.system};
       };
-    in
-
-    {
+    in {
       homeConfigurations.lucio = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [
@@ -45,8 +42,6 @@
       };
 
       devShells.x86_64-linux.default = import ./shell.nix { inherit pkgs; };
-
       system.configurationRevision = nixpkgs.lib.mkIf (self ? rev) self.rev;
-
     };
 }

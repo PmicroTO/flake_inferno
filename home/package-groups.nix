@@ -1,28 +1,18 @@
-{ pkgs, ... }: with pkgs;
+{ pkgs, ... }:
+with pkgs;
 
 rec {
 
-  web = [
-    yt-dlp
-    firefox
-  ];
+  web = [ yt-dlp firefox ];
 
   mediaed = [
     (gimp-with-plugins.override { plugins = with gimpPlugins; [ bimp ]; })
     handbrake
   ];
 
-  organization = [
-    thunderbird
-    logseq
-  ];
+  organization = [ thunderbird logseq ];
 
-  social = [
-    discord
-    mumble
-    teams
-    kotatogram-desktop
-  ];
+  social = [ discord mumble teams kotatogram-desktop ];
 
   editor = [
     gnome-text-editor
@@ -31,12 +21,12 @@ rec {
     helix
     wl-clipboard
     xclip
-
-    rnix-lsp
+    nil
+    nixfmt
     nodePackages.bash-language-server
     texlab
-    (python310.withPackages
-      (ps: with ps; [
+    (python310.withPackages (ps:
+      with ps; [
         python-lsp-server
         autopep8
         rope
@@ -46,22 +36,12 @@ rec {
       ]))
   ];
 
-  viewers = [
-    vlc
-    imv
-    fontpreview
-    hakuneko
-  ];
+  viewers = [ vlc imv fontpreview hakuneko ];
 
-  documents = [
-    scantailor-advanced
-    libreoffice
-    #    mupdf #too slugish
-    evince
-  ];
+  documents = [ scantailor-advanced libreoffice evince ];
 
   gutils = [
-    bottles
+    #bottles
     easyeffects
     pika-backup
     bitwarden
@@ -82,7 +62,7 @@ rec {
     taskwarrior
     wgetpaste
     any-nix-shell
-    steam-run
+    #steam-run
     appimage-run
     disfetch
     ventoy-bin-full
@@ -90,27 +70,13 @@ rec {
     mcfly
   ];
 
-  bury = [
-    tomb
-    pinentry-curses
-  ];
+  bury = [ tomb pinentry-curses ];
 
-  theming = [
-    qogir-icon-theme
-    nordzy-icon-theme
-    nerdfonts
-  ];
+  theming = [ qogir-icon-theme nordzy-icon-theme nerdfonts ];
 
-  gnome = with pkgs.gnome; [
-    gnome-boxes
-    gnome-tweaks
-    file-roller
-    seahorse
-    pomodoro
-    nautilus
-  ] ++ [
-    dconf2nix
-  ];
+  gnome = with pkgs.gnome;
+    [ gnome-boxes gnome-tweaks file-roller seahorse pomodoro nautilus ]
+    ++ [ dconf2nix ];
 
   gnome-extensions = with pkgs.gnomeExtensions; [
     dash-to-panel
@@ -120,10 +86,10 @@ rec {
     disable-unredirect-fullscreen-windows
   ];
 
-  base = utils ++ gutils ++ viewers ++ editor ++ organization ++ bury ++ documents;
+  base = utils ++ gutils ++ viewers ++ editor ++ organization ++ bury
+    ++ documents;
   manipulation = mediaed;
   connect = web;
   gnomebase = gnome ++ gnome-extensions ++ theming;
 }
-
 

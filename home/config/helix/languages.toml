@@ -9,3 +9,4 @@ indent = { tab-width = 4, unit = "  " }
 name = "nix"
 auto-format = true
 indent = { tab-width = 4, unit = "  "  }
+formatter = { command = "nixfmt" }

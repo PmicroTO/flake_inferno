@@ -62,13 +62,31 @@
 
   fileSystems."/mnt/backups" = {
     device = "/dev/disk/by-partuuid/adb52c4f-f46b-45d0-89ac-de20809792b4";
-    options = [ "defaults" "nosuid" "noatime" "nofail" "noexec" "group" "nodev" "x-gvfs-show" ]; #"noauto" 
+    options = [
+      "defaults"
+      "nosuid"
+      "noatime"
+      "nofail"
+      "noexec"
+      "group"
+      "nodev"
+      "x-gvfs-show"
+    ]; # "noauto"
     fsType = "auto";
   };
 
   fileSystems."/mnt/vdisks" = {
     device = "/dev/disk/by-partuuid/0f8a8858-d062-4d79-a044-042991490a0b";
-    options = [ "defaults" "nosuid" "noatime" "nofail" "noexec" "group" "nodev" "x-gvfs-show" ];
+    options = [
+      "defaults"
+      "nosuid"
+      "noatime"
+      "nofail"
+      "noexec"
+      "group"
+      "nodev"
+      "x-gvfs-show"
+    ];
     fsType = "auto";
   };
 

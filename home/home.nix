@@ -1,16 +1,13 @@
 { config, pkgs, lib, ... }:
 
-let
-  packageGroups = import ./package-groups.nix { inherit pkgs; };
-in
+let packageGroups = import ./package-groups.nix { inherit pkgs; };
 
-{
+in {
   programs.home-manager.enable = true;
-
   home = {
     username = "lucio";
     homeDirectory = "/home/lucio";
-    stateVersion = "22.11";
+    stateVersion = "23.05";
     sessionVariables = {
       EDITOR = "hx";
       VISUAL = "hx";
@@ -21,7 +18,6 @@ in
   };
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.allowUnfreePredicate = (pkg: true);
-  fonts.fontconfig.enable = true;
   home.packages = with packageGroups; base ++ connect ++ gnomebase;
   systemd.user.tmpfiles.rules = [
 
@@ -82,7 +78,6 @@ in
     };
   };
 
-
   systemd.user.startServices = "sd-switch";
   systemd.user.services = {
     fake-cam = {
@@ -92,11 +87,11 @@ in
       };
       Service = {
         Type = "simple";
-        ExecStart = "${lib.getBin pkgs.ffmpeg_5-full}/bin/ffmpeg -stream_loop -1 -re -i %h/.fkcam.webm -vcodec rawvideo -threads 0 -f v4l2 /dev/video0";
+        ExecStart = "${
+            lib.getBin pkgs.ffmpeg_5-full
+          }/bin/ffmpeg -stream_loop -1 -re -i %h/.fkcam.webm -vcodec rawvideo -threads 0 -f v4l2 /dev/video0";
       };
-      Install = {
-        WantedBy = [ "default.target" ];
-      };
+      Install = { WantedBy = [ "default.target" ]; };
     };
   };
 

@@ -7,11 +7,12 @@
     enable = true;
     dockerCompat = true;
   };
-  environment.systemPackages = with pkgs; [
-    (pkgs.systemd.overrideAttrs (oldAttrs: {
-      mesonFlags = oldAttrs.mesonFlags ++ [ "-Doptimization=3" ];
-    }))
-  ];
+  environment.systemPackages = with pkgs;
+    [
+      (pkgs.systemd.overrideAttrs (oldAttrs: {
+        mesonFlags = oldAttrs.mesonFlags ++ [ "-Doptimization=3" ];
+      }))
+    ];
 
   time.timeZone = "America/Fortaleza";
   i18n = {

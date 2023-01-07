@@ -30,7 +30,5 @@ with lib;
   systemd.services."autovt@tty1".enable = false;
   # "debloat", ironically
   services.gnome.core-utilities.enable = false;
-  environment.gnome.excludePackages = with pkgs; [
-    gnome-tour
-  ];
+  environment.gnome.excludePackages = with pkgs; [ gnome-tour ];
 }

@@ -1,5 +1,4 @@
-{ config, pkgs, lib, ... }:
-{
+{ config, pkgs, lib, ... }: {
   programs.fish = {
     enable = true;
     shellInit = ''
@@ -13,7 +12,7 @@
     '';
     functions = {
       to = {
-        body = '' 
+        body = ''
           tomb open $HOME/user-dirs/tomb/personal.tomb -k $HOME/user-dirs/tomb/personal.tomb.key
           sleep 600;
           tomb slam all    
@@ -48,5 +47,4 @@
     n = "nnn";
   };
 }
-
 

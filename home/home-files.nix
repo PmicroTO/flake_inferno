@@ -17,10 +17,8 @@
 
     ".background-image" = {
       source = pkgs.fetchurl {
-        url =
-          "https://w.wallhaven.cc/full/13/wallhaven-13g2qw.jpg";
-        sha256 =
-          "1y8ld6qjybcksdq6l4pf62khgycwv4kwyvjzc2r2p0mbcgfnyzcp";
+        url = "https://w.wallhaven.cc/full/13/wallhaven-13g2qw.jpg";
+        sha256 = "1y8ld6qjybcksdq6l4pf62khgycwv4kwyvjzc2r2p0mbcgfnyzcp";
       };
     };
 
@@ -38,11 +36,11 @@
     ".local/share/applications/cups.desktop".source = ./config/hide.desktop;
 
     ".local/share/VeroptBR3215AOC.oxt".source = pkgs.fetchurl {
-      url = "https://pt-br.libreoffice.org/assets/Uploads/PT-BR-Documents/VERO/VeroptBR3215AOC.oxt";
+      url =
+        "https://pt-br.libreoffice.org/assets/Uploads/PT-BR-Documents/VERO/VeroptBR3215AOC.oxt";
       sha256 = "1vhh09867gcrkbdcnzd89zx7d60q2g32ybapifgnkmd0mbca6wbm";
     };
 
   };
 }
-
 

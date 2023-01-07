@@ -13,7 +13,7 @@ with lib.hm.gvariant;
         "dash-to-panel@jderose9.github.com"
         "workspace-indicator@gnome-shell-extensions.gcampax.github.com"
         "pomodoro@arun.codito.in"
-        "unredirect@vaina.lt" #necessary to temporary fix bedtime mode wayland fullscreen
+        "unredirect@vaina.lt" # necessary to temporary fix bedtime mode wayland fullscreen
       ];
     };
 
@@ -32,7 +32,8 @@ with lib.hm.gvariant;
 
     "org/gnome/shell/extensions/dash-to-panel" = {
 
-      animate-appicon-hover-animation-extent = "{'RIPPLE': 4, 'PLANK': 4, 'SIMPLE': 1}";
+      animate-appicon-hover-animation-extent =
+        "{'RIPPLE': 4, 'PLANK': 4, 'SIMPLE': 1}";
       appicon-margin = 8;
       appicon-padding = 4;
       available-monitors = [ 0 ];
@@ -73,15 +74,20 @@ with lib.hm.gvariant;
     ### SHELL/WM
 
     "org/gnome/desktop/wm/preferences" = { num-workspaces = 4; };
-    "org/gnome/desktop/interface" = { enable-hot-corners = false; toolkit-acessibility = false; };
-    "system/locale" = {
-      region = "en_GB.UTF-8";
+    "org/gnome/desktop/interface" = {
+      enable-hot-corners = false;
+      toolkit-acessibility = false;
     };
+    "system/locale" = { region = "en_GB.UTF-8"; };
 
     ### KEYS
 
     "org/gnome/settings-daemon/plugins/media-keys" = {
-      custom-keybindings = [ "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/" ];
+      custom-keybindings = [
+        "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
+        "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/"
+        "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/"
+      ];
       email = [ "<Super>m" ];
       help = [ ];
       magnifier-zoom-in = [ ];
@@ -93,27 +99,38 @@ with lib.hm.gvariant;
       www = [ "<Super>b" ];
     };
 
-    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
-      binding = "<Super>Return";
-      command = "alacritty";
-      name = "term";
-    };
+    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" =
+      {
+        binding = "<Super>Return";
+        command = "alacritty";
+        name = "term";
+      };
 
-    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" = {
-      binding = "<Alt><Super>minus";
-      command = "ddcutil setvcp 10 - 20";
-      name = "bld";
-    };
+    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" =
+      {
+        binding = "<Alt><Super>minus";
+        command = "ddcutil setvcp 10 - 20";
+        name = "bld";
+      };
 
-    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2" = {
-      binding = "<Alt><Super>equal";
-      command = "ddcutil setvcp 10 + 20";
-      name = "blu";
-    };
+    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2" =
+      {
+        binding = "<Alt><Super>equal";
+        command = "ddcutil setvcp 10 + 20";
+        name = "blu";
+      };
 
     "org/gnome/desktop/input-sources" = {
       sources = [ (mkTuple [ "xkb" "us" ]) (mkTuple [ "xkb" "us+intl" ]) ];
-      xkb-options = [ "altwin:swap_lalt_lwin" "caps:escape" "lv3:menu_switch" "grp:shifts_toggle" "lvl3:ralt_alt" "lv3:ralt_alt" "grp_led:caps" ];
+      xkb-options = [
+        "altwin:swap_lalt_lwin"
+        "caps:escape"
+        "lv3:menu_switch"
+        "grp:shifts_toggle"
+        "lvl3:ralt_alt"
+        "lv3:ralt_alt"
+        "grp_led:caps"
+      ];
     };
 
     "org/gnome/desktop/peripherals/trackball" = {
@@ -207,8 +224,10 @@ with lib.hm.gvariant;
       #    picture-uri-dark = "file:///home/lucio/.background-image";
       #     primary-color = "#000000000000";
       #      secondary-color = "#000000000000";
-      picture-uri = "file:///run/current-system/sw/share/backgrounds/gnome/vnc-l.webp";
-      picture-uri-dark = "file:///run/current-system/sw/share/backgrounds/gnome/vnc-d.webp";
+      picture-uri =
+        "file:///run/current-system/sw/share/backgrounds/gnome/vnc-l.webp";
+      picture-uri-dark =
+        "file:///run/current-system/sw/share/backgrounds/gnome/vnc-d.webp";
       primary-color = "#77767B";
       secondary-color = "#000000";
     };
@@ -235,9 +254,7 @@ with lib.hm.gvariant;
       sleep-inactive-ac-timeout = 2700;
     };
 
-    "org/gnome/desktop/session" = {
-      idle-delay = mkUint32 0;
-    };
+    "org/gnome/desktop/session" = { idle-delay = mkUint32 0; };
 
   }; # dconf end
 }
