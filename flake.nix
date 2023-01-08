@@ -31,6 +31,7 @@
 
       nixosConfigurations.inferno = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
+        specialArgs = { inherit self system; };
         modules = [
           ./root/base_system.nix
           ./root/boot.nix
