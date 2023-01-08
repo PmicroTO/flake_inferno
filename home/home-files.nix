@@ -6,6 +6,7 @@
     ".config/helix/config.toml".source = ./config/helix/config.toml;
     ".config/helix/languages.toml".source = ./config/helix/languages.toml;
     ".config/nixpkgs/config.nix".source = ./config/nixpkgs/config.nix;
+    ".detoxrc".source = ./config/detoxrc;
     ".fkcam.webm".source = ./fkcam.webm;
 
     ".face" = {
