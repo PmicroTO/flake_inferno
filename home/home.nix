@@ -7,7 +7,7 @@ in {
   home = {
     username = "lucio";
     homeDirectory = "/home/lucio";
-    stateVersion = "23.05";
+    stateVersion = "22.11";
     sessionVariables = {
       EDITOR = "hx";
       VISUAL = "hx";

@@ -1,8 +1,9 @@
 {
   description = "my machine";
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-22.11";
     nixpkgs-master.url = "github:nixos/nixpkgs/master";
+    nix-alien.url = "github:thiagokokada/nix-alien";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -38,6 +39,16 @@
           ./root/networking.nix
           ./root/pipewire.nix
           ./root/containers.nix
+          ({ self, system, ... }: {
+            environment.systemPackages = with pkgs;
+              with self.inputs.nix-alien.packages.${system}; [
+                nix-alien
+                nix-index # not necessary, but recommended
+                nix-index-update
+              ];
+            # Optional, needed for `nix-alien-ld`
+            programs.nix-ld.enable = true;
+          })
         ];
       };
 
