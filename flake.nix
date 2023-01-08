@@ -13,6 +13,12 @@
   outputs = { self, nixpkgs, nixpkgs-master, home-manager, ... }:
     let
       system = "x86_64-linux";
+      allowUnfree = {
+        nixpkgs.config = {
+          allowUnfree = true;
+          allowUnfreePredicate = (pkg: true);
+        };
+      };
       pkgs = nixpkgs.legacyPackages.${system};
       overlay-master = final: prev: {
         master = nixpkgs-master.legacyPackages.${prev.system};
@@ -22,6 +28,7 @@
         inherit pkgs;
         modules = [
           ({ config, pkgs, ... }: { nixpkgs.overlays = [ overlay-master ]; })
+          allowUnfree
           ./home/home-shell.nix
           ./home/home-files.nix
           ./home/home.nix

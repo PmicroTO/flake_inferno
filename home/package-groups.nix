@@ -62,7 +62,7 @@ rec {
     taskwarrior
     wgetpaste
     any-nix-shell
-    #steam-run
+    #    steam-run
     appimage-run
     disfetch
     ventoy-bin-full

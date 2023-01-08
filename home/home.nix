@@ -16,8 +16,6 @@ in {
       MOZ_ENABLE_WAYLAND = 1;
     };
   };
-  nixpkgs.config.allowUnfree = true;
-  nixpkgs.config.allowUnfreePredicate = (pkg: true);
   home.packages = with packageGroups; base ++ connect ++ gnomebase;
   systemd.user.tmpfiles.rules = [
 
