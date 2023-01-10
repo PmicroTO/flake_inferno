@@ -1,7 +1,7 @@
 {
   description = "my machine";
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-22.11";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-master.url = "github:nixos/nixpkgs/master";
     nix-alien.url = "github:thiagokokada/nix-alien";
     home-manager = {

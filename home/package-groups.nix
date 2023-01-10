@@ -12,11 +12,13 @@ rec {
 
   organization = [ thunderbird logseq ];
 
-  social = [ discord mumble teams kotatogram-desktop ];
+  social = [
+    discord
+    # kotatogram-desktop
+  ];
 
   editor = [
     gnome-text-editor
-
     ###hx
     helix
     wl-clipboard
@@ -40,12 +42,7 @@ rec {
 
   documents = [ scantailor-advanced libreoffice evince ];
 
-  gutils = [
-    #bottles
-    easyeffects
-    pika-backup
-    bitwarden
-  ];
+  gutils = [ bottles easyeffects pika-backup bitwarden ];
 
   utils = [
     nnn
@@ -62,7 +59,7 @@ rec {
     taskwarrior
     wgetpaste
     any-nix-shell
-    #    steam-run
+    steam-run
     appimage-run
     disfetch
     ventoy-bin-full
@@ -75,8 +72,18 @@ rec {
   theming = [ qogir-icon-theme nordzy-icon-theme nerdfonts ];
 
   gnome = with pkgs.gnome;
-    [ gnome-boxes gnome-tweaks file-roller seahorse pomodoro nautilus ]
-    ++ [ dconf2nix ];
+    [ gnome-boxes gnome-tweaks file-roller seahorse pomodoro ] ++ [ dconf2nix ]
+    ++ [
+      # nautilus  
+      nautilus
+      xfce.tumbler
+      webp-pixbuf-loader
+      poppler_gi
+      ffmpegthumbnailer
+      gst_all_1.gst-libav
+      gst_all_1.gst-plugins-ugly
+      libgsf
+    ];
 
   gnome-extensions = with pkgs.gnomeExtensions; [
     dash-to-panel
@@ -89,7 +96,6 @@ rec {
   base = utils ++ gutils ++ viewers ++ editor ++ organization ++ bury
     ++ documents;
   manipulation = mediaed;
-  connect = web;
+  connect = web ++ social;
   gnomebase = gnome ++ gnome-extensions ++ theming;
 }
-
